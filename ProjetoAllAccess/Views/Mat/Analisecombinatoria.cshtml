@@ -1,0 +1,332 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Analise Combinatória";
+}
+<h1>Análise Combinatória</h1>
+<br />
+
+    O que é Análise Combinatória ou simplesmente Combinatória? A maior parte dos alunos do 2º grau responderia que ela é o estudo das
+    combinações, arranjos e permutações. Isso no entanto é uma resposta parcial pois, embora combinações, arranjos e permutações façam
+    parte da Análise Combinatória, são conceitos que permitem resolver um tipo de problemas de Analise Combinatória: os de contagem de
+    certos tipos de subconjuntos de um conjunto finito, sem que seja necessário enumerar seus elementos. No entanto, a Análise Combinatória
+    trata de vários outros tipos de problemas e dispõe, além das combinações, arranjos e permutações, de outras técnicas para atacá-los: o
+    princípio da inclusão-exclusão, o princípio das gavetas de Dirichlet, as funções geradoras, a teoria de Ramsey são exemplos de técnicas
+    poderosas de Análise Combinatória. Pelo menos uma delas, o princípio das gavetas de Dirichlet, é mais simples ou pelo menos tão simples
+    quanto o estudo das combinações, arranjos e permutações.
+<br />
+<br />
+
+De maneira mais geral, podemos dizer que a Análise Combinatória é a parte da Matemática que analisa estruturas e relações discretas.
+<br />
+
+Dois tipos de problemas que ocorrem frequentemente em Analise combinatória são:
+<br />
+<br />
+
+1) Demonstrar a existência de subconjuntos de elementos de um conjunto finito dado e que satisfazem certas condições
+<br />
+<br />
+
+2) Contar ou classificar os subconjuntos de um conjunto finito e que satisfazem certas condições dadas.
+<br />
+<br />
+
+Origem: <a href="https://portaldaobmep.impa.br/uploads/msg/5fpwf84eez8c0.pdf">link</a>
+
+<h1>O Princípio da Inclusão-Exclusão</h1>
+<br />
+<br />
+
+O Princípio da inclusão-Exclusão é uma fórmula para contar o número de elementos que pertencem à união de vários conjuntos não
+necessariamente disjuntos. Na sua versão mais simples, ele afirma que:
+<br />
+
+<img src="~/images/eq9.png" width="400" height="150">
+<br />
+<br />
+
+A justificativa pode ser obtida de dois modos diferentes:
+
+Suponhamos que haja y elementos comuns a A e B e que além disso haja x elementos que pertençam a A e não a B e z elementos que
+pertençam a B mas não a A.
+<br />
+<br />
+
+Temos:
+<br />
+<br />
+<img src="~/images/eq10.png" width="600" height="150">
+<br />
+<br />
+<img src="~/images/eq11.png" width="600" height="250">
+<br />
+<br />
+
+#(A U B) é o número de elementos que pertencem a pelo menos um dos conjuntos A e B. Para contar os elementos de A U B
+contamos todos os elementos de A(#A) e todos os de B(#B). Ao fazermos isso, os elementos de A ∩ B foram contados duas vezes, uma
+em #A e outra em #B, portanto devemos descontar a segunda contagem desses elementos e obtemos.
+<br />
+<br />
+
+#(A U B) = #A + #B - (A ∩ B)
+<br />
+<br />
+
+Para três conjuntos A, B, C o Princípio da Inclusão-Exclusão afirma que:
+<br />
+<br />
+
+
+
+#(A U B ∩ C) = #A+ #B + #C - #(A ∩ B) - (A ∩ C) - (B ∩ C) + #(A ∩ B ∩ C)
+<br />
+<br />
+
+
+
+Uma justificava pode ser:
+<br />
+<br />
+
+#[A U B U C] = #[(A U B) U C] = #(A U B) + #C - #[(A U B) ∩ C]
+<br />
+<br />
+
+= #A + #B - #(A ∩ B) + #C
+<br />
+<br />
+
+- #[(A ∩ C) U (B ∩ C) ]
+<br />
+<br />
+
+= #A + #B - #(A ∩ B) + #C - #(A ∩ C) - #(B ∩ C) + # (A ∩ C ∩ B ∩ C)
+<br />
+<br />
+
+= #A + #B + #C + - #(A ∩ B) - #(A ∩ C) - # (B ∩ C)
+<br />
+<br />
+
++ #(A ∩ B ∩ C)
+<br />
+<br />
+
+Livro:<a href="https://portaldaobmep.impa.br/uploads/msg/5fpwf84eez8c0.pdf">link</a>
+<br />
+<br />
+
+<h1>Permutação Simples</h1>
+<br />
+
+Dados n objetos distintos a1, a2, a3,....an quantos modos é possível ordena-los?
+<br />
+<br />
+
+Por exemplo, para os objetos 1.2.3 há 6 ordenações es: 123. 132, 213. 231, 312 e 321. No caso geral temos n modos de escolher o
+objeto que ocupara o primeiro lugar n-1 modos de escolher o que ocupará o segundo lugar, 1 modo de escolher o objeto que ocupara o
+último lugar. Portanto
+<br />
+<br />
+
+O número de modos de ordenar n objetos distintos é
+<br />
+<br />
+
+<center><h2>n(n-1)...]= n!</h2></center>
+<br />
+<br />
+
+Cada ordenação dos n objetos é chamada uma permutação simples de n objetos e o número de permutações simples de n objetos, e o
+número de permutações simples de n objetos distintos é representado por
+<br />
+<br />
+<img src="~/images/eq12.png" width="400" height="100">
+<br />
+<br />
+
+
+Livro utilizado: <a href="https://portaldaobmep.impa.br/uploads/msg/5fpwf84eez8c0.pdf">link</a>
+<br />
+<br />
+
+<h1>Combinação Simples</h1>
+<br />
+
+De quantos modos podemos escolher p objetos distintos entre n objetos distintos dado? Ou, o que é o mesmo, quantos são os subconjuntos
+com p elementos do conjunto {a1, a2,.....,na} ?
+<br />
+<br />
+
+Cada subconjuntos com p elementos é chamado e uma combinação de classe p dos n objetos a1, a2, ..., an. Assim, por exemplo,
+as combinações simples de classe 3 dos objetos a1,a2,a3,a4,a5 são:
+<br />
+<br />
+
+{a1,a2,a3}	{a1,a2,a4}	{a1,a2,a5}	{a1,a3,a4}	{a1,a3,a5}
+<br />
+<br />
+
+{a1,a4,a5}	{a2,a3,a4}	{a2,a3,a5}	{a2,a4,a5}	{a3,a4,a5}
+<br />
+<br />
+
+O número de combinações simples de classe p de n objetos é representado por
+<br />
+<br />
+<img src="~/images/eq13.png" width="250" height="125">
+<br />
+<br />
+
+Analisamos esta resposta: a escolha do 1º elemento da combinação pode ser feita de 5 modos; a do 2º, de 4 modos e a do 3º, de 3 modos.
+A resposta parece ser 5 x 4 x 3 = 60. Entretanto, se pensarmos numa combinação, por exemplo {a1,a2,a3}, verificamos que as combinações
+{a1,a2,a3}, {a1, a3, a2}, {a2, a1, a3}, etc... são idênticas e foram contadas como se fossem diferentes. Com efeito, se dissemos que há
+5 modos de escolher o 1º elemento da combinação é porque estamos considerando as escolhas a1 e a2 como diferentes e portanto estamos
+contando {a1, a2, a3} como diferente de {a2, a1, a3}. Em suma, na reposta 60 estamos contando cada combinação uma vez para cada ordem
+de escrever seus elementos. Como em cada combinação os elementos podem ser escritos em
+<img src="~/images/eq14.png" width="125" height="45">ordens, cada combinação foi contada 6 vezes. Logo, a resposta é 60/6 = 10.
+<br />
+<br />
+No caso geral temos:
+<br />
+<br />
+<img src="~/images/eq15.png" width="550" height="125">
+<br />
+<br />
+
+Livro utilizado: <a href="https://portaldaobmep.impa.br/uploads/msg/5fpwf84eez8c0.pdf">link</a>
+<br />
+<br />
+
+<h1>
+    Arranjos
+</h1>
+<br />
+Dado um conjunto de n elementos, e sendo p um inteiro e positivo tal que p ≤ n, chama-se arranjo simples dos n elementos dados,
+agrupados p a p, qualquer sequência de p elementos distintos formada com elementos do conjunto. O número de arranjos é dado por:
+<br />
+<br />
+<img src="~/images/eq16.png" width="550" height="125">
+<br />
+<br />
+
+Tal expressão foi encontrada anteriormente utilizando o princípio multiplicativo. A desnecessidade de utilizar o conceito de Arranjo é
+justificado no uso do Princípio Fundamental da Contagem. A mudança de ordem dos p elementos altera o agrupamento. Em arranjo a sequência
+dos elementos é levada em conta.
+<br />
+<br />
+
+Conteudo:<a href="https://uenf.br/posgraduacao/matematica/wp-content/uploads/sites/14/2017/09/16092015Carlos-Alberto-Lopes-dos-Santos-de-Oliveira.pdf">link</a>
+<br />
+<br />
+
+Vídeo de exemplos Permutação, combinação, arranjos:
+<br> <iframe width="650" height="450" src="https://www.youtube.com/embed/rSgs9YD9ns0" title="Agora Ficou Fácil I Análise Combinatória I Arranjo I Permutação | Combinação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1> Exercícios de Permutação Simples:</h1>
+<br />
+Quantos são anagramas da palavra PRÁTICO?
+<br />
+
+Solução: Cada anagrama de PRÁTICO nada mais é que uma ordenação das letras P, R, A, T, I, C, O. Assim o número de anagramas de PRÁTICO é
+<img src="~/images/eq17.png" width="200" height="75">
+<br />
+<br />
+
+Quantos anagramas da palavra PRÁTICO que começam e terminam por consoante?
+<br />
+<br />
+
+Solução: A consoante inicial pode ser escolhida de 4 maneiras, a consoante final de 3 maneiras e as 5 letras restantes podem ser arrumadas entre essas duas consoantes de
+P5 = 5! Modos. A resposta é 4 x 3 x 5! = 1440
+<br />
+<br />
+
+<h1> Exercícios de Permutação Simples:</h1>
+<br />
+Quantas saladas contendo exatamente 4 frutas podemos formar se dispomos de 10 frutas diferentes?
+<br />
+
+Solução: Para formar uma salada basta escolher 4 das 10 frutas, o que pode ser feito de
+<img src="~/images/eq18.png" width="300" height="75">
+<br />
+<br />
+
+Marcam-se 5 pontos sobre uma reta R e 8 pontos sobre uma reta R’ paralela a R. Quantos triângulos existem com vértices em
+3 desses 13 pontos?
+<br />
+<br />
+
+Solução: Para formar um triângulo ou tomamos um vértice em R e dois em R’ ou tomamos um vértice em R’ e dois em R. O número de
+triângulos do 1º tipo é 5
+<br />
+<br />
+<img src="~/images/eq19.png" width="300" height="75">
+<br />
+<br />
+
+Origem: <a href="https://portaldaobmep.impa.br/uploads/msg/5fpwf84eez8c0.pdf">link</a>
+<br />
+<br />
+
+<h1> Exercícios de Inclusão-Exclusão: </h1>
+<br />
+
+Quantos inteiros entre 1 e 1000 são divisíveis por 3 ou 7 ?
+<br />
+<br />
+
+Solução: Defina-se:
+<br />
+<br />
+
+A = Conjunto dos inteiros entre 1 e 1000 que são divisíveis por 3
+<br />
+<br />
+
+B = Conjunto dos inteiros entre 1 e 1000 que são divisíveis por 7
+<br />
+<br />
+
+Queremos calcular #(A U B). Temos:
+<br />
+<br />
+<img src="~/images/eq20.png" width="300" height="175">
+<br />
+<br />
+
+(pois A ∩ B é o conjunto dos inteiros entre 1 e 1000 que são divisíveis por 3 e 7 , isto é, que são divisíveis por 21)
+<br />
+<br />
+
+Pelo princípio da Inclusão-exclusão, temos:
+<br />
+<br />
+
+#(A U B) = #A + #B - #( A ∩ B) = 33 + 142 – 47 = 428
+<br />
+<br />
+
+Origem: <a href="https://portaldaobmep.impa.br/uploads/msg/5fpwf84eez8c0.pdf">link</a>
+
+<h1> Exercícios de Arranjos Simples: </h1>
+<br />
+
+Dado o conjunto de números {1, 2, 3, 4}, podemos listar todos os arranjos simples possíveis que podemos formar com 2 elementos
+desse conjunto.
+<br />
+<br />
+
+(1, 2); (1, 3); (1, 4); (2, 1); (2, 3); (2, 4); (3, 1); (3, 2); (3, 4); (4, 1); (4, 2); (4, 3).
+<br />
+<br />
+
+Então, podemos afirmar que existem 12 arranjos possíveis de 4 elementos tomados de 2 em 2. Muitas vezes, o interesse não está em listar
+todos os agrupamentos possíveis, como foi feito, mas sim em calcular a quantidade de arranjos possíveis, e, para isso, existe uma fórmula.
+<br />
+<br />
+
+Origem: <a href="https://mundoeducacao.uol.com.br/matematica/arranjos-simples.html">link</a>
+<br />
+<br />

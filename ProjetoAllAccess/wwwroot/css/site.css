@@ -1,0 +1,88 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.main-content,
+.sidebar {
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.main-wrapper {
+    width:1000px;
+    margin: 0 auto;
+
+}
+
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.coli {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 0%;
+}
+
+    .coli:first-child {
+        margin-left: 0;
+    }
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1; /* For IE 6/7 */
+}
+
+/*  GRID OF TWO  */
+.sec2 {
+    width: 100%;
+    background-color:red;
+}
+
+.sec1 {
+    width: 20%;
+    background-color:blue;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .coli {
+        margin: 1% 0 1% 0%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .sec2, .sec1 {
+        width: 100%;
+    }
+}

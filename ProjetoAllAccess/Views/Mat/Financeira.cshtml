@@ -1,0 +1,477 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Matematica Financeira";
+}
+<h1>Matemática Financeira</h1>
+<h1> Juros Simples</h1>
+<br />
+
+Quando se toma emprestado de alguém por um certo tempo algum bem ou dinheiro, é natural que se pague ao fim desse prazo,
+além do valor emprestado, alguma compensação financeira, o aluguel, no caso de um bem ou os juros, no caso de dinheiro.
+Ao valor emprestado denominamos Principal, Capital Inicial ou simplesmente Capital. A soma dos juros com o Capital em um
+determinado é período é dado o nome de Montante.
+<br />
+<br />
+Constitui a base principal da Matemática Financeira os estudos dos mecanismos que regem a formação dos juros e a sua incorporação
+ao Capital, também denominada Capitalização. O intervalo de tempo decorrente entre cada capitalização é denominado Período de
+Capitalização.
+<br />
+<br />
+
+Quanto aos Sistemas ou Regimes de Capitalização, destacamos dois:
+<br />
+<br />
+
+• Juros Simples – Ao fim de cada período de capitalização são incorporados os juros calculados sobre o Capital Inicial.
+<br />
+<br />
+
+• Juros Compostos – Ao fim de cada período de capitalização são incorporados os juros calculados sobre o montante do período anterior.
+<br />
+<br />
+
+Juros Simples: No regime de capitalização a Juros Simples, a compensação financeira mencionada na seção anterior, ou seja,
+os (juros) são diretamente proporcionais ao valor do capital emprestado (C), dentro de um período unitário de tempo (dia, mês, ano, etc.),
+e também diretamente proporcionais à quantidade de períodos em que o mesmo ficar emprestado.
+<br />
+<br />
+
+Para um período unitário, a parcela dos juros (combinada previamente entre as partes), é dada por uma porcentagem do capital inicial,
+ou seja, um valor r para cada 100 (cem) partes desse valor. r é denominada a taxa de juros.
+<br />
+<br />
+
+Por exemplo, se r = 5, escreve-se r = 5% e lê-se (cinco por cento). Pode-se escrever também:
+<br />
+<br />
+r = 5/100 ou o que é equivalente r = 0,05.
+<br />
+<br />
+
+Sendo r% a taxa de juros, chamaremos r/100 = i de taxa unitária.
+<br />
+<br />
+
+Taxas de juros – <b>Classificação</b>
+<br />
+<br />
+
+Uma taxa de juros é denominada taxa efetiva, quando o período a que ela se refere coincide com o período de capitalização.
+<br />
+<br />
+
+Exemplo: 4% ao semestre, capitalizado semestralmente.
+<br />
+<br />
+
+Uma taxa de juros é denominada taxa nominal, quando o período a que ela se refere não coincide com o período de capitalização.
+<br />
+<br />
+
+Exemplo: 7% ao ano, capitalizado mensalmente.
+<br />
+<br />
+
+Esse tipo de taxa não é aplicável aos juros simples uma vez que o período de referência da taxa já determina o período de capitalização.
+No entanto ela é de extrema importância para os juros compostos, dando origem aos conceitos de taxa proporcional e equivalente que serão
+discutidas a seguir.
+<br />
+<br />
+
+Duas taxas de juros são proporcionais quando formam uma proporção direta com os períodos de capitalização a elas referidos.
+<br />
+<br />
+
+Exemplo: A taxa de juros de 2% ao bimestre é proporcional a 6% ao semestre, pois:
+<br />
+<br />
+
+<img src="~/images/eq21.png" width="150" height="100">
+<br />
+<br />
+
+E uma proporção direta, ou seja, a razão entre as taxas é igual à razão entre os períodos a elas referidos. Na prática, quando a relação
+entre os períodos é de 1 : n, basta multiplicar ou dividir uma taxa de um período por n para obter a taxa proporcional a ela relativa ao
+outro período.
+<br />
+<br />
+
+Exemplos:
+<br />
+<br />
+
+1. Para obter a taxa semestral proporcional a 10% ao ano, observamos que a relação entre os períodos é de 1 : 2, ou seja,
+1 ano = 2 semestres, basta dividir 10 por 2, resultando na taxa semestral de 5%.
+<br />
+<br />
+
+2. Para obter a taxa anual proporcional a 3% ao bimestre, lembramos que a relação entre os períodos é de 1 : 6, isto ´e,
+(1 ano = 6 bimestres). Multiplicamos então 3 por 6 e obtemos a taxa proporcional procurada de 18% ao ano.
+<br />
+<br />
+
+Definição: Duas taxas são equivalentes quando se referindo a períodos de capitalizações diferentes, produzem os mesmos juros num
+determinado período, quando aplicadas sobre um mesmo capital.
+<br />
+<br />
+
+No regime de capitalização a juros simples as taxas equivalentes para dois períodos de capitalização distintos são também proporcionais
+para esses mesmos períodos, pois a incidência dos juros ocorre apenas sobre capital inicial.
+<br />
+<br />
+
+Outro conceito muito importante e que as pessoas em geral não d´a muita atenção é o de taxa real de juros. Essa taxa exprime o ganho
+real de um investimento em um período pois ela relaciona a taxa efetiva e a taxa de inflação (perda do valor do dinheiro) de um período
+de capitalização, da seguinte forma:
+<br />
+
+<img src="~/images/eq22.png" width="375" height="225">
+<br />
+<br />
+
+Em épocas de inflação alta, a não observância dessa taxa fez que muitas pessoas perdessem as suas economias.
+<br />
+<br />
+ As taxas de juros para investimento eram altas e as pessoas emprestavam e gastavam os rendimentos dos juros.
+<br />
+<br />
+ Quando retiravam o montante do investimento, elas percebiam que haviam perdido consideravelmente o seu valor devido à taxa de inflação.
+<br />
+<br />
+
+Recomendamos aos professores de Matemática do Ensino Médio não dedicar muito tempo das aulas no estudo dos juros simples,
+pois há muito tempo já não se pratica os juros simples em nossa economia, também porque ele já figura na grade do ensino fundamental.
+O que sugerimos aqui ´e uma revisão rápida e bem elaborada desse conteúdo que tem sua importância para facilitar o entendimento da
+capitalização composta.
+<br />
+<br />
+
+<b>Fórmula de Juros Simples</b>
+<br />
+<br />
+
+Se C é o capital emprestado à taxa de r% ao mês, durante n meses, o cálculo dos juros produzidos, denotado por j, é dado pela fórmula:
+<br />
+<br />
+
+<img src="~/images/eq23.png" width="275" height="125">
+<br />
+<br />
+
+Demonstração : Para calcular os juros em cada período (mês), multiplicamos o valor C pela taxa percentual
+ i = r/100 e para obter o total dos juros dos n períodos, multiplica-se por n. Ou seja:
+<br />
+<br />
+
+<img src="~/images/eq24.png" width="275" height="125">
+<br />
+<br />
+
+ O que é equivalente a:
+<br />
+
+<img src="~/images/eq25.png" width="250" height="125">
+<br />
+<br />
+
+ Fórmulas derivadas A fórmula 1 para o cálculo da taxa de juros, também pode ser usada para gerar o cálculo do Capital C,
+ do tempo n e da taxa i. Como esta fórmula envolve quatro variáveis, basta conhecer três delas para gerar a variável desconhecida.
+ Para calcular o capital, isolamos a incógnita C na fórmula 1 para obter:
+<br />
+<br />
+
+<img src="~/images/eq26.png" width="250" height="125">
+<br />
+<br />
+ Para obter o período n, temos:
+<br />
+
+<img src="~/images/eq27.png" width="250" height="125">
+<br />
+<br />
+ Para calcular a taxa i, temos:
+<br />
+
+<img src="~/images/eq28.png" width="250" height="125">
+<br />
+<br />
+
+ Observação importante! A taxa r e o tempo n devem estar expressos coerentemente, ou seja, se a taxa for mensal,
+ o tempo deve ser expresso em meses, caso contrário, deve-se transformar a taxa, usando-se uma taxa proporcional, ou o
+ tempo, usando a relação de proporcionalidade entre os períodos.
+<br />
+<br />
+
+<h1>Rendas Certas</h1>
+<br />
+
+Uma lista de quantias (usualmente denominadas prestações, pagamentos ou termos), referidas a épocas diversas é denominada
+série, anuidade ou ainda, renda certa. Se esses pagamentos forem iguais e em intervalos de tempo iguais, a série recebe o nome de
+uniforme. Quanto à sua finalidade, as rendas certas podem servir ao propósito de constituir um capital (capitalização) ou
+liquidar uma dívida (liquidação). São exemplos de rendas certas as poupanças e capitalizações programadas, os pagamentos de
+aluguéis, impostos e as prestações de financiamentos em geral. Quanto às amortizações de dívidas, existem diversos sistemas de
+amortizações, destacando-se o francês, o sistema de amortização constante (SAC), o americano e o alemão, cada um com as suas peculiaridades.
+Sistema francês de amortização:
+<br />
+<br />
+
+No sistema francês de amortização de dívidas, o valor das prestações e o período entre as prestações são constantes.
+Esse é o sistema mais usado no comércio atualmente. Em geral, as prestações, são pagas mensalmente.
+Quanto ao pagamento da primeira prestação, as rendas certas podem ser classificadas como: antecipadas, postecipadas ou diferidas.
+Rendas antecipadas – Com entrada Nas rendas antecipadas, ou com entrada, o pagamento da primeira prestação se dá na data atual,
+ou seja, no momento da constituição da dívida. Denotaremos esse momento de período 0.
+<br />
+<br />
+
+O exemplo mostrado na Figura abaixo representa uma série antecipada uniforme de n = 4 pagamentos iguais a P para
+liquidar uma dívida D sujeita a uma taxa de juros i.
+<br />
+<br />
+
+Observação: E usual em Matemática Financeira indicar o coeficiente de capitalização 1 + i pela letra u, ou seja:
+<br />
+<br />
+
+u = 1 + i
+<br />
+<br />
+
+<img src="~/images/eq29.png" width="300" height="400">
+<br />
+<br />
+
+Como a dívida deveria ser liquidada no fim do quarto período, podemos estabelecer, nesse período uma equivalência de capitais
+entre o valor da dívida D e o somatório das prestações P, ou seja:
+<br />
+<br />
+
+<img src="~/images/eq30.png" width="250" height="125">
+<br />
+<br />
+
+Observe que a sequência (P, Pu, Pu2, Pu3, Pu4) dos montantes das prestações forma uma progressão geométrica de n = 5 termos,
+e razão q = u e primeiro termo a1 = P, assim, o segundo membro da equação acima, é a soma dos n = 5 termos de uma PG.
+<br />
+<br />
+
+A fórmula geral para a soma dos termos uma progressão geométrica finita é:
+<br />
+<br />
+
+<img src="~/images/eq31.png" width="250" height="125">
+<br />
+<br />
+
+Substituindo os valores conhecidos na fórmula acima, obtemos:
+<br />
+<br />
+
+<img src="~/images/eq32.png" width="250" height="125">
+<br />
+<br />
+
+Como u = 1 + i, o denominador da última equação fica u − 1 = 1 + i − 1 = i e realizando a substituição, resulta:
+<br />
+<br />
+
+<img src="~/images/eq33.png" width="250" height="125">
+<br />
+<br />
+
+Comparando as expressões anteriores, obtemos
+<br />
+<br />
+
+<img src="~/images/eq34.png" width="250" height="125">
+<br />
+<br />
+
+<h1>Juros Compostos</h1>
+<br />
+
+Quando vimos na seção anterior os juros simples, entendemos que ele representava um valor calculado em cima do valor da dívida,
+ e que o mesmo valor se repetiria mês a mês ou ano a ano conforme fosse contratada a operação. No entanto juros simples quase não
+ aparecem nas operações financeiras, na sua grande maioria prevalece o regime de juros compostos que veremos com mais detalhes agora.
+<br />
+<br />
+
+Esta modalidade de regime é a mais utilizada no dia-a-dia pelo sistema financeiro. Nesta modalidade, os juros gerados a cada período
+são incorporados ao principal para calcular os juros do período seguinte. Então, os rendimentos auferidos pela aplicação serão incorporados
+à aplicação, participando da geração do rendimento no período seguinte.
+<br />
+<br />
+
+Quando trabalhamos com juros compostos, o dinheiro cresce muito mais rapidamente. Neste caso, temos um crescimento exponencial em
+progressão geométrica ao longo do período. Este modelo nos leva àquela expressão que escutamos no nosso cotidiano: "juro sobre juro".
+O modelo descrito acima é conhecido também como regime de capitalização composta.
+<br />
+<br />
+
+Vejamos o seguinte exemplo: Um capital (C) de R$ 1.000,00 aplicado a taxa (i) de 10% a.m. durante quatro meses (n). O montante
+ao término do período pode ser obtido diretamente na fórmula: M=C(1+i)n.
+<br />
+<br />
+
+M=C(1+i)n Logo, teríamos M = 1.000,00 (1+0,1)4 = R$ 1.464,10. Segundo Samanez (2002), os fatores (1 + i)n e (1+ i)-n têm
+a seguinte finalidade:
+<br />
+<br />
+
+• O fator (1 + i)n "joga" grandezas para frente, possibilitando encontrar o montante ou valor futuro da aplicação.
+É a capitalização para data posterior.
+<br />
+<br />
+
+<img src="~/images/img13.png" width="450" height="125">
+<br />
+<br />
+
+O fator (1+ i)-n "puxa" grandezas para trás, possibilitando encontrar o principal de um determinado montante,
+ou seja, traz um valor futuro à data anterior.
+<br />
+<br />
+
+<img src="~/images/img14.png" width="450" height="125">
+<br />
+<br />
+
+Vejamos que a diferença entre as situações acima reside no tempo que estamos querendo trazer o valor (dinheiro),
+seja em uma data futura (1 + i)n ou para uma data antes do vencimento (1+ i)-n.
+<br />
+<br />
+
+<b>Conceito de Juros Compostos </b>
+
+Nesse regime consideramos que os juros formados em cada período são adicionados ao capital formando o montante (capital + juros) do
+período, esse montante passa a ser o novo capital e irá incidir juros sobre esse novo capital e assim sucessivamente. Dizemos ainda que os
+juros são capitalizados, e como não apenas o capital inicial rende juros, denominamos juros compostos. Entendemos, então, que a composição
+do capital mais os juros transformam-se em um novo capital.
+<br />
+<br />
+
+Cada vez que os juros são incorporados ao principal, denominamos capitalização. Este termo representa a principal diferença entre
+juros simples e compostos. Vejamos o exemplo abaixo sobre a diferença entre juros simples e compostos.
+<br />
+<br />
+
+Como é do nosso conhecimento, o montante é a soma do principal aos juros da aplicação no prazo determinado e à taxa de juros estipulada.
+Para obtenção dos juros, temos a seguinte fórmula:
+<br />
+<br />
+
+<img src="~/images/img15.png" width="450" height="225">
+<br />
+<br />
+
+<h1>Exercícios</h1>
+<br />
+<br />
+
+1 - Calcular os juros simples obtidos pela aplicação do capital R$ 1200,00, colocado à taxa de 5% ao mês, durante 8 meses.
+<br />
+<br />
+
+Resolução:
+<br />
+<br />
+
+• i = 5/100 = 0,05
+<br />
+<br />
+
+• C = 1200
+<br />
+<br />
+
+• n = 8
+<br />
+<br />
+
+• j =?
+<br />
+<br />
+
+Aplicando a fórmula 1, temos:
+<br />
+<br />
+
+j = 1200 · 0,05 · 8 = 480
+<br />
+<br />
+
+Resposta: Os juros obtidos foram de R$ 480,00.
+<br />
+<br />
+
+
+
+2. Qual o capital, que emprestado a juros simples de 15% ao ano, produz em 5 anos juros no valor de R$ 210,00?
+<br />
+<br />
+
+Resolução:
+<br />
+<br />
+
+• i = 15/100 = 0, 15
+<br />
+<br />
+
+• C =?
+<br />
+<br />
+
+• n = 5
+<br />
+<br />
+
+• j = 210
+<br />
+<br />
+
+Aplicando a fórmula 2, obtemos
+<br />
+<br />
+
+<img src="~/images/img16.png" width="200" height="100">
+<br />
+<br />
+
+3. Determine o valor dos juros pagos em um empréstimo de R$ 2.000,00 com taxa de juros de 1% a.m. pelo período de cinco meses.
+<br />
+<br />
+
+Resolução:
+<br />
+<br />
+
+C0 = 2.000,00; i = 1% a.m.; n = 5m
+<br />
+<br />
+
+Jn = C0 [(1 + i)n -1] Jn = 2.000,00 [(1 +0,01)5 -1]
+<br />
+<br />
+
+Jn = C0 [(1 + i)n -1] Jn = 2.000,00 (1,05101) = R$ 102,02 é o valor pago de juros na operação.
+<br />
+<br />
+
+Para acesso completo ao conteúdo apresentado, siga o link para o periódico utilizado nessa amostra.
+Esse periódico contém todo o conteúdo apresentado de maneira mais detalhada e completa, além de outros tópicos mais avançados:
+<br />
+<br />
+
+<a href="http://www.uel.br/projetos/matessencial/superior/pde/epaminondas-matfin.pdf">link</a>
+<br />
+<br />
+
+Além disso, recomendamos que assistam a aula a seguir, que apresenta detalhadamente o conteúdo de Juros simples e compostos,
+que foi tratado no primeiro tópico desse módulo.
+<br />
+<br />
+
+<iframe width="650" height="450" src="https://www.youtube.com/embed/YExQ10soiJg" title="Matemática Financeira - Aula 1 - Juros Simples e Compostos - Prof. Gui" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>br />
+<br />
