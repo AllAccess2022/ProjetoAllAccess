@@ -4,50 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjetoAllAccess</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/w3.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjetoAllAccess.styles.css" asp-append-version="true" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="c:\users\caiqu\.nuget\packages\bootstrap\5.2.1\contentfiles\any\any\wwwroot\js\bootstrap.esm.min.js"></script>
-    <script src="c:\users\caiqu\.nuget\packages\bootstrap\5.2.1\contentfiles\any\any\wwwroot\js\bootstrap.bundle.js"></script>
-    <script src="c:\users\caiqu\.nuget\packages\bootstrap\5.2.1\contentfiles\any\any\wwwroot\js\bootstrap.esm.js"></script>
-    <script src="c:\users\caiqu\.nuget\packages\bootstrap\5.2.1\contentfiles\any\any\wwwroot\js\bootstrap.bundle.min.js"></script>
-    <script src="c:\users\caiqu\.nuget\packages\bootstrap\5.2.1\contentfiles\any\any\wwwroot\js\bootstrap.min.js"></script>
-    <script src="c:\users\caiqu\.nuget\packages\bootstrap\5.2.1\contentfiles\any\any\wwwroot\js\bootstrap.js"></script>
-    <link rel="stylesheet" href="~/css/w3.css">
-
-    <script src="~/js/site.js" asp-append-version="true"></script>
 </head>
 <body>
-    
-    <!--HEADER-->
-
     <header>
-
         <nav class="navbar navbar-expand-lg  " style="background-color: lightskyblue">
             <div class="container-fluid">
-                <a class="navbar-brand active" asp-controller="Home" asp-action="Index" style = "font-family:gagalin">ALL ACCESS</a>
+                <a class="navbar-brand active" asp-controller="Home" asp-action="Index" style="font-family:gagalin">ALL ACCESS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" role="group" aria-label="Basic outlined example">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" asp-controller="Mat" asp-action="MatIndex">Matemática</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" asp-controller="Fis" asp-action="FisIndex">Fisica</a>
-                        </li>
-
-
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" asp-controller="Mat" asp-action="MatIndex">Matemática</a></li>
+                        <li class="nav-item"><a class="nav-link active" asp-controller="Fis" asp-action="FisIndex">Fisica</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Exercicios Matemática
-                            </a>
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Exercicios Matemática</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item btn btn-outline-primary" href="#">Capitulo 1</a></li>
                                 <li><hr class="dropdown-divider"></li>
@@ -56,11 +31,8 @@
                                 <li><a class="dropdown-item btn btn-outline-primary" href="#">Capitulo 3</a></li>
                             </ul>
                         </li>
-
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Exercicios Fisica
-                            </a>
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Exercicios Fisica</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item btn btn-outline-primary" href="#">Capitulo 1</a></li>
                                 <li><hr class="dropdown-divider"></li>
@@ -69,11 +41,8 @@
                                 <li><a class="dropdown-item btn btn-outline-primary" href="#">Capitulo 3</a></li>
                             </ul>
                         </li>
-
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Vestibulares
-                            </a>
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vestibulares </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item btn btn-outline-primary" asp-controller="Home" asp-action="Enem">ENEM</a></li>
                                 <li><hr class="dropdown-divider"></li>
@@ -82,7 +51,6 @@
                                 <li><a class="dropdown-item btn btn-outline-primary" asp-controller="Home" asp-action="Fuvest">FUVEST</a></li>
                             </ul>
                         </li>
-
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
@@ -91,133 +59,58 @@
                 </div>
             </div>
         </nav>
-   
-
     </header>
-
     <!--HEADER-->
-
     <!--MAIN BODY-->
-    <div>            
-        <div class=" w3-quarter" style="text-align:center">
-            <div class="w3-bar-block d-grid ">
-                <h4>
-                    Matematica
-                </h4>
-                <ul class="nav flex-column mb-auto">
-                    <li class="nav-item rounded">
-                        <a asp-controller="Mat" asp-action="Estatistica" class=" text-decoration-none">
-                            Estatistica
-                        </a>
-                        </li>
-                    <li class="rounded">
-                        <a asp-controller="Mat" asp-action="Conjunto" class="text-decoration-none ">
-                            Conjunto
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Mat" asp-action="" class="text-decoration-none ">
-                            Funções
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Mat" asp-action="Analisecombinatoria" class="text-decoration-none ">
-                            Análise Combinatória
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Mat" asp-action="" class="text-decoration-none ">
-                            Probabilidade
-                            </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Mat" asp-action="Geometria" class="text-decoration-none ">
-                            Geometria
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Mat" asp-action="Financeira" class="text-decoration-none ">
-                            Matemática Financeira
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Mat" asp-action="" class="text-decoration-none">
-                            Regra de Três
-                        </a>
-                        </li>
-                    <li class="rounded">
-                        <a asp-controller="Mat" asp-action="" class="text-decoration-none ">
-                            Porcentagem
-                        </a>
-                    </li>
-                </ul>
+    <div>
+        <div class=" w3-quarter">
+            &nbsp;
+            <div style="position:fixed;margin-right: 10px;">
+                <div class=" w3-bar-block d-grid " style="font-size:small;">
+                    <h4 style="text-align:center">Matematica</h4>
+                    <ul class=" mb-auto">
+                        <li class="nav-item rounded"><a asp-controller="Mat" asp-action="Estatistica" class=" text-decoration-none">Estatistica</a></li>
+                        <li class="rounded"><a asp-controller="Mat" asp-action="Conjunto" class="text-decoration-none ">Conjunto</a></li>
+                        <li class="rounded"><a asp-controller="Mat" asp-action="" class="text-decoration-none ">Funções</a></li>
+                        <li class="rounded"><a asp-controller="Mat" asp-action="Analisecombinatoria" class="text-decoration-none ">Análise Combinatória </a></li>
+                        <li class="rounded"><a asp-controller="Mat" asp-action="" class="text-decoration-none ">Probabilidade</a></li>
+                        <li class="rounded"><a asp-controller="Mat" asp-action="Geometria" class="text-decoration-none ">Geometria</a></li>
+                        <li class="rounded"><a asp-controller="Mat" asp-action="Financeira" class="text-decoration-none ">Matemática Financeira</a></li>
+                        <li class="rounded"><a asp-controller="Mat" asp-action="" class="text-decoration-none">Regra de Três</a></li>
+                        <li class="rounded"><a asp-controller="Mat" asp-action="" class="text-decoration-none ">Porcentagem</a></li>
+                    </ul>
+                </div>
+                <div class=" w3-bar-block d-grid " style="font-size:small">
+                    <h4 style="text-align:center">Fisica</h4>
+                    <ul>
+                        <li class="rounded "><a asp-controller="Fis" asp-action="Energia" class="text-decoration-none ">Energia </a></li>
+                        <li class="rounded"><a asp-controller="Fis" asp-action="Trabalho" class="text-decoration-none ">Trabalho</a></li>
+                        <li class="rounded"><a asp-controller="Fis" asp-action="Potencia" class="text-decoration-none ">Potencia</a></li>
+                        <li class="rounded"><a asp-controller="Fis" asp-action="Resistores" class="text-decoration-none ">Resistores</a></li>
+                        <li class="rounded"><a asp-controller="Fis" asp-action="Acustica" class="text-decoration-none">Acustica</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapsed ">
-                <h4>
-                    Fisica
-                </h4>
-                <ul class="nav flex-column">
-                    <li class="rounded ">
-                        <a asp-controller="Fis" asp-action="Energia" class="text-decoration-none ">
-                            Energia
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Fis" asp-action="Trabalho" class="text-decoration-none ">
-                            Trabalho
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Fis" asp-action="Potencia" class="text-decoration-none ">
-                            Potencia
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Fis" asp-action="Resistores" class="text-decoration-none ">
-                            Resistores
-                        </a>
-                    </li>
-                    <li class="rounded">
-                        <a asp-controller="Fis" asp-action="Acustica" class="text-decoration-none">
-                            Acustica
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
-            
         </div>
         <div class="w3-twothird w3-content justify-content-center">
-                <main role="main" class="bd-main order-1">
-                    @RenderBody()
-                </main>
-             </div>
+            <main role="main" class="bd-main order-1">
+                @RenderBody()
+            </main>
+        </div>
         <div class="w3-quarter">
-            
+            &nbsp;
         </div>
     </div>
-        
-   
     <!--MAIN BODY-->
-
     <!--FOOTER-->
-
-
     <footer>
-
     </footer>
-
-
     <!--FOOTER-->
-
     <!--SCRIPT-->
-
-
-    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
-
     <!--SCRIPT-->
-
 </body>
 </html>
