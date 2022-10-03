@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br />
+<div id="container-1" class="container">
+    <h1>Interseção e reunião</h1><br />
+    <p>
+        Com dois conjuntos A e B podemos construir novos conjuntos cujos elementos devem obedecer às condições preestabelecidas. <br />
+        Como exemplo, dados os conjuntos <b>A e B</b>, podemos determinar um conjunto cujos elementos pertencem simultaneamente a A e a B. Esse conjunto é
+        chamado de interseção de A e B indicado por <b>A ∩ B</b>, que lemos “A interseção B” ou, apenas, “A inter B”. Desta forma, definimos: <br /><br />
+        •	<b>A ∩ B = {x | ∈ A e x ∈ B}</b><br /><br />
+        <img src="../images/Mat/img3.png" width="400" height="300"><br />
+        Existem dois casos que são particulares:<br />
+        •	<b>A ⊂ B</b><br />
+        <img src="../images/Mat/img4.png" width="400" height="300"><br />
+        •	<b>A e B</b> não tem elementos comuns:<br />
+        <img src="../images/Mat/img5.png" width="400" height="300"><br /><br />
+
+        A partir de dois conjuntos, <b>A e B</b>, também podemos obter um novo conjunto que os elementos pertencem a pelo menos um dos conjuntos dados, isto é,
+        ou pertencem somente a A ou somente a B, ou podemos ser a ambos <b>(A ∩ B)</b>. Esse tipo de conjuntos que obtemos é chamado de reunião ou também união de
+        A e B e representado por <b>A ∪ B</b>, que é lido como “A <b>reunião</b> b” ou “A <b>união</b> B”. Desta forma, definimos:<br /><br />
+        •	 <b>A ∪ B = {x | x ∈ A ou x ∈}</b><br />
+        <img src="../images/Mat/img6.png" width="400" height="300"><br />
+        Existem dois casos que são particulares:<br />
+        •	<b>A ⊂ B</b><br />
+        <img src="../images/Mat/img7.png" width="400" height="300"><br />
+        •	<b>A ∩ B = Ø ( A e B disjuntos)</b><br />
+        <img src="../images/Mat/img8.png" width="400" height="300"><br />
+
+        <h3>Observações:</h3><br />
+        •	O conectivo ou, é colocado no meio de duas sentenças <b>( x ∈ A ou x ∈)</b> representa que pelo menos uma delas deve ser obedecida.
+        Também podemos substituir pelo o símbolo <b>∨</b>.<br />
+        •	Quaisquer que sejam os conjuntos A e B, temos que: <b>A ⊂ (A ∪ B) e B ⊂ (A ∪ B)</b>.<br />
+        •	Se A <b>∪ B = Ø</b>, então <b>A = Ø</b> e <b>B = Ø</b>, e mutuamente, se <b>A = Ø</b> e <b>B = Ø</b>, então <b>A ∪ B = Ø</b>.<br />
+        •	Pelo diagrama a baixo temos que:<br />
+        <img src="../images/Mat/img9.png" width="400" height="300"><br /><br />
+
+        <b>A = X ∪ (A ∩ B)</b> e A ∪ B = X ∪ B</b><br />
+        Como <b>X ∩ (A ∩ B) = Ø</b>, desta forma temos:<br /><br />
+        <b>n(A) = n(x) + n(A ∩ B)      1</b><br />
+        Como <b>X ∩ B = Ø</b>, desta forma temos:<br /><br />
+        <b>n(A ∪ B) = n(X) + n(B)   2</b><br />
+        Assim, de 1 temos:<b> n(X) = n(A) – n(A ∩ B)</b>, que substituído por 2, irá resultar em:<br /><br />
+        <b>n(A ∪ B) = n(A) + n(B) – n(A ∩ B)</b><br /><br />
+
+        Propriedades da Interseção e da reunião<br />
+        Admitindo sem demonstração a validade de cada uma das seguintes propriedades.<br />
+        Quaisquer que sejam os conjuntos A, B, C.<br /><br />
+        •	<b>Idempotente:</b> A ∩ A = A e A ∪ A = A<br />
+        •	<b>Comutativa:</b> A ∩ B = B ∩ A e A ∪ B = B ∪ A<br />
+        •	<b>Associativa:</b> A ∩ (B ∩ C) = (A ∩ B) ∩ C e A ∪ (B ∪ C) = (A ∪ B) ∪ C<br />
+        •	<b>Distribuição:</b> A ∩ (B ∪ C) = (A ∩ B) ∪ ( A ∩ C) e A ∪ (B ∩ C) = ( A ∪ B) ∩ (A ∪ C)<br /><br />
+        <div class="container" id="container-alternativas">
+            Consulte o vídeo para complementar o conteúdo: <br /><br />
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/tqU-EA7Mdco" title="União e Intersecção" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </b><br />
+
+        <i>
+            Livro utilizado para o conteúdo: Matematica – Ciência e aplicação Editora<br />
+            Saraiva : <a href="https://api.plurall.net/media_viewer/documents/2414500">Link</a>
+        </i>
+
+    </p>
+</div>
+<br />
+<div id="container-2" class="container" style="background-color:lightskyblue">
+<h1>Capítulos:</h1>
+<br />
+
+<h3>
+        <a asp-action="NocoesConjuntos" style="text-decoration: none">Inicio</a><br /><br />
+
+    <a asp-action="NocoesConjuntos1" style="text-decoration: none">1.	Igualdade de conjuntos</a><br /><br />
+
+    <a asp-action="NocoesConjuntos2" style="text-decoration: none">2.	Subconjuntos – Relação de inclusão</a><br />
+
+    <a asp-action="NocoesConjuntos21" style="text-decoration: none">2.1 Propriedades da Relação de inclusão</a><br /><br />
+
+    <a asp-action="NocoesConjuntos3" style="text-decoration: none">3.	Interseção e reunião</a><br /><br />
+
+    <a asp-action="NocoesConjuntos4" style="text-decoration: none">4.	Diferença</a><br /><br />
+
+</h3>
+
+
+
+
+</div>

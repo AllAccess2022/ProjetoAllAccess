@@ -4,27 +4,27 @@ namespace ProjetoAllAccess.Controllers
 {
     public class MatController : Controller
     {
-        public IActionResult Analisecombinatoria()
+        public IActionResult NocoesConjuntos()
         {
             return View();
         }
-
-        public IActionResult Conjunto()
+        public IActionResult NocoesConjuntos1()
         {
             return View();
         }
-
-        public IActionResult Estatistica()
+        public IActionResult NocoesConjuntos2()
         {
             return View();
         }
-
-        public IActionResult Financeira()
+        public IActionResult NocoesConjuntos21()
         {
             return View();
         }
-
-        public IActionResult Geometria()
+        public IActionResult NocoesConjuntos3()
+        {
+            return View();
+        }
+        public IActionResult NocoesConjuntos4()
         {
             return View();
         }

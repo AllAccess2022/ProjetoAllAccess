@@ -18,3 +18,32 @@ body {
 }
 
 
+
+a, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#container-1 {
+    align-content: center;
+    text-align: center;
+    background-color: white;
+    font-family: Helvetica;
+    border-radius: 15px 50px 30px;
+    background: white;
+    border: 3px solid darkblue;
+}
+
+#container-2 {
+    background-color: lightskyblue;
+    text-align: center;
+    font-family: Helvetica;
+    border-radius: 15px 50px 30px;
+    background: lightblue;
+    border: 2px solid darkblue;
+}
+
+a, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
