@@ -1,6 +1,4 @@
-﻿using Microsoft.Build.Framework;
-using System.ComponentModel.DataAnnotations;
-using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribute;
+﻿using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribute;
 
 namespace ProjetoAllAccess.Models
 {

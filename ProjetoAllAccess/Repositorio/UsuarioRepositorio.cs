@@ -1,9 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using ProjetoAllAccess.Data;
+﻿using ProjetoAllAccess.Data;
 using ProjetoAllAccess.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ProjetoAllAccess.Repositorio
 {

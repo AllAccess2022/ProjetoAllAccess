@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using ProjetoAllAccess.Data;
 using ProjetoAllAccess.Models;
 using ProjetoAllAccess.Repositorio;
 
@@ -10,7 +7,7 @@ namespace ProjetoAllAccess.Controllers
     public class LoginController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
-        public LoginController(IUsuarioRepositorio usuarioRepositorio) 
+        public LoginController(IUsuarioRepositorio usuarioRepositorio)
         {
             _usuarioRepositorio = usuarioRepositorio;
         }
@@ -25,7 +22,8 @@ namespace ProjetoAllAccess.Controllers
         }
 
         [HttpPost]
-        public IActionResult Entrar(LoginModel loginModel) {
+        public IActionResult Entrar(LoginModel loginModel)
+        {
 
             try
             {

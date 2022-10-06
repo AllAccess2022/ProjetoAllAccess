@@ -1,7 +1,5 @@
-﻿using Microsoft.VisualBasic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Security.Cryptography;
 
 namespace ProjetoAllAccess.Models
 {
@@ -38,7 +36,7 @@ namespace ProjetoAllAccess.Models
         [Column("Senha")]
         public string Senha { get; set; }
 
-        public bool SenhaValida(string senha) 
+        public bool SenhaValida(string senha)
         {
             return Senha == senha;
         }

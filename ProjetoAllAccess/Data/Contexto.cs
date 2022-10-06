@@ -8,7 +8,7 @@ namespace ProjetoAllAccess.Data
         public Contexto(DbContextOptions<Contexto> options)
             : base(options)
         {
-        
+
 
         }
 
