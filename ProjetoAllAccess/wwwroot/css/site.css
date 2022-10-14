@@ -47,3 +47,51 @@ a, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
+
+#container-alternativas {
+    border-radius: 15px 50px 30px;
+    background: lightblue;
+    border: 2px solid darkblue;
+    padding: 20px;
+    width: 700px;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+#container-fisica-index {
+    align-content: center;
+    text-align: center;
+    font-family: Helvetica;
+    border-radius: 15px 50px 30px;
+    background: white;
+    border: 3px solid darkblue;
+    background: url("/images/Fis/img19.png") no-repeat fixed center center;
+    background-size: cover;
+}
+#container-fisica-index2 {
+    border-radius: 15px 50px 30px;
+    background-color: lightblue;
+    background: rgba(173, 216, 230, 0.4);
+    border: 2px solid darkblue;
+    padding: 20px;
+    width: 700px;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #000f;
+    font-weight: 900;
+    font-size: 25px;
+}
+#container-fisica-index3 {
+    font-weight: 900;
+    border-radius: 15px 50px 30px;
+    background-color: lightblue;
+    background: rgba(173, 216, 230, 1.0);
+    border: 2px solid darkblue;
+    color: #000f;
+}
+
