@@ -8,7 +8,15 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
-        public IActionResult EForcaPeso()
+        public IActionResult EForcaConstanteGab()
+        {
+            return View();
+        }
+        public IActionResult ETrabForcaPeso()
+        {
+            return View();
+        }
+        public IActionResult ETrabForcaPesoGab()
         {
             return View();
         }
@@ -16,7 +24,15 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
+        public IActionResult EForcaElasticaGab()
+        {
+            return View();
+        }
         public IActionResult EEnergiaCinetica()
+        {
+            return View();
+        }
+        public IActionResult EEnergiaCineticaGab()
         {
             return View();
         }
@@ -24,7 +40,15 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
+        public IActionResult EEnergiaPotencialGravitacionalGab()
+        {
+            return View();
+        }
         public IActionResult EEnergiaPotencialElastica()
+        {
+            return View();
+        }
+        public IActionResult EEnergiaPotencialElasticaGab()
         {
             return View();
         }
@@ -32,7 +56,15 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
+        public IActionResult EEnergiaMecanicaGab()
+        {
+            return View();
+        }
         public IActionResult EPrimeiraLeiN()
+        {
+            return View();
+        }
+        public IActionResult EPrimeiraLeiNGab()
         {
             return View();
         }
@@ -40,7 +72,23 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
+        public IActionResult ESegundaLeiNGab()
+        {
+            return View();
+        }
         public IActionResult ETerceiraLeiN()
+        {
+            return View();
+        }
+        public IActionResult ETerceiraLeiNGab()
+        {
+            return View();
+        }
+        public IActionResult EForcaPeso()
+        {
+            return View();
+        }
+        public IActionResult EForcaPesoGab()
         {
             return View();
         }
