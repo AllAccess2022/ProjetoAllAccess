@@ -95,3 +95,65 @@ a, a:focus, a:active {
     color: #000f;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.coluna {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+.coluna img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+.coluna2 {
+    width: 100%;
+    padding: 10px 10px;
+
+}
+
+    .coluna2 img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+/* Remove extra left and right margins, due to padding */
+.linha {
+    margin: 0 -5px;
+}
+
+    /* Clear floats after the columns */
+    .linha:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .coluna .coluna2 {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.cartao {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    padding: 16px;
+    text-align: center;
+    /*background-color: #f1f1f1;*/
+}
+
+.cartao2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    /*background-color: #f1f1f1;*/
+}

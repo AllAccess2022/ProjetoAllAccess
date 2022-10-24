@@ -1,7 +1,53 @@
 ﻿@{
     ViewData["Title"] = "Física - Índice";
 }
-<br />
+<div class="row">
+    <div class="col-md-2">
+        <!--<div >
+            <ul >
+                <h4 style="text-align:center">Matematica</h4>
+                <li class="rounded"><a asp-controller="Mat" asp-action="NocoesConjuntos" class=" text-decoration-none">Noções de Conjuntos</a></li>
+                <h4 style="text-align:center">Fisica</h4>
+                <li class="rounded "><a asp-controller="Fis" asp-action="EnergiaIndex" class="text-decoration-none ">Energia </a></li>
+                <li class="rounded"><a asp-controller="Fis" asp-action="TrabalhoIndex" class="text-decoration-none ">Trabalho</a></li>
+                <li class="rounded"><a asp-controller="Fis" asp-action="LeiNewtonIndex" class="text-decoration-none ">Leis de Newton</a></li>
+            </ul>
+         </div>-->
+    </div>
+    <div class="col-md-8">
+        <div class="coluna2">
+            <div class="cartao2">
+                <img src="/images/index/indexFisLogo.jpg" />
+            </div>
+        </div>
+        <div class="linha">
+
+            <div class="coluna">
+                <div class="cartao">
+                    <a asp-controller="Fis" asp-action="EnergiaIndex"><img src="/images/index/indexEnergia.jpg" /></a>
+                </div>
+            </div>
+
+            <div class="coluna">
+                <div class="cartao">
+                    <a asp-controller="Fis" asp-action="TrabalhoIndex"><img src="/images/index/indexTrabalho.jpg" /></a>
+                </div>
+            </div>
+
+            <div class="coluna">
+                <div class="cartao">
+                    <a asp-controller="Fis" asp-action="LeiNewtonIndex"><img src="/images/index/indexDinamica.jpg" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <!--
+            <h4 style="text-align:center">Dashboard</h4>
+        -->
+    </div>
+</div>
+<!--
 <div class="container" id="container-fisica-index">
     <br />
     
@@ -38,5 +84,5 @@
     <br /><br />
 
 </div>
-<br />
+<br />-->
 

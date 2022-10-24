@@ -63,17 +63,15 @@
 
                             </ul>
                         </li>
-                        <!--
+                        
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vestibulares </a>
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vestibular </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item btn btn-outline-primary" asp-controller="Home" asp-action="Enem">ENEM</a></li>
+                                <li><a class="dropdown-item btn btn-outline-primary" asp-controller="Vestibular" asp-action="ExerciciosVestibular">Exercicio Vestibulares</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item btn btn-outline-primary" asp-controller="Home" asp-action="Unicamp">UNICAMP</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item btn btn-outline-primary" asp-controller="Home" asp-action="Fuvest">FUVEST</a></li>
+                                <li><a class="dropdown-item btn btn-outline-primary" asp-controller="Vestibular" asp-action="IndexVestibular">Noticia</a></li>
                             </ul>
-                        </li>-->
+                        </li>
                         <li class"nav-item"><a class="nav-link active" href="https://discord.gg/HzfanyhCTH" target="_blank" rel="noopener noreferrer">Discord</a></li>
                     </ul>
                     
@@ -91,35 +89,9 @@
     </header>
     <!--HEADER-->
     <!--MAIN BODY-->
-    <div>
-        <div class=" w3-quarter">
-            &nbsp;
-            <div style="position:fixed;margin-right: 10px;">
-                <div class=" w3-bar-block d-grid " style="font-size:small;">
-                    <h4 style="text-align:center">Matematica</h4>
-                    <ul class=" mb-auto">
-                        <li class="rounded"><a asp-controller="Mat" asp-action="NocoesConjuntos" class=" text-decoration-none">Noções de Conjuntos</a></li>
-                    </ul>
-                </div>
-                <div class=" w3-bar-block d-grid " style="font-size:small">
-                    <h4 style="text-align:center">Fisica</h4>
-                    <ul>
-                        <li class="rounded "><a asp-controller="Fis" asp-action="EnergiaIndex" class="text-decoration-none ">Energia </a></li>
-                        <li class="rounded"><a asp-controller="Fis" asp-action="TrabalhoIndex" class="text-decoration-none ">Trabalho</a></li>
-                        <li class="rounded"><a asp-controller="Fis" asp-action="LeiNewtonIndex" class="text-decoration-none ">Leis de Newton</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="w3-twothird w3-content justify-content-center">
             <main role="main" class="bd-main order-1">
                 @RenderBody()
             </main>
-        </div>
-        <div class="w3-quarter">
-            &nbsp;
-        </div>
-    </div>
     <!--MAIN BODY-->
     <!--FOOTER-->
     <footer>
