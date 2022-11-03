@@ -12,6 +12,29 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
-
+        public IActionResult ExerciciosEnem1()
+        {
+            return View();
+        }
+        public IActionResult ExerciciosEnem2()
+        {
+            return View();
+        }
+        public IActionResult ExerciciosEnemFis1()
+        {
+            return View();
+        }
+        public IActionResult ExerciciosEnemFis2()
+        {
+            return View();
+        }
+        public IActionResult ExerciciosFuvest()
+        {
+            return View();
+        }
+        public IActionResult ExerciciosComvest()
+        {
+            return View();
+        }
     }
 }
