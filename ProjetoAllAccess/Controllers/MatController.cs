@@ -28,6 +28,52 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
+        public IActionResult Estatistica()
+        {
+            return View();
+        }
+        public IActionResult Estatistica1()
+        {
+            return View();
+        }
+
+        public IActionResult Estatistica2()
+        {
+            return View();
+        }
+        public IActionResult Estatistica3()
+        {
+            return View();
+        }
+        public IActionResult ConjuntosNumericos()
+        {
+            return View();
+        }
+        public IActionResult ConjuntosNumericos1()
+        {
+            return View();
+        }
+        public IActionResult ConjuntosNumericos2()
+        {
+            return View();
+        }
+        public IActionResult ConjuntosNumericos3()
+        {
+            return View();
+        }
+        public IActionResult ConjuntosNumericos4()
+        {
+            return View();
+        }
+        public IActionResult ConjuntosNumericos5()
+        {
+            return View();
+        }
+        public IActionResult ConjuntosNumericos6()
+        {
+            return View();
+        }
+
 
         public IActionResult MatIndex()
         {
