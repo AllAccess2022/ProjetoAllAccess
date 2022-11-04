@@ -14,17 +14,61 @@
     </div>
 
 }
-<form asp-controller="Login" asp-action="Entrar" method="post">
-    <div class="mb-3">
-        <label for="login" class="form-label">Email:</label>
-        <input type="email" asp-for="Login" class="form-control" id="login" aria-describedby="emailAjuda">
-        @Html.ValidationMessageFor(x => x.Login)
+<div class="container-login">
+        <form asp-controller="Login" asp-action="Entrar" method="post">
+            <div class="mb-3">
+                <label for="login" class="form-label">Email:</label>
+                <input type="email" asp-for="Login" class="form-control" id="login" aria-describedby="emailAjuda">
+                @Html.ValidationMessageFor(x => x.Login)
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" asp-for="Senha" class="form-control" id="senha">
+                @Html.ValidationMessageFor(x => x.Senha)
+            </div>
+            <button type="submit" class="btn btn-primary btn-success">Login</button>
+            <button type="button" class="btn btn-primary btn-danger"><a asp-controller="Usuarios" asp-action="Index" style="text-decoration-none">Criar Conta</a></button>
+        </form>
+</div>
+<div class="container-login" style="background-color:lightskyblue">
+    <div class="row-login">
+        <div class="coluna-login-66">
+            <h1 class="xlarge-font" style="color:aqua"><b>All Access</b></h1>
+            <h1 class="large-font" style="color:cornflowerblue"><b>O que é?</b></h1>
+            <p><span style="font-size:36px">Estude e compartilhe.</span><br />
+                Estude conosco e compartilhe experiencias com a comunidade.</p>
+        </div>
+        <div class="coluna-login-33">
+            <img src="/images/All acess - Logo.jpg" />
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="senha" class="form-label">Senha</label>
-        <input type="password" asp-for="Senha" class="form-control" id="senha">
-        @Html.ValidationMessageFor(x => x.Senha)
+</div>
+
+<div class="container-login " style="background-color:antiquewhite">
+    <div class="row-login">
+        <div class="coluna-login-33">
+            <img src="https://w7.pngwing.com/pngs/193/759/png-transparent-faq-question-american-home-detectives-quilt-trail-boredgamer-faq-text-logo-united-states.png" width=" 335" />
+        </div>
+        <div class="coluna-login-66" style="float:right">
+            <h1 class="xlarge-font" style="color:lightblue"><b>Perguntas frequentes</b></h1>
+            <h1 class="large-font" style="color:aqua"><b>FAQ</b></h1>
+            <p><span style="font-size:36px">Para mais informações.</span><br />
+                Conheça mais a aplicação e tire suas duvidas.</p>
+            <button class="button-login" style="background-color:lightblue;">Acesse</button>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-success">Login</button>
-    <button type="button" class="btn btn-primary btn-danger"><a asp-controller="Usuarios" asp-action="Index" style="text-decoration-none">Criar Conta</a></button>
-</form>
+</div>
+
+<div class="container-login" style="background-color:aliceblue">
+    <div class="row-login">
+        <div class="coluna-login-66" >
+            <h1 class="xlarge-font" style="color:lightblue"><b>Discord</b></h1>
+            <h1 class="large-font" style="color:aqua"><b>Canal da galera</b></h1>
+            <p><span style="font-size:36px">All Access no Discord.</span></p><br />
+            Acesse nosso canal no discord e fique por dentro!
+        </div>
+        <div class="coluna-login-33">
+            <img src="https://logosmarcas.net/wp-content/uploads/2020/12/Discord-Emblema-650x366.png"  />
+        </div>
+    </div>
+</div>
