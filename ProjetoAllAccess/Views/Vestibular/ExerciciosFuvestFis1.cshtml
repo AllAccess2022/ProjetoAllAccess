@@ -1,0 +1,516 @@
+﻿@{
+    ViewData["Title"] = "Exercícios - Fuvest";
+}
+<br />
+<style>
+    input[type='checkbox'] { 
+        display: none; 
+    } 
+
+    .wrap-collabsible { 
+        margin: 1.4rem 0;
+    } 
+
+    .lbl-toggle { 
+        border-radius: 15px 50px 30px;
+        display: block; 
+        font-weight: bold; 
+        font-family: monospace; 
+        font-size: 1.2rem; 
+        text-transform: uppercase; 
+        text-align: center; 
+        padding: 1rem; 
+        color: #DDD; 
+        background: darkblue; 
+        cursor: pointer;  
+        transition: all 0.25s ease-out;
+        
+
+    } 
+    .lbl-toggle:hover { 
+        color: #FFF; 
+    } 
+
+    .lbl-toggle::before { 
+        content: ' '; 
+        display: inline-block; 
+        border-top: 10px solid transparent; 
+        border-bottom: 10px solid transparent; 
+        border-left: 10px solid currentColor; 
+        vertical-align: middle; 
+        margin-right: .7rem; 
+        transform: translateY(-2px); 
+        transition: transform .2s ease-out; 
+    } 
+    .toggle:checked+.lbl-toggle::before { 
+        transform: rotate(90deg) translateX(-3px); 
+    } 
+    .collapsible-content 
+    { 
+        max-height: 0px; 
+        overflow: hidden; 
+        transition: max-height .25s ease-in-out; 
+    } 
+    .toggle:checked + .lbl-toggle + .collapsible-content 
+    { 
+        max-height: 800px; 
+    } 
+
+    .toggle:checked+.lbl-toggle 
+    { 
+      border-bottom-right-radius: 0; 
+      border-bottom-left-radius: 0; 
+    } 
+    .collapsible-content .content-inner 
+    { 
+      background: rgba(0, 105, 255, .2); 
+      border-bottom: 1px solid rgba(0, 105, 255, .45); 
+      border-bottom-left-radius: 7px; 
+      border-bottom-right-radius: 7px; 
+      padding: .5rem 1rem; 
+    } 
+    .collapsible-content p 
+      { 
+          margin-bottom: 0; 
+      }
+
+</style>
+
+<div class="container" id="container-1">
+    <h1>Exercícios FUVEST - Física</h1><br />
+
+    <h4><i>
+            (FUVEST/2019 – Primeira fase)<br /><br />
+            À medida que a parcela de ar se eleva na atmosfera, nos limites da troposfera, 
+            a temperatura do ar decai a uma razão de 1 °C a cada 100 metros (Razão Adiabática Seca ‐ RAS) 
+            ou 0,6 °C a cada 100 metros (Razão Adiabática Úmida ‐ RAU).<br />
+
+            <img src="~/images/Vest/img70.png" /><br /><br />
+
+            Considerando os conceitos e a ilustração, é correto afirmar que as temperaturas do ar, em graus 
+            Celsius, T1 e T2, são, respectivamente,<br /><br />
+            Note e adote: Utilize RAS ou RAU de acordo com a presença ou não de ar saturado. <br /><br />
+            Tar: temperatura do ar.
+
+
+            <br /> <br />
+            a) Junho; 7º.<br />
+            b) Dezembro; 7º<br />
+            c) Junho; 23º<br />
+            d) Dezembro; 23º<br />
+            e) Junho; 0,3º<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible1" class="toggle" type="checkbox">
+        <label for="collapsible1" class="lbl-toggle" id="gabarito1">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito1">
+            <div class="content-inner">
+                <p><i>
+                    Alternativa Correta = A. <br /><br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div> <br /> <br />
+
+    <h4>
+        <i>
+            (Fuvest 2018 – Primeira Fase)<br /><br />
+            Dentre os candidatos que fizeram provas de matemática, português e inglês num concurso, 
+            20 obtiveram nota mínima para aprovação nas três disciplinas. Além disso, sabe se que:<br /><br />
+
+            I. 14 não obtiveram nota mínima em matemática;<br />
+            II. 16 não obtiveram nota mínima em português;<br />
+            III. 12 não obtiveram nota mínima em inglês;<br />
+            IV. 5 não obtiveram nota mínima em matemática e em português;<br />
+            V. 3 não obtiveram nota mínima em matemática e em inglês;<br />
+            VI. 7 não obtiveram nota mínima em português e em inglês e<br />
+            VII. 2 não obtiveram nota mínima em português, matemática e inglês.<br /><br />
+            A quantidade de candidatos que participaram do concurso foi
+
+
+            <br /> <br />
+            A) 44.<br />
+            B) 46.<br />
+            C) 47.<br />
+            D) 48.<br />
+            E) 49.<br />
+
+        </i>
+    </h4> 
+
+    <div class="wrap-collabsible">
+        <input id="collapsible2" class="toggle" type="checkbox">
+        <label for="collapsible2" class="lbl-toggle" id="gabarito2">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito2">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = E.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br /> <br />
+
+    <h4>
+        <i>
+            (Fuvest 2017 – Primeira Fase)  <br /><br />
+            Sejam a e b dois números inteiros positivos. Diz-se que a e b são equivalentes se a soma dos divisores 
+            positivos de a coincide com a soma dos divisores positivos de b. Constituem dois inteiros positivos 
+            equivalentes:
+
+
+            <br /> <br />
+            a) 8 e 9<br />
+            b) 9 e 11<br />
+            c) 10 e 12<br />
+            d) 15 e 20<br />
+            e) 16 e 25<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible3" class="toggle" type="checkbox">
+        <label for="collapsible3" class="lbl-toggle" id="gabarito3">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito3">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = E.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2016 – Primeira Fase) <br /><br />
+            De 1869 até hoje, ocorreram as seguintes mudanças de moeda no Brasil:<br /><br />
+
+            (1) em 1942, foi criado o cruzeiro, cada cruzeiro valendo mil réis;<br />
+            (2) em 1967, foi criado o cruzeiro novo, cada cruzeiro novo valendo mil cruzeiros; em 1970, 
+            o cruzeiro novo voltou a se chamar apenas cruzeiro;<br />
+            (3) em 1986, foi criado o cruzado, cada cruzado valendo mil cruzeiros;<br />
+            (4) em 1989, foi criado o cruzado novo, cada um valendo mil cruzados; em 1990, o 
+            cruzado novo passou a se chamar novamente cruzeiro;<br />
+            (5) em 1993, foi criado o cruzeiro real, cada um valendo mil cruzeiros;<br />
+            (6) em 1994, foi criado o real, cada um valendo 2.750 cruzeiros reais.<br />
+
+            Quando morreu, em 1869, Brás Cubas possuía 300 contos. Se esse valor tivesse ficado 
+            até hoje em uma conta bancária, sem receber juros e sem pagar taxas, e se, a cada mudança de 
+            moeda, o depósito tivesse sido normalmente convertido para a nova moeda, o saldo hipotético dessa 
+            conta seria, aproximadamente, de um décimo de:<br /><br />
+            Dados:<br /><br />
+            Um conto equivalia a um milhão de réis.<br />
+            Um bilhão é igual a 10<sup>9</sup> e um trilhão é igual a 10<sup>12</sup>.
+
+            <br /> <br />
+            a) Real.<br />
+            b) Milésimo de real.<br />
+            c) Milionésimo de real.<br />
+            d) Bilionésimo de real.<br />
+            e) Trilionésimo de real.<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible4" class="toggle" type="checkbox">
+        <label for="collapsible4" class="lbl-toggle" id="gabarito4">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito4">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = D.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2014 – Primeira Fase) <br /><br />
+            O numero real x, que satisfaz 3 < x < 4, tem uma expansão decimal na qual os 999.999 
+            primeiros dígitos à direita da virgula são iguais a 3. Os 1.000.001 dígitos seguintes são 
+            iguais a 2 e os restantes são iguais a zero. Considere as seguintes afirmações:<br /><br />
+
+            (I) x é racional<br />
+            (II) ≥ 103103<br />
+            (III) x·10<sup>2.000.000</sup> é um inteiro par.<br /><br />
+            Então,
+
+
+            <br /> <br />
+            a) Nenhuma das três afirmações é verdadeira.<br />
+            b) Apenas as afirmações I e II são verdadeiras.<br />
+            c) Apenas a afirmação I é verdadeira.<br />
+            d) Apenas a afirmação II é verdadeira.<br />
+            e) Apenas a afirmação III é verdadeira.<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible5" class="toggle" type="checkbox">
+        <label for="collapsible5" class="lbl-toggle" id="gabarito5">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito5">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = E.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2020 – Primeira Fase)<br /><br />
+            Carros que saem da cidade A rumo a alguma das cidades turísticas E, F e G fazem caminhos diversos, 
+            passando por pelo menos uma das cidades B, C e D, apenas no sentido indicado pelas setas, como mostra 
+            a figura. Os números indicados nas setas são as probabilidades, dentre esses carros, de se ir de uma cidade a 
+            outra.<br />
+
+            <img src="/images/Vest/img35.png" /><br />
+
+            Nesse cenário, a probabilidade de um carro ir de A a F é
+
+
+            <br /> <br />
+            a) 0,120.<br />
+            b) 0,216.<br />
+            c) 0,264.<br />
+            d) 0,336.<br />
+            e) 0,384.<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible6" class="toggle" type="checkbox">
+        <label for="collapsible6" class="lbl-toggle" id="gabarito6">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito6">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = E.<br />
+
+                        Para ir de A a F, há três caminhos possíveis: ACF, ABCF e ABDF.<br />
+                        Em cada caminho, as probabilidades são dadas pelos produto:<br />
+
+                        ACF 🡪 0,2 · 0,6 = 0,12<br />
+                        ABCF 🡪 0,8 · 0,1 · 0,6 = 0,048<br />
+                        ABDF 🡪 0,8 · 0,9 · 0,3 = 0,216<br />
+                        Como os caminhos são todos alternativos, a probabilidade total de o carro ir de A a F é dada pela soma
+                        ACF + ABCF + ABDF<br />
+                        0,12 + 0,048 + 0,216 = 0,384<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2020 – Primeira Fase)<br /><br />
+            O cilindro de papelão central de uma fita crepe tem raio externo de 3 cm. A fita tem espessura de 
+            0,01 cm e dá 100 voltas completas. Considerando que, a cada volta, o raio externo do rolo é aumentado 
+            no valor da espessura da fita, o comprimento total da fita é de, aproximadamente,<br />
+
+            <img src="/images/Vest/img36.png" /><br />
+
+
+            <br /> <br />
+            A) 9,4 m.<br />
+            B) 11,0 m.<br />
+            C) 18,8 m.<br />
+            D) 22,0 m.<br />
+            E) 25,1 m.<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible7" class="toggle" type="checkbox">
+        <label for="collapsible7" class="lbl-toggle" id="gabarito7">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito7">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = D.<br />
+
+                        Sabendo que o comprimento de uma circunferência é dado por C=2 · π · R, temos 
+                        a seguinte sequência de comprimentos ao enrolar a fita no cilintro:<br />
+
+                         <img src="/images/Vest/img37.png" /><br />
+
+                        Dessa forma, o comprimento total da fita é dado por:<br />
+
+                        <img src="/images/Vest/img38.png" height="400px"/><br />
+
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2020 – Primeira Fase)<br /><br />
+            Um objeto é formado por 4 hastes rígidas conectadas em seus extremos por articulações, cujos centros 
+            são os vértices de um paralelogramo. As hastes movimentam-se de tal forma que o paralelogramo permanece 
+            sempre no mesmo plano. A cada configuração desse objeto, associa-se d, a medida do menor ângulo interno 
+            do paralelogramo. A área da região delimitada pelo paralelogramo quando d = 90° é A.<br />
+
+
+            <img src="/images/Vest/img39.png" /><br /><br />
+
+            Para que a área da região delimitada pelo paralelogramo seja A2 o valor de θ é necessariamente, igual a:
+
+            <br /> <br />
+            A) 15°<br />
+            B) 22,5°<br />
+            C) 30°<br />
+            D) 45°<br />
+            E) 60<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible8" class="toggle" type="checkbox">
+        <label for="collapsible8" class="lbl-toggle" id="gabarito8">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito8">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = C.<br />
+
+                        Chamando os lados do retângulo de x e y, temos a seguinte relação entre suas áreas:<br />
+
+                        <img src="/images/Vest/img40.png" /><br /><br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2020 – Primeira Fase)<br /><br />
+            A menor esfera na qual um paralelepípedo reto-retângulo de medidas 7 cm x 4 cm x 4 cm está 
+            inscrito tem diâmetro de
+
+
+            <br /> <br />
+            A) 9 cm.<br />
+            B) 10 cm.<br />
+            C) 11 cm.<br />
+            D) 12 cm.<br />
+            E) 15 cm.<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible9" class="toggle" type="checkbox">
+        <label for="collapsible9" class="lbl-toggle" id="gabarito9">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito9">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = A.<br />
+                        Para que a esfera tangencie todos os vértices do paralelepípedo, seu diâmetro será 
+                        igual à diagonal do paralelepípedo.<br />
+
+                        <img src="/images/Vest/img41.png" /><br /><br />
+
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2020 – Primeira Fase) <br /><br />
+            A função E de Euler determina, para cada número natural n, a quantidade de números naturais 
+            menores do que n cujo máximo divisor comum com n é igual a 1.<br />
+            Por exemplo, E (6) = 2 pois os números menores do que 6 com tal propriedade são 1 e 5. <br />
+            Qual o valor máximo de E (n), para n de 20 a 25?
+
+
+            <br /> <br />
+            A) 19<br />
+            B) 20<br />
+            C) 22<br />
+            D) 24<br />
+            E) 25<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible10" class="toggle" type="checkbox">
+        <label for="collapsible10" class="lbl-toggle" id="gabarito10">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito10">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = C.<br />
+                        A descrição da função de Euler indica que devemos selecionar, a cada número n, todos os 
+                        números menores que n, que sejam primos com n.<br />
+                        Para n = 20, temos:<br />
+
+                        <img src="/images/Vest/img42.png" /><br /><br />
+
+                        Para n=21, temos:<br />
+
+                        <img src="/images/Vest/img43.png" /><br /><br />
+
+                        Perceba que, por serem números compostos, acabamos por retirar todos os números menores que 
+                        n que tenham algum primo em comum com n.<br />
+                        Dessa forma, não há necessidade de fazermos o processo para todos os números do 
+                        exercício (entre 20 e 25), pois, nesse intervalo, só há um primo, o 23.<br />
+                        Assim, para o 23, não precisaremos retirar número algum da sequência dos números menores 
+                        que ele, pois é primo, resultando no maior resultado possível, nesse intervalo, para E(n).<br /><br />
+                        Portanto, n=23<br />
+
+                        <img src="/images/Vest/img44.png" /><br /><br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div><br /><br />
+
+    <div id="container-2" class="container" style="background-color:lightskyblue">
+    <h3><a asp-action="ExerciciosFuvest2" style="text-decoration: none">Próxima Página</a><br /></h3><br />
+    </div>
+
