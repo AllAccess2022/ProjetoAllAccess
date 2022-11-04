@@ -1,0 +1,373 @@
+﻿@{
+    ViewData["Title"] = "Exercícios - Enem";
+}
+<br />
+<style>
+    input[type='checkbox'] { 
+        display: none; 
+    } 
+
+    .wrap-collabsible { 
+        margin: 1.4rem 0;
+    } 
+
+    .lbl-toggle { 
+        border-radius: 15px 50px 30px;
+        display: block; 
+        font-weight: bold; 
+        font-family: monospace; 
+        font-size: 1.2rem; 
+        text-transform: uppercase; 
+        text-align: center; 
+        padding: 1rem; 
+        color: #DDD; 
+        background: darkblue; 
+        cursor: pointer;  
+        transition: all 0.25s ease-out;
+        
+
+    } 
+    .lbl-toggle:hover { 
+        color: #FFF; 
+    } 
+
+    .lbl-toggle::before { 
+        content: ' '; 
+        display: inline-block; 
+        border-top: 10px solid transparent; 
+        border-bottom: 10px solid transparent; 
+        border-left: 10px solid currentColor; 
+        vertical-align: middle; 
+        margin-right: .7rem; 
+        transform: translateY(-2px); 
+        transition: transform .2s ease-out; 
+    } 
+    .toggle:checked+.lbl-toggle::before { 
+        transform: rotate(90deg) translateX(-3px); 
+    } 
+    .collapsible-content 
+    { 
+        max-height: 0px; 
+        overflow: hidden; 
+        transition: max-height .25s ease-in-out; 
+    } 
+    .toggle:checked + .lbl-toggle + .collapsible-content 
+    { 
+        max-height: 1000px; 
+    } 
+
+    .toggle:checked+.lbl-toggle 
+    { 
+      border-bottom-right-radius: 0; 
+      border-bottom-left-radius: 0; 
+    } 
+    .collapsible-content .content-inner 
+    { 
+      background: rgba(0, 105, 255, .2); 
+      border-bottom: 1px solid rgba(0, 105, 255, .45); 
+      border-bottom-left-radius: 7px; 
+      border-bottom-right-radius: 7px; 
+      padding: .5rem 1rem; 
+    } 
+    .collapsible-content p 
+      { 
+          margin-bottom: 0; 
+      }
+
+</style>
+
+<div class="container" id="container-1">
+    <h1>Exercícios Enem - Eletricidade e Óptica</h1><br />
+
+    <h4><i>
+            Exercício 14) Eletricidade <br /><br />
+            (Enem 2019) Os olhos humanos normalmente têm três tipos de cones responsáveis pela 
+            percepção das cores: um tipo para tons vermelhos, um para tons azuis e outro para 
+            tons verdes. As diversas cores que enxergamos são o resultado da percepção das cores básicas, 
+            como indica a figura.
+            <img src="~/images/Vest/img28.png" /><br />
+            Para qual cartão os dois voluntários identificarão a mesma cor?
+
+
+
+            <br /> <br />
+            a)    Vermelho.<br />
+            b)    Magenta.<br />
+            c)    Amarelo.<br />
+            d)    Branco.<br />
+            e)    Azul.<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible1" class="toggle" type="checkbox">
+        <label for="collapsible1" class="lbl-toggle" id="gabarito1">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito1">
+            <div class="content-inner">
+                <p><i>
+                        Alternativa Correta = E<br />
+                        Devemos mostrar um cartão que não contenha o vermelho em sua composição. <br />
+                        Qualquer cartão que só reflita o verde ou o azul, ou que reflita o verde e o 
+                        azul (ciano) serão identificados pelos dois voluntários com a mesma cor.<br />
+
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div> <br /> <br />
+
+    <h4>
+        <i>
+            Exercício 15) Óptica <br /><br />
+            (Enem 2019) Quando se considera a extrema velocidade com que a luz se espalha por todos os lados e que, 
+            quando vêm de diferentes lugares, mesmo totalmente opostos, [os raios luminosos] se atravessam uns aos 
+            outros sem se atrapalharem, compreende-se que, quando vemos um objeto luminoso, isso não poderia ocorrer 
+            pelo transporte de uma matéria que venha do objeto até nós, como uma flecha ou bala atravessa o ar; pois 
+            certamente isso repugna bastante a essas duas propriedades da luz, principalmente a última.<br />
+
+            O texto contesta que concepção acerca do comportamento da luz?
+
+
+            <br /> <br />
+            a)    O entendimento de que a luz precisa de um meio de propagação, difundido pelos defensores da 
+            existência do éter.<br />
+            b)    O modelo ondulatório para a luz, o qual considera a possibilidade de interferência entre 
+            feixes luminosos.<br />
+            c)    O modelo corpuscular defendido por Newton, que descreve a luz como um feixe de partículas.<br />
+            d)    A crença na velocidade infinita da luz, defendida pela maioria dos filósofos gregos.<br />
+            e)    A ideia defendida pelos gregos de que a luz era produzida pelos olhos.<br />
+
+
+        </i>
+    </h4> 
+
+    <div class="wrap-collabsible">
+        <input id="collapsible2" class="toggle" type="checkbox">
+        <label for="collapsible2" class="lbl-toggle" id="gabarito2">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito2">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = C.<br />
+
+                        Newton conjecturava sobre a luz como uma formação de partículas, ao contrário do 
+                        Princípio de Huygens, que considera a luz como uma onda.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br /> <br />
+
+    <h4>
+        <i>
+            Exercicio 16) Óptica <br /><br />
+            (Enem 2016) Algumas crianças, ao brincarem de esconde-esconde, tapam os olhos com as mãos, 
+            acreditando que, ao adotarem tal procedimento, não poderão ser vistas. Essa percepção da criança 
+            contraria o conhecimento científico porque, para serem vistos, os objetos
+
+            <br /> <br />
+            a)    refletem partículas de luz (fótons), que atingem os olhos.<br />
+            b)    geram partículas de luz (fótons), convertidas pela fonte externa.<br />
+            c)    são atingidos por partículas de luz (fótons), emitidas pelos olhos.<br />
+            d)    refletem partículas de luz (fótons), que se chocam com os fótons emitidos pelos olhos.<br />
+            e)    são atingidos pelas partículas de luz (fótons), emitidas pela fonte externa e pelos olhos.<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible3" class="toggle" type="checkbox">
+        <label for="collapsible3" class="lbl-toggle" id="gabarito3">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito3">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = A.<br />
+
+                        Nosso corpo, sendo uma fonte de luz primária, reflete a luz emitida por outras fontes 
+                        luminosas, e só seremos vistos por alguém se as luzes refletidas pelos nossos corpos 
+                        atingirem os olhos de um observador.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            Exercício 17) Eletricidade <br /><br />
+            (Enem 2019) Um estudante leu em um site da internet que os povos antigos determinavam a duração 
+            das estações do ano observando a variação do tamanho da sombra de uma haste vertical projetada 
+            no solo. Isso ocorria porque, se registrarmos o tamanho da menor sombra ao longo de um dia 
+            (ao meio-dia solar), esse valor varia ao longo do ano, o que permitiu aos antigos usar esse 
+            instrumento rudimentar como um calendário solar primitivo. O estudante também leu que, ao longo 
+            de um ano (sempre ao meio-dia solar): (I) a sombra é máxima no solstício de inverno; e (II) a 
+            sombra é mínima no solstício de verão.<br />
+            O estudante, que morava em Macapá (na Linha do Equador), ficou intrigado com essas afirmações 
+            e resolveu verificar se elas eram verdadeiras em diferentes regiões do mundo. Contatou seus 
+            amigos virtuais em Salvador (região tropical) e Porto Alegre (região temperada) e pediu que 
+            eles registrassem o tamanho da menor sombra de uma haste vertical padronizada, ao longo do dia, 
+            durante um ano. Os resultados encontrados estão mostrados esquematicamente no gráfico 
+            (SV: Solstício de Verão; SI: Solstício de Inverno; E: Equinócio):<br />
+
+            <img src="~/images/Vest/img29.png" /><br />
+
+            Qual(is) cidade(s) indicada(s) no texto e no gráfico contradiz(em) a afirmação II?<br />
+
+
+            <br /> <br />
+            a)    Salvador.<br />
+            b)    Porto Alegre.<br />
+            c)    Macapá e Salvador.<br />
+            d)    Macapá e Porto Alegre.<br />
+            e)    Porto Alegre e Salvador.<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible4" class="toggle" type="checkbox">
+        <label for="collapsible4" class="lbl-toggle" id="gabarito4">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito4">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = C.<br />
+
+                        Verificando o gráfico, percebemos que em Salvador a menor sombra foi formada no meio da 
+                        primavera e no meio do verão. Já em Macapá, a menor sombra foi formada no início da primavera 
+                        e no início do outono. Ambas as situações estão em desacordo com a afirmação II.<br />
+
+
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            Exercício 18) Óptica<br /><br />
+            (Enem 2014) Folhas de papel, como as utilizadas para a impressão de documentos, são opacas 
+            e permeáveis aos líquidos. Esse material é constituído de microfibras entrelaçadas de celulose, 
+            que são transparentes à luz. Quando sobre elas se derrama glicerina, elas se tornam translúcidas. 
+            Uma imagem da superfície de uma folha de papel, ampliada por um microscópio eletrônico de varredura, 
+            pode ser vista na figura. No quadro é apresentada a razão (n) entre a velocidade da luz no vácuo e 
+            no respectivo material (celulose, glicerina ou ar).<br />
+
+            <img src="~/images/Vest/img30.png" /><br /><br />
+
+            <img src="~/images/Vest/img31.png" /><br />
+
+            Nessa situação, o papel se tornou translúcido porque a luz é
+
+
+
+            <br /> <br />
+            a)    mais refletida.<br />
+            b)    mais absorvida.<br />
+            c)    mais espalhada.<br />
+            d)    menos refratada.<br />
+            e)    menos transmitida.<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible5" class="toggle" type="checkbox">
+        <label for="collapsible5" class="lbl-toggle" id="gabarito5">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito5">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = D.<br />
+
+                        Nos meios translúcidos, raios de luz que incidem em sua superfície paralelos entre
+                        si perdem esse paralelismo ao entrar no material. Além disso, quanto mais esses raios se 
+                        espalham, mais translúcido é o meio material.<br />
+
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            Exercício 19) Eletricidade<br /><br />
+            (Enem 2019) A figura mostra, de forma esquemática, uma representação comum em diversos livros            
+            e textos sobre eclipses. Apenas analisando essa figura, um estudante pode concluir que os eclipses 
+            podem ocorrer duas vezes a cada volta completa da lua em torno da Terra. Apesar de a figura levar a 
+            essa percepção, algumas informações adicionais são necessárias para se concluir que nem o eclipse 
+            solar, nem o lunar ocorrem com tal periodicidade.<br />
+
+            <img src="~/images/Vest/img32.png" /><br />
+
+            A periodicidade dos eclipses ser diferente da possível percepção do estudante ocorre em razão de:<br />
+
+            <br /> <br />
+            a)    eclipses noturnos serem imperceptíveis da Terra<br />
+            b)    planos das órbitas da Terra e da lua serem diferentes.<br />
+            c)    distância entre a Terra e a lua variar ao longo da órbita.<br />
+            d)    eclipses serem visíveis apenas em parte da superfície da Terra.<br />
+            e)    o Sol ser uma fonte de luz extensa comparado ao tamanho da lua.<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible6" class="toggle" type="checkbox">
+        <label for="collapsible6" class="lbl-toggle" id="gabarito6">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito6">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = B.<br />
+
+                        A Terra faz sua órbita ao redor do Sol em um plano geométrico diferente daquele 
+                        em que a lua faz sua órbita ao redor da Terra.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            Exercício 20) Óptica<br /><br />
+            (Enem 2011) A figura mostra uma superfície refletora de formato parabólico que tem sido utilizada 
+            como um fogão solar. Esse dispositivo é montado de tal forma que a superfície fique posicionada sempre 
+            voltada para o Sol. Neste, a panela deve ser colocada em um ponto determinado para maior eficiência do fogão.<br />
+
+            <img src="~/images/Vest/img33.png" /><br />
+
+            Considerando que a panela esteja posicionada no ponto citado, a maior eficiência ocorre porque os raios solares:
+
+
+            <br /> <br />
+            a)    refletidos passam por esse ponto, definido como ponto de reflexão.<br />
+            b)    incidentes passam por esse ponto, definido como vértice da parábola.<br />
+            c)    refletidos se concentram nesse ponto, definido como foco da parábola.<br />
+            d)    incidentes se concentram nesse ponto, definido como ponto de incidência.<br />
+            e)    incidentes e refletidos se interceptam nesse ponto, definido como centro de curvatura.<br />
+
+        </i>
+    </h4>
+
+</div><br /><br />
+
+    <div id="container-2" class="container" style="background-color:lightskyblue">
+    <h3><a asp-action="ExerciciosEnemFis1" style="text-decoration: none">Página Anterior</a><br /></h3><br />
+    </div>
+
