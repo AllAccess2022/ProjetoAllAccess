@@ -157,3 +157,63 @@ a, a:focus, a:active {
     text-align: center;
     /*background-color: #f1f1f1;*/
 }
+
+/*Login index*/
+
+.container-login {
+    padding: 64px;
+    width:100%;
+}
+
+.row-login:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.coluna-login-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+}
+
+.coluna-login-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+}
+
+.large-font {
+    font-size: 48px;
+}
+
+.xlarge-font {
+    font-size: 64px
+}
+
+.button-login {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #04AA6D;
+}
+
+img-login {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .coluna-login-66,
+    .coluna-login-33 {
+        width: 100%;
+        text-align: center;
+    }
+
+    img-login {
+        margin: auto;
+    }
+}
