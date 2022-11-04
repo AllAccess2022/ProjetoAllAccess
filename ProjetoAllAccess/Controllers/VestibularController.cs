@@ -48,5 +48,17 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
+        public IActionResult ExerciciosComvest2()
+        {
+            return View();
+        }
+        public IActionResult ExerciciosComvestFis1()
+        {
+            return View();
+        }
+        public IActionResult ExerciciosComvestFis2()
+        {
+            return View();
+        }
     }
 }

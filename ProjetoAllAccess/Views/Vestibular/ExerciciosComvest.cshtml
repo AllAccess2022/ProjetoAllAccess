@@ -1,0 +1,610 @@
+﻿@{
+    ViewData["Title"] = "Exercícios - Comvest";
+}
+<br />
+<style>
+    input[type='checkbox'] { 
+        display: none; 
+    } 
+
+    .wrap-collabsible { 
+        margin: 1.4rem 0;
+    } 
+
+    .lbl-toggle { 
+        border-radius: 15px 50px 30px;
+        display: block; 
+        font-weight: bold; 
+        font-family: monospace; 
+        font-size: 1.2rem; 
+        text-transform: uppercase; 
+        text-align: center; 
+        padding: 1rem; 
+        color: #DDD; 
+        background: darkblue; 
+        cursor: pointer;  
+        transition: all 0.25s ease-out;
+        
+
+    } 
+    .lbl-toggle:hover { 
+        color: #FFF; 
+    } 
+
+    .lbl-toggle::before { 
+        content: ' '; 
+        display: inline-block; 
+        border-top: 10px solid transparent; 
+        border-bottom: 10px solid transparent; 
+        border-left: 10px solid currentColor; 
+        vertical-align: middle; 
+        margin-right: .7rem; 
+        transform: translateY(-2px); 
+        transition: transform .2s ease-out; 
+    } 
+    .toggle:checked+.lbl-toggle::before { 
+        transform: rotate(90deg) translateX(-3px); 
+    } 
+    .collapsible-content 
+    { 
+        max-height: 0px; 
+        overflow: hidden; 
+        transition: max-height .25s ease-in-out; 
+    } 
+    .toggle:checked + .lbl-toggle + .collapsible-content 
+    { 
+        max-height: 800px; 
+    } 
+
+    .toggle:checked+.lbl-toggle 
+    { 
+      border-bottom-right-radius: 0; 
+      border-bottom-left-radius: 0; 
+    } 
+    .collapsible-content .content-inner 
+    { 
+      background: rgba(0, 105, 255, .2); 
+      border-bottom: 1px solid rgba(0, 105, 255, .45); 
+      border-bottom-left-radius: 7px; 
+      border-bottom-right-radius: 7px; 
+      padding: .5rem 1rem; 
+    } 
+    .collapsible-content p 
+      { 
+          margin-bottom: 0; 
+      }
+
+</style>
+
+<div class="container" id="container-1">
+    <h1>Exercícios COMVEST - Matemática</h1><br />
+
+    <h4><i>
+            (UNICAMP - 2022 - 1ª fase - Caderno R)  <br /><br />
+            Certo país adquiriu 5.000.000 de doses das vacinas Alfa, Beta e Gama, pagando um preço 
+            de $40.000.000,00 pelo total. Cada dose das vacinas Alfa, Beta e Gama custou $5,00, $10,00 e $20,00, 
+            respectivamente. Sabendo que o número de doses adquiridas da vacina Beta é o triplo do número de 
+            doses adquiridas da vacina Gama, o número de doses adquiridas da vacina Alfa foi de:
+
+            <br /> <br />
+            a) 1.500.000<br />
+            b) 2.000.000<br />
+            c) 2.500.000<br />
+            d) 3.000.000<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible1" class="toggle" type="checkbox">
+        <label for="collapsible1" class="lbl-toggle" id="gabarito1">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito1">
+            <div class="content-inner">
+                <p><i>
+                    Alternativa Correta = D. <br /><br />
+
+                        Vamos chamar de x o número de doses da vacina Alfa, de y o número de 
+                        doses da vacina Beta e de z o número de doses da vacina Gama. Assim, 
+                        já temos uma primeira equação a partir da quantidade de doses e a 
+                        segunda equação a partir do custo total de todas as doses:<br />
+
+                        X + y + z = 5000000<br /><br />
+
+                        5x + 10y + 20z = 40000000<br /><br />
+
+                        Também do enunciado:<br /><br />
+
+                        Y = 3z<br /><br />
+
+                        Agora, só resolver o sistema. Substituindo a terceira equação nas outras:<br /><br />
+
+                        X + 4z = 5000000<br /><br />
+
+                        5x + 50z = 40000000<br /><br />
+
+                        Simplificando a segunda equação:<br /><br />
+
+                        X + 10z = 8000000<br /><br />
+
+                        x+4z = 5000000<br /><br />
+
+                        6z = 3000000<br /><br />
+
+                        Z = 500000doses<br /><br />
+
+                        Y = 1500000doses<br /><br />
+
+                        x = 5000000 – 4 · 500000 = 5000000 – 2000000 = 3000000<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div> <br /> <br />
+
+    <h4>
+        <i>
+            (UNICAMP - 2022 - 1ª fase - Caderno R) <br /><br />
+            Certo modelo de carro é vendido em duas versões: uma a gasolina e outra híbrida. 
+            Essa última versão conta com um motor elétrico para funcionar em baixas velocidades, 
+            reduzindo, assim, o consumo de combustível e também os índices de poluição. 
+            A versão a gasolina custa R$ 150.000,00 e a versão híbrida custa R$ 180.000,00. 
+            A tabela a seguir indica o consumo de combustível de cada uma das versões:<br /><br />
+
+            <img src="~/images/Vest/img89.png" /><br /><br />
+
+            Note que a versão híbrida é mais econômica, porém custa mais caro.<br />
+            Um motorista faz diariamente um percurso de 36 km na cidade e de 56 km na estrada. 
+            Considerando que cada litro de gasolina custa R$ 5,00 e que, ao longo do tempo, esse 
+            preço será constante e o percurso não se alterará, quantos anos de uso serão necessários 
+            para que a economia no abastecimento compense o preço mais alto pago inicialmente pelo 
+            carro híbrido?
+
+            <br /> <br />
+            a) Mais que 8 e menos que 10 anos.<br />
+            b) Mais que 10 e menos que 12 anos.<br />
+            c) Mais que 12 e menos que 14 anos.<br />
+            d) Mais que 14 e menos que 16 anos.<br />
+
+        </i>
+    </h4> 
+
+    <div class="wrap-collabsible">
+        <input id="collapsible2" class="toggle" type="checkbox">
+        <label for="collapsible2" class="lbl-toggle" id="gabarito2">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito2">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = B.<br />
+
+                        Vamos encontrar o custo por dia que o motorista tem em cada situação.<br />
+                        Utilizando a versão a gasolina:<br /><br />
+
+                        C1 = 36/12· 5 + 56/14 · 5<br />
+
+                        C1=3 · 5+4 · 5 = 15+20 = 35<br /><br />
+
+                        Utilizando a versão híbrida:<br /><br />
+
+                        C2 = 36/18· 5 + 56/16 · 5<br />
+
+                        C2=2 · 5 + 3,5 · 5 = 10 + 17,5 = 27,5<br />
+
+                        A diferença de custo dos carros é 180000 − 150000 = 30000<br />
+
+                        A diferença de custo no percurso diário é 35−27,5=7,5<br /><br />
+
+                        Vamos encontrar quantos anos são necessários para a diferença ser compensada:<br /><br />
+
+                        7,5 · 365 · x = 30000<br />
+
+                        X = 10,95 anos<br />
+
+                        Logo, o tempo necessário é maior que 10 e menor que 12 anos.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <br /> <br />
+
+    <h4>
+        <i>
+            (UNICAMP - 2022 - 1ª fase - Caderno R)  <br /><br />
+            As figuras abaixo ilustram, respectivamente, os gráficos das funções y = f(x) e y = g(x).<br /><br />
+
+            <img src="~/images/Vest/img90.png" /><br /><br />
+
+            <img src="~/images/Vest/img91.png" /><br /><br />
+            Então f(g(−1)) − g(f(1)) vale: 
+
+
+
+            <br /> <br />
+            a) 1<br />
+            b) 2<br />
+            c) 3<br />
+            d) 4<br />
+            
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible3" class="toggle" type="checkbox">
+        <label for="collapsible3" class="lbl-toggle" id="gabarito3">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito3">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = D.<br />
+
+                        Queremos encontrar f(g(-1) - g(f(1)). Pelos gráficos dados:<br /><br />
+
+                        g(-1) = - 1 e f(1) = 0. Substituindo na equação elucidada, temos:<br />
+
+                        f(-1) - g(0) , mas f(-1) = 2 e g(0) = -2, Logo, pela segunda substituição, temos:<br />
+
+                        f(-1) - g(0) = 2 - (-2) = 2+ 2 = 4<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (UNICAMP - 2022 - 1ª fase - Caderno R) <br /><br />
+            Leia o texto para responder à questão <br /><br />
+
+            Para conter uma certa epidemia viral, uma vacina será aplicada a uma população. Sabe-se que:<br />
+
+            A efetividade de uma vacina pode ser entendida como sendo a porcentagem dos indivíduos vacinados 
+            que estarão imunes à doença;<br />
+            E para controlar a epidemia, a porcentagem mínima de uma dada população a ser imunizada é dada 
+            pela fórmula I(R0) = 100(R0 - 1)/R0, em que R0 > 1 é um valor associado às características da epidemia. 
+            Assume-se, ainda, que uma eventual imunização somente é adquirida por meio da vacina.<br />
+
+            Em relação à epidemia e à vacinação, é correto afirmar que:
+
+            <br /> <br />
+            a) a porcentagem mínima da população que deve ser vacinada para controlar a epidemia é sempre maior que 50%<br />
+            b) para uma vacina, quanto maior R0, menor a porcentagem mínima da população que deve ser vacinada para controlar a epidemia.<br />
+            c) para uma vacina, quanto maior R0 maior a porcentagem mínima da população que deve ser vacinada para controlar a epidemia.<br />
+            d) para um dado R0, quanto maior a efetividade da vacina, maior a porcentagem mínima da população que deve ser vacinada para controlar a epidemia.<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible4" class="toggle" type="checkbox">
+        <label for="collapsible4" class="lbl-toggle" id="gabarito4">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito4">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = C.<br />
+                        Alternativa A) Incorreto, pois para um R0 de, por exemplo, 1,1 encontra-se valores de I(R0) menores 
+                        do que 50%.<br />
+                        Alternativa B) Incorreto, pois a função I(R0) é crescente. Logo, quanto maior o R0 maior é 
+                        a porcentagem mínima da população a ser vacinada.<br />
+                        Alternativa C) Correto, pois a função I(R0) é crescente. Logo, quanto maior o R0 maior é 
+                        a porcentagem mínima da população a ser vacinada.<br />
+                        Alternativa D) Incorreto, pois a função I(R0) diz respeito apenas à quantidade mínima 
+                        de pessoas imunizadas em relação ao nível da epidemia, a efetividade da vacina garante 
+                        que mais das pessoas vacinadas estejam imunizadas, logo, alcança uma imunização maior, 
+                        o que contradiz a alternativa.<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (UNICAMP - 2022 - 1ª fase - Caderno R)  <br /><br />
+            Leia o texto abaixo e responda o que é solicitado sobre o mesmo.<br /><br />
+            Para conter certa epidemia viral, uma vacina será aplicada a uma população. Sabe-se que:<br />
+            a efetividade de uma vacina pode ser entendida como sendo a porcentagem dos indivíduos vacinados que 
+            estarão imunes à doença; e para controlar a epidemia, a porcentagem mínima de uma dada população a ser 
+            imunizada é dada pela fórmula I(R0) = 100(R0 - 1)/R0, em que R0 > 1 é um valor associado às características 
+            da epidemia. Assume-se, ainda, que uma eventual imunização somente é adquirida por meio da vacina.<br />
+            Assuma que R0 = 2. Sabendo que uma dada vacina tem 80% de efetividade, em qual dos intervalos se encontra 
+            a porcentagem mínima da população que deve ser vacinada para controlar a epidemia?
+
+
+            <br /> <br />
+            a) Entre 46% e 55%.<br />
+            b) Entre 56% e 65%.<br />
+            c) Entre 66% e 75%.<br />
+            d) Entre 76% e 85%.<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible5" class="toggle" type="checkbox">
+        <label for="collapsible5" class="lbl-toggle" id="gabarito5">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito5">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = B.<br />
+                        Para R0=2, temos<br /><br />
+
+                        I(2) = (100 ⋅ 1)/2 = 50<br />
+
+                        Logo, para controlar esta epidemia, precisa-se que no mínimo 50% da população 
+                        esteja vacinada. Porém, como a vacina é 80% eficaz, é preciso encontrar um valor 
+                        de forma que 80% da população vacinada se iguale a 50% da população total.<br /><br />
+
+                        Chamando de V a porcentagem da população a ser vacinada:<br /><br />
+                        0,8V = 50<br />
+                        V = 62,5<br /><br />
+
+                        Logo 62,5% da população deve ser vacinada para controlar uma epidemia de R0 = 2<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (UNICAMP - 2022 - 1ª fase - Caderno R)<br /><br />
+            Um círculo está inscrito em um quadrilátero ABCD. Seja T o ponto de tangência do lado DA com o 
+            círculo. Sabe-se que as medidas dos lados AB, BC e CD formam, nesta ordem, uma progressão aritmética 
+            crescente de números inteiros e que a medida do lado DA é 3. Considerando que a medida do segmento TA é 
+            um número inteiro, as medidas dos lados AB, BC e CD são, respectivamente:
+
+  
+            <br /> <br />
+            a) 1, 3, 5.<br />
+            b) 2, 3, 4.<br />
+            c) 2, 4, 6.<br />
+            d) 3, 4, 5.<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible6" class="toggle" type="checkbox">
+        <label for="collapsible6" class="lbl-toggle" id="gabarito6">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito6">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = B.<br />
+
+                        <img src="~/images/Vest/img92.png" /><br /><br />
+
+                        Veja essa figura. Note que a-r, a, a+r é uma progressão aritmética, como está no 
+                        enunciado. Além disso, x é um valor inteiro. <br />
+
+                        Segundo o Teorema de Pitot: <br /><br />
+
+                        AB+CD=BC+DA <br />
+                        a − r +a + r = a+3 <br />
+                        2a = a + 3 <br />
+                        a = 3 <br /><br />
+
+                        Agora sabemos que o valor intermediário da sequência mede 3, o que restringe nossa 
+                        resposta às alternativas A e B. <br /><br />
+
+                        Se A for a alternativa correta, temos que AB mede 1. Mas, pelo Teorema do Bico, 
+                        sabemos que AT = AP e, assim, x teria um valor menor que 1, que não seria um valor 
+                        inteiro, o que foge ao enunciado. <br /><br />
+
+                        Dessa forma, por exclusão, temos que a alternativa correta é a Letra B. <br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (UNICAMP - 2022 - 1ª fase - Caderno R) <br /><br />
+            Pedra-papel-tesoura, também chamado jankenpon ou jokempô, é um jogo recreativo para duas pessoas. 
+            Nesse jogo, os participantes usam as mãos para representar os símbolos de pedra, papel e tesoura, 
+            conforme mostrado nos emojis a seguir:<br /><br />
+
+            <img src="~/images/Vest/img93.png" /><br /><br />
+
+            Pelas regras do jogo, o participante que escolher “pedra” ganha do que escolher tesoura;
+            o participante que escolher tesoura ganha do que escolher papel; por fim, o que escolher papel 
+            ganha do que escolher pedra. Se ambos escolherem os mesmos símbolos, eles empatam.<br /><br />
+
+            Admitindo que os participantes escolhem os símbolos com igual probabilidade, qual a chance 
+            de acontecer pelo menos um empate em três partidas?
+
+
+            <br /> <br />
+            a) 16/17 <br />
+            b) 17/27 <br />
+            c) 18/27 <br />
+            d) 19/27 <br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible7" class="toggle" type="checkbox">
+        <label for="collapsible7" class="lbl-toggle" id="gabarito7">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito7">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = D.<br />
+
+                        Considerando os dois jogadores, independente do que um deles escolher, existe a probabilidade de 
+                        1/3 de o outro jogador empatar.<br />
+                        Logo, 1 – 13 = 231 – 13 = 23 de não haver empate.<br />
+                        Para se considerar a probabilidade de que haja pelo menos um empate em três partidas, 
+                        pode-se calcular todas as possibilidades (1) e subtrair a probabilidade de não ocorrerem 
+                        empates em 3 partidas seguidas. <br /><br />
+                        Logo:<br />
+                        1 -  2/3 ⋅ 2/3 ⋅ 2/3 → 1 − 8/27 = 19/27<br />
+ 
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (UNICAMP - 2022 - 1ª fase - Caderno R)  <br /><br />
+
+            O polinômio p(x) = 2x3 + ax2 + bx + c é divisível por 2x2 − x + 4. O valor de c + 2b − a é:
+
+            <br /> <br />
+            A) 9<br />
+            B) 15<br />
+            C) 21<br />
+            D) 25<br />
+
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible8" class="toggle" type="checkbox">
+        <label for="collapsible8" class="lbl-toggle" id="gabarito8">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito8">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = A.<br />
+
+                        Se o polinômio p(x)=2x3 + ax2 + bx + c é divisível pelo polinômio p(x)=2x2−x+4, 
+                        então ele deixa resto zero quando efetuamos a divisão. Então:<br /><br />
+
+                        <img src="~/images/Vest/img94.png" /><br /><br />
+
+                        (a+1)x2+(b−4)x+c=2x2−x+4<br />
+
+                        Como o resto é ZERO basta igualarmos:<br /><br />
+
+                        a+1 = 2 <br />
+                        a = 1<br />
+                        b-4 = -1 <br />
+                        b = 3<br />
+                        c = 4<br />
+
+                        Substituindo na equação dada: 4 + 2.3 -1 = 9<br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2020 – Primeira Fase)<br /><br />
+            A menor esfera na qual um paralelepípedo reto-retângulo de medidas 7 cm x 4 cm x 4 cm está 
+            inscrito tem diâmetro de
+
+
+            <br /> <br />
+            A) 9 cm.<br />
+            B) 10 cm.<br />
+            C) 11 cm.<br />
+            D) 12 cm.<br />
+            E) 15 cm.<br />
+
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible9" class="toggle" type="checkbox">
+        <label for="collapsible9" class="lbl-toggle" id="gabarito9">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito9">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = A.<br />
+                        Para que a esfera tangencie todos os vértices do paralelepípedo, seu diâmetro será 
+                        igual à diagonal do paralelepípedo.<br />
+
+                        <img src="/images/Vest/img41.png" /><br /><br />
+
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h4>
+        <i>
+            (Fuvest 2020 – Primeira Fase) <br /><br />
+            A função E de Euler determina, para cada número natural n, a quantidade de números naturais 
+            menores do que n cujo máximo divisor comum com n é igual a 1.<br />
+            Por exemplo, E (6) = 2 pois os números menores do que 6 com tal propriedade são 1 e 5. <br />
+            Qual o valor máximo de E (n), para n de 20 a 25?
+
+
+            <br /> <br />
+            A) 19<br />
+            B) 20<br />
+            C) 22<br />
+            D) 24<br />
+            E) 25<br />
+
+        </i>
+    </h4>
+
+    <div class="wrap-collabsible">
+        <input id="collapsible10" class="toggle" type="checkbox">
+        <label for="collapsible10" class="lbl-toggle" id="gabarito10">Conferir Gabarito</label>
+        <div class="collapsible-content" id="gabarito10">
+            <div class="content-inner">
+                <p>
+                    <i>
+                        Alternativa Correta = C.<br />
+                        A descrição da função de Euler indica que devemos selecionar, a cada número n, todos os 
+                        números menores que n, que sejam primos com n.<br />
+                        Para n = 20, temos:<br />
+
+                        <img src="/images/Vest/img42.png" /><br /><br />
+
+                        Para n=21, temos:<br />
+
+                        <img src="/images/Vest/img43.png" /><br /><br />
+
+                        Perceba que, por serem números compostos, acabamos por retirar todos os números menores que 
+                        n que tenham algum primo em comum com n.<br />
+                        Dessa forma, não há necessidade de fazermos o processo para todos os números do 
+                        exercício (entre 20 e 25), pois, nesse intervalo, só há um primo, o 23.<br />
+                        Assim, para o 23, não precisaremos retirar número algum da sequência dos números menores 
+                        que ele, pois é primo, resultando no maior resultado possível, nesse intervalo, para E(n).<br /><br />
+                        Portanto, n=23<br />
+
+                        <img src="/images/Vest/img44.png" /><br /><br />
+
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div><br /><br />
+
+    <div id="container-2" class="container" style="background-color:lightskyblue">
+    <h3><a asp-action="ExerciciosFuvest2" style="text-decoration: none">Próxima Página</a><br /></h3><br />
+    </div>
+
