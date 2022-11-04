@@ -32,6 +32,7 @@ a, a:focus, a:active {
     border-radius: 15px 50px 30px;
     background: white;
     border: 3px solid darkblue;
+    width: 1000px;
 }
 
 #container-2 {

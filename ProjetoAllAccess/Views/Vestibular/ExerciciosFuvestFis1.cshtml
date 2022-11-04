@@ -3,102 +3,101 @@
 }
 <br />
 <style>
-    input[type='checkbox'] { 
-        display: none; 
-    } 
+    input[type='checkbox'] {
+        display: none;
+    }
 
-    .wrap-collabsible { 
+    .wrap-collabsible {
         margin: 1.4rem 0;
-    } 
+    }
 
-    .lbl-toggle { 
+    .lbl-toggle {
         border-radius: 15px 50px 30px;
-        display: block; 
-        font-weight: bold; 
-        font-family: monospace; 
-        font-size: 1.2rem; 
-        text-transform: uppercase; 
-        text-align: center; 
-        padding: 1rem; 
-        color: #DDD; 
-        background: darkblue; 
-        cursor: pointer;  
+        display: block;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1rem;
+        color: #DDD;
+        background: darkblue;
+        cursor: pointer;
         transition: all 0.25s ease-out;
-        
+    }
 
-    } 
-    .lbl-toggle:hover { 
-        color: #FFF; 
-    } 
+        .lbl-toggle:hover {
+            color: #FFF;
+        }
 
-    .lbl-toggle::before { 
-        content: ' '; 
-        display: inline-block; 
-        border-top: 10px solid transparent; 
-        border-bottom: 10px solid transparent; 
-        border-left: 10px solid currentColor; 
-        vertical-align: middle; 
-        margin-right: .7rem; 
-        transform: translateY(-2px); 
-        transition: transform .2s ease-out; 
-    } 
-    .toggle:checked+.lbl-toggle::before { 
-        transform: rotate(90deg) translateX(-3px); 
-    } 
-    .collapsible-content 
-    { 
-        max-height: 0px; 
-        overflow: hidden; 
-        transition: max-height .25s ease-in-out; 
-    } 
-    .toggle:checked + .lbl-toggle + .collapsible-content 
-    { 
-        max-height: 800px; 
-    } 
+        .lbl-toggle::before {
+            content: ' ';
+            display: inline-block;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid currentColor;
+            vertical-align: middle;
+            margin-right: .7rem;
+            transform: translateY(-2px);
+            transition: transform .2s ease-out;
+        }
 
-    .toggle:checked+.lbl-toggle 
-    { 
-      border-bottom-right-radius: 0; 
-      border-bottom-left-radius: 0; 
-    } 
-    .collapsible-content .content-inner 
-    { 
-      background: rgba(0, 105, 255, .2); 
-      border-bottom: 1px solid rgba(0, 105, 255, .45); 
-      border-bottom-left-radius: 7px; 
-      border-bottom-right-radius: 7px; 
-      padding: .5rem 1rem; 
-    } 
-    .collapsible-content p 
-      { 
-          margin-bottom: 0; 
-      }
+    .toggle:checked + .lbl-toggle::before {
+        transform: rotate(90deg) translateX(-3px);
+    }
+
+    .collapsible-content {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .25s ease-in-out;
+    }
+
+    .toggle:checked + .lbl-toggle + .collapsible-content {
+        max-height: 800px;
+    }
+
+    .toggle:checked + .lbl-toggle {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .collapsible-content .content-inner {
+        background: rgba(0, 105, 255, .2);
+        border-bottom: 1px solid rgba(0, 105, 255, .45);
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        padding: .5rem 1rem;
+    }
+
+    .collapsible-content p {
+        margin-bottom: 0;
+    }
 
 </style>
 
 <div class="container" id="container-1">
     <h1>Exercícios FUVEST - Física</h1><br />
 
-    <h4><i>
+    <h4>
+        <i>
             (FUVEST/2019 – Primeira fase)<br /><br />
-            À medida que a parcela de ar se eleva na atmosfera, nos limites da troposfera, 
-            a temperatura do ar decai a uma razão de 1 °C a cada 100 metros (Razão Adiabática Seca ‐ RAS) 
+            À medida que a parcela de ar se eleva na atmosfera, nos limites da troposfera,
+            a temperatura do ar decai a uma razão de 1 °C a cada 100 metros (Razão Adiabática Seca ‐ RAS)
             ou 0,6 °C a cada 100 metros (Razão Adiabática Úmida ‐ RAU).<br />
 
             <img src="~/images/Vest/img70.png" /><br /><br />
 
-            Considerando os conceitos e a ilustração, é correto afirmar que as temperaturas do ar, em graus 
+            Considerando os conceitos e a ilustração, é correto afirmar que as temperaturas do ar, em graus
             Celsius, T1 e T2, são, respectivamente,<br /><br />
             Note e adote: Utilize RAS ou RAU de acordo com a presença ou não de ar saturado. <br /><br />
             Tar: temperatura do ar.
 
-
             <br /> <br />
-            a) Junho; 7º.<br />
-            b) Dezembro; 7º<br />
-            c) Junho; 23º<br />
-            d) Dezembro; 23º<br />
-            e) Junho; 0,3º<br />
+            a) 8,0 e 26,0<br />
+            b) 12,8 e 28,0<br />
+            c) 12,0 e 26,0<br />
+            d) 12,0 e 20,4<br />
+            e) 11,6 e 20,4<br />
 
         </i>
     </h4>
@@ -108,8 +107,22 @@
         <label for="collapsible1" class="lbl-toggle" id="gabarito1">Conferir Gabarito</label>
         <div class="collapsible-content" id="gabarito1">
             <div class="content-inner">
-                <p><i>
-                    Alternativa Correta = A. <br /><br />
+                <p>
+                    <i>
+                        Alternativa Correta = C. <br /><br />
+
+                        Analisando o texto e a figura, podemos definir três regiões:<br /><br />
+                        0 a 400 m → razão adiabática seca – RAS: A umidade é elevada devido às altas temperaturas,
+                        porém não ocorre precipitação.<br />
+                        400 m a 1400 m → razão adiabática úmida – RAU: A partir dos 400 m, atravessa-se o
+                        ponto de condensação, o que favorecerá a precipitação devido à queda da temperatura.<br />
+                        1400 m a 0 m → razão adiabática seca – RAS: A sotavento, não ocorre precipitação
+                        devido ao aumento da temperatura.<br />
+
+                        Assim, temos:<br /><br />
+                        1) A 400 m: T0 = 20,0°C – 200 m . 1 °C100 m = 18,0 °C<br />
+                        2) A 1400 m: T1 = 18,0 °C – 1000 m . 0,6 °C100 m = 12,0 °C<br />
+                        3) A 0 m: T2 = 12,0 °C + 1400 m . 1 °C100 m = 26,0 °C<br />
 
                     </i>
                 </p>
@@ -119,29 +132,26 @@
 
     <h4>
         <i>
-            (Fuvest 2018 – Primeira Fase)<br /><br />
-            Dentre os candidatos que fizeram provas de matemática, português e inglês num concurso, 
-            20 obtiveram nota mínima para aprovação nas três disciplinas. Além disso, sabe se que:<br /><br />
+            (FUVEST – 2019 – Primeira fase)<br /><br />
+            Os grandes aviões comerciais voam em altitudes onde o ar é rarefeito e a pressão atmosférica é baixa.
+            Devido a isso, eles têm o seu interior pressurizado em uma pressão igual à atmosférica na altitude de 2.000 m.
+            A figura mostra o gráfico da pressão atmosférica em função da altitude.<br /><br />
 
-            I. 14 não obtiveram nota mínima em matemática;<br />
-            II. 16 não obtiveram nota mínima em português;<br />
-            III. 12 não obtiveram nota mínima em inglês;<br />
-            IV. 5 não obtiveram nota mínima em matemática e em português;<br />
-            V. 3 não obtiveram nota mínima em matemática e em inglês;<br />
-            VI. 7 não obtiveram nota mínima em português e em inglês e<br />
-            VII. 2 não obtiveram nota mínima em português, matemática e inglês.<br /><br />
-            A quantidade de candidatos que participaram do concurso foi
+            <img src="~/images/Vest/img71.png" /><br /><br />
 
+            A força, em N, a que fica submetida uma janela plana de vidro, de 20 x 30 cm2, na cabine de
+            passageiros na altitude de 10.000 m, é, aproximadamente:<br />
 
             <br /> <br />
-            A) 44.<br />
-            B) 46.<br />
-            C) 47.<br />
-            D) 48.<br />
-            E) 49.<br />
+            a) 12.400<br />
+            b) 6.400<br />
+            c) 4.800<br />
+            d) 3.200<br />
+            e) 1.600<br />
+
 
         </i>
-    </h4> 
+    </h4>
 
     <div class="wrap-collabsible">
         <input id="collapsible2" class="toggle" type="checkbox">
@@ -150,7 +160,17 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = E.<br />
+                        Alternativa Correta = D.<br />
+
+                        De acordo com o gráfico:	 h1 = 10.000 m…… p1 ≅ 26.000 Pa<br />
+                        h2 = 2.000 m …… p2 ≅ 78.000 Pa<br />
+                        A força resultante aplicada pelo ar sobre a janela é dada por: Far = Δpar . A<br />
+                        A = 600 cm2 = 600 . 10^–4 m2 = 6,0 . 10–2 m2<br />
+                        Far ≅ (78 – 26) . 103 . 6,0 . 10–2 (N)<br />
+                        Far ≅ 52 . 6,0 . 10 (N)<br />
+                        Far ≅ 3120 N<br />
+                        O valor mais próximo é 3200 N.<br />
+
 
                     </i>
                 </p>
@@ -162,19 +182,22 @@
 
     <h4>
         <i>
-            (Fuvest 2017 – Primeira Fase)  <br /><br />
-            Sejam a e b dois números inteiros positivos. Diz-se que a e b são equivalentes se a soma dos divisores 
-            positivos de a coincide com a soma dos divisores positivos de b. Constituem dois inteiros positivos 
-            equivalentes:
+            (FUVEST – 2019 – Primeira fase)<br /><br />
+            O consumo calórico de um animal de sangue quente é proporcional à área superficial
+            de seu corpo. Um animal com massa 3,5 kg consome 250 kcal diárias. O gráfico relaciona a
+            área superficial desse animal com sua massa<br />
 
+            <img src="~/images/Vest/img72.png" /><br /><br />
+
+            Considerando o gráfico, conclui-se que, se a massa deste animal dobrar,
+            o seu novo consumo diário de energia, em kcal, será, aproximadamente,
 
             <br /> <br />
-            a) 8 e 9<br />
-            b) 9 e 11<br />
-            c) 10 e 12<br />
-            d) 15 e 20<br />
-            e) 16 e 25<br />
-
+            a) 130<br />
+            b) 250<br />
+            c) 310<br />
+            d) 390<br />
+            e) 500<br />
 
         </i>
     </h4>
@@ -186,7 +209,16 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = E.<br />
+                        Alternativa Correta = D.<br />
+
+                        Sendo C o consumo calórico do animal e A a área superficial de seu corpo, tem-se, de
+                        acordo com o enunciado: C = k A em que k é uma constante de proporcionalidade.<br /><br />
+                        Do gráfico, para a massa de 3,5 kg, obtém-se A1 ≅ 0,14 m2.<br />
+                        Logo: 250 = k 0,14 (1)<br />
+                        Também do gráfico, para a massa de 2 . 3,5 kg = 7,0 kg, obtém-se A2 ≅ 0,22 m2.<br />
+                        Assim: C2 = k 0,22 (2)<br />
+                        Dividindo-se (1) por (2) membro à membro, depreende-se que:<br />
+                        C2 250 = k 0,22k 0,14⇒ C2 ≅ 390 kcal<br />
 
                     </i>
                 </p>
@@ -196,32 +228,28 @@
 
     <h4>
         <i>
-            (Fuvest 2016 – Primeira Fase) <br /><br />
-            De 1869 até hoje, ocorreram as seguintes mudanças de moeda no Brasil:<br /><br />
+            (FUVEST – 2019 – Primeira fase) <br /><br />
+            Dois corpos de massas iguais são soltos, ao mesmo tempo, a partir do repouso, da altura h1 e
+            percorrem os diferentes trajetos (A) e (B), mostrados na figura, onde x1 > x2 e h1 > h2.<br />
 
-            (1) em 1942, foi criado o cruzeiro, cada cruzeiro valendo mil réis;<br />
-            (2) em 1967, foi criado o cruzeiro novo, cada cruzeiro novo valendo mil cruzeiros; em 1970, 
-            o cruzeiro novo voltou a se chamar apenas cruzeiro;<br />
-            (3) em 1986, foi criado o cruzado, cada cruzado valendo mil cruzeiros;<br />
-            (4) em 1989, foi criado o cruzado novo, cada um valendo mil cruzados; em 1990, o 
-            cruzado novo passou a se chamar novamente cruzeiro;<br />
-            (5) em 1993, foi criado o cruzeiro real, cada um valendo mil cruzeiros;<br />
-            (6) em 1994, foi criado o real, cada um valendo 2.750 cruzeiros reais.<br />
+            <img src="~/images/Vest/img73.png" /><br /><br />
 
-            Quando morreu, em 1869, Brás Cubas possuía 300 contos. Se esse valor tivesse ficado 
-            até hoje em uma conta bancária, sem receber juros e sem pagar taxas, e se, a cada mudança de 
-            moeda, o depósito tivesse sido normalmente convertido para a nova moeda, o saldo hipotético dessa 
-            conta seria, aproximadamente, de um décimo de:<br /><br />
-            Dados:<br /><br />
-            Um conto equivalia a um milhão de réis.<br />
-            Um bilhão é igual a 10<sup>9</sup> e um trilhão é igual a 10<sup>12</sup>.
+            Considere as seguintes afirmações:<br /><br />
+            As energias cinéticas finais dos corpos em (A) e em (B) são diferentes.<br />
+            As energias mecânicas dos corpos, logo antes de começarem a subir a rampa, são iguais.<br />
+            O tempo para completar o percurso independe da trajetória.<br />
+            O corpo em (B) chega primeiro ao final da trajetória.<br />
+            O trabalho realizado pela força peso é o mesmo nos dois casos.<br />
+
+            Note e adote: Desconsidere forças dissipativas.<br />
+            É correto somente o que se afirma em:
 
             <br /> <br />
-            a) Real.<br />
-            b) Milésimo de real.<br />
-            c) Milionésimo de real.<br />
-            d) Bilionésimo de real.<br />
-            e) Trilionésimo de real.<br />
+            a) I e III<br />
+            b) II e V<br />
+            c) IV e V<br />
+            d) II e III<br />
+            e) I e V<br />
 
         </i>
     </h4>
@@ -233,7 +261,22 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = D.<br />
+                        Alternativa Correta = B.<br /><br />
+
+                        I) Falsa. Nas duas configurações, temos: Efinal = Einicial (referência no solo)
+                        Ecin final + mg h2 = mg h1 Ecin final = mg (h1 – h2) Portanto: Ecin B = Ecin A <br /><br />
+
+                        II) Verdadeira. Como o sistema é conservativo e as energias mecânicas iniciais são iguais,
+                        então em qualquer instante as energias mecânicas são iguais. <br /><br />
+
+                        III) Falsa. O tempo total gasto dependerá da extensão da trajetória.<br /><br />
+
+                        IV) Falsa. De acordo com a figura, o percurso total é o mesmo e, como no trajeto A
+                        existe um intervalo de tempo em que a velocidade escalar do corpo é maior, então o
+                        tempo gasto por A é menor e o corpo em A chega primeiro ao final da trajetória.<br /><br />
+
+                        V) Verdadeira. O trabalho do peso em ambos os casos é dado por: WP = mg (h1 – h2) Portanto: WA = WB<br /><br />
+
 
                     </i>
                 </p>
@@ -243,24 +286,29 @@
 
     <h4>
         <i>
-            (Fuvest 2014 – Primeira Fase) <br /><br />
-            O numero real x, que satisfaz 3 < x < 4, tem uma expansão decimal na qual os 999.999 
-            primeiros dígitos à direita da virgula são iguais a 3. Os 1.000.001 dígitos seguintes são 
-            iguais a 2 e os restantes são iguais a zero. Considere as seguintes afirmações:<br /><br />
+            (FUVEST- 2022 - 1ª fase) <br /><br />
+            O gráfico mostra dados coletados na cidade do Rio de Janeiro, entre fevereiro e abril de 2020,
+            período que inclui o início das medidas de restrição de circulação na cidade por causa da pandemia
+            de COVID-19. Para cada dia, representado por um símbolo no gráfico, foram coletadas duas grandezas:
+            uma média da energia de vibração sísmica durante o dia (na abscissa) e o índice F (na ordenada),
+            que é a fração de pessoas que saiu de casa alguma vez naquele dia. A energia sísmica média foi
+            medida em (nm/s)2 na faixa de frequências que tem causas humanas. Os triângulos representam domingos
+            e feriados; os quadrados referem-se aos sábados; e os círculos correspondem aos dias úteis da semana.
+            Para cada um desses subconjuntos de dados, uma reta média foi obtida, expressando a relação aproximada
+            entre as duas grandezas medidas.<br /><br />
 
-            (I) x é racional<br />
-            (II) ≥ 103103<br />
-            (III) x·10<sup>2.000.000</sup> é um inteiro par.<br /><br />
-            Então,
+            <img src="~/images/Vest/img74.png" /><br /><br />
 
+            Sobre o estudo descrito, o que é possível inferir a partir dos dados apresentados?<br />
 
             <br /> <br />
-            a) Nenhuma das três afirmações é verdadeira.<br />
-            b) Apenas as afirmações I e II são verdadeiras.<br />
-            c) Apenas a afirmação I é verdadeira.<br />
-            d) Apenas a afirmação II é verdadeira.<br />
-            e) Apenas a afirmação III é verdadeira.<br />
-
+            a) Em nenhum sábado, a energia sísmica média registrada superou 380 (nm/s)2 .<br />
+            b) Em todos os dias úteis da semana, pelo menos 20% das pessoas permaneceram o tempo todo em casa.<br />
+            c) Em alguns dos dias de domingo ou feriado, a energia sísmica média foi maior do que 600 (nm/s)².<br />
+            d) Em dias úteis da semana, a energia sísmica média foi maior ou igual do que em sábados, domingos e feriados,
+            para o mesmo número de pessoas que saiu de casa em um dia.<br />
+            e) Aos sábados, uma medição de energia sísmica média de 190 (nm/s)² indica que mais de 60% das pessoas
+            saíram de casa nesse dia.<br />
 
         </i>
     </h4>
@@ -272,7 +320,13 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = E.<br />
+                        Alternativa Correta = D.<br />
+
+                        a). Em nenhum sábado, a energia sísmica média registrada superou 380 (nm/s)2. Falso, se observarmos o gráfico, os sábados indicados pelos quadrados, temos que muitos passaram os 380.<br />
+                        b). Em todos os dias úteis da semana, pelo menos 20% das pessoas permaneceram o tempo todo em casa. Falso, se observarmos o gráfico<br />
+                        c).  Em alguns dos dias de domingo ou feriado, a energia sísmica média foi maior do que 600 (nm/s)2.Falso<br />
+                        d). Em dias úteis da semana, a energia sísmica média foi maior ou igual do que em sábados, domingos e feriados, para o mesmo número de pessoas que saiu de casa em um dia. Verdadeiro. No diagrama, a maior região de círculos pretos está a direita do gráfico.<br />
+                        e). Aos sábados, uma medição de energia sísmica média de 190 (nm/s)2 indica que mais de 60% das pessoas saíram de casa nesse dia. Falso<br />
 
                     </i>
                 </p>
@@ -282,24 +336,20 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase)<br /><br />
-            Carros que saem da cidade A rumo a alguma das cidades turísticas E, F e G fazem caminhos diversos, 
-            passando por pelo menos uma das cidades B, C e D, apenas no sentido indicado pelas setas, como mostra 
-            a figura. Os números indicados nas setas são as probabilidades, dentre esses carros, de se ir de uma cidade a 
-            outra.<br />
-
-            <img src="/images/Vest/img35.png" /><br />
-
-            Nesse cenário, a probabilidade de um carro ir de A a F é
+            (FUVEST- 2022 - 1ª fase)<br /><br />
+            Um bom café deve ser preparado a uma temperatura pouco acima de 80 ºC.
+            Para evitar queimaduras na boca, deve ser consumido a uma temperatura mais baixa.
+            Uma xícara contém 60 mL de café a uma temperatura de 80ºC. <br />
+            Qual a quantidade de leite gelado (a uma temperatura de 5 ºC) deve ser misturada ao
+            café para que a temperatura final do café com leite seja de 65 ºC?<br />
 
 
             <br /> <br />
-            a) 0,120.<br />
-            b) 0,216.<br />
-            c) 0,264.<br />
-            d) 0,336.<br />
-            e) 0,384.<br />
-
+            a) 5mL<br />
+            b) 10mL<br />
+            c) 15mL<br />
+            d) 20mL<br />
+            e) 25mL<br />
 
         </i>
     </h4>
@@ -311,17 +361,16 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = E.<br />
+                        Alternativa Correta = C.<br />
 
-                        Para ir de A a F, há três caminhos possíveis: ACF, ABCF e ABDF.<br />
-                        Em cada caminho, as probabilidades são dadas pelos produto:<br />
+                        Primeiramente vamos encontrar o valor da massa de café e do leite em função de seus volumes:<br />
 
-                        ACF 🡪 0,2 · 0,6 = 0,12<br />
-                        ABCF 🡪 0,8 · 0,1 · 0,6 = 0,048<br />
-                        ABDF 🡪 0,8 · 0,9 · 0,3 = 0,216<br />
-                        Como os caminhos são todos alternativos, a probabilidade total de o carro ir de A a F é dada pela soma
-                        ACF + ABCF + ABDF<br />
-                        0,12 + 0,048 + 0,216 = 0,384<br />
+                        <img src="~/images/Vest/img75.png" /><br /><br />
+
+                        Aplicando a Lei Fundamental da Calorimetria:<br />
+
+                        <img src="~/images/Vest/img76.png" /><br /><br />
+
 
                     </i>
                 </p>
@@ -331,20 +380,18 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase)<br /><br />
-            O cilindro de papelão central de uma fita crepe tem raio externo de 3 cm. A fita tem espessura de 
-            0,01 cm e dá 100 voltas completas. Considerando que, a cada volta, o raio externo do rolo é aumentado 
-            no valor da espessura da fita, o comprimento total da fita é de, aproximadamente,<br />
-
-            <img src="/images/Vest/img36.png" /><br />
-
+            (FUVEST - 2022 - 1ª fase)<br /><br />
+            Uma criança deixa cair de uma mesma altura duas maçãs, uma delas duas vezes mais pesada do que a outra.
+            Ignorando a resistência do ar e desprezando as dimensões das maçãs frente à altura inicial,
+            o que é correto afirmar a respeito das energias cinéticas das duas maçãs na iminência de atingirem o solo?
 
             <br /> <br />
-            A) 9,4 m.<br />
-            B) 11,0 m.<br />
-            C) 18,8 m.<br />
-            D) 22,0 m.<br />
-            E) 25,1 m.<br />
+            a) A maçã mais pesada possui tanta energia cinética quanto a maçã mais leve.<br />
+            b) A maçã mais pesada possui o dobro da energia cinética da maçã mais leve.<br />
+            c) A maçã mais pesada possui a metade da energia cinética da maçã mais leve.<br />
+            d) A maçã mais pesada possui o quádruplo da energia cinética da maçã mais leve.<br />
+            e) A maçã mais pesada possui um quarto da energia cinética da maçã mais leve.<br />
+
 
         </i>
     </h4>
@@ -356,17 +403,14 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = D.<br />
+                        Alternativa Correta = B.<br />
 
-                        Sabendo que o comprimento de uma circunferência é dado por C=2 · π · R, temos 
-                        a seguinte sequência de comprimentos ao enrolar a fita no cilintro:<br />
-
-                         <img src="/images/Vest/img37.png" /><br />
-
-                        Dessa forma, o comprimento total da fita é dado por:<br />
-
-                        <img src="/images/Vest/img38.png" height="400px"/><br />
-
+                        Pelo teorema do trabalho e variação da energia cinética, podemos afirmar que a maça
+                        mais pesada possuirá, ao atingir o solo, o dobro da energia cinética da maçã mais leve.<br />
+                        O trabalho nos dois casos é diretamente proporcional ao Peso, já que a altura da qual
+                        as maçãs caem é a mesma, logo, uma maçã que tenha o dobro do Pesosofrerá o dobro da variação
+                        da energia cinética, mas como ambas estão partindo do repouso, podemos afirmar que o módulo do
+                        trabalho da força Peso é igual ao módulo da energia cinética.<br /><br />
 
                     </i>
                 </p>
@@ -376,23 +420,28 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase)<br /><br />
-            Um objeto é formado por 4 hastes rígidas conectadas em seus extremos por articulações, cujos centros 
-            são os vértices de um paralelogramo. As hastes movimentam-se de tal forma que o paralelogramo permanece 
-            sempre no mesmo plano. A cada configuração desse objeto, associa-se d, a medida do menor ângulo interno 
-            do paralelogramo. A área da região delimitada pelo paralelogramo quando d = 90° é A.<br />
+            (FUVEST - 2022 - 1ª fase)<br /><br />
+            Uma bola de bilhar vermelha está inicialmente em repouso a 40 cm de duas das bordas
+            (lateral e superior da figura) de uma mesa de bilhar, como mostra a figura. Uma bola branca de
+            mesma massa e tamanho é lançada em direção à vermelha com velocidade v0 paralela à borda lateral.<br />
+            As duas bolas colidem e, algum tempo depois, a bola vermelha está prestes a cair na caçapa posicionada
+            na junção das duas bordas. No mesmo instante, a bola branca toca a borda superior da mesa a uma
+            distância d da bola vermelha, conforme figura.<br />
 
+            <img src="~/images/Vest/img77.png" /><br /><br />
 
-            <img src="/images/Vest/img39.png" /><br /><br />
-
-            Para que a área da região delimitada pelo paralelogramo seja A2 o valor de θ é necessariamente, igual a:
+            O valor de d é aproximadamente:<br /><br />
+            Note e Adote:<br />
+            Despreze efeitos dissipativos (como deslizamentos com atrito) e considere a colisão entre
+            as bolas como sendo perfeitamente elástica. Considere que o diâmetro das bolas seja muito
+            menor que as distâncias mencionadas e que não ocorram outras colisões intermediárias.
 
             <br /> <br />
-            A) 15°<br />
-            B) 22,5°<br />
-            C) 30°<br />
-            D) 45°<br />
-            E) 60<br />
+            A) 20cm<br />
+            B) 40cm<br />
+            C) 60cm<br />
+            D) 80cm<br />
+            E) 100cm<br />
 
 
         </i>
@@ -405,11 +454,18 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = C.<br />
+                        Alternativa Correta = D.<br />
 
-                        Chamando os lados do retângulo de x e y, temos a seguinte relação entre suas áreas:<br />
+                        Desprezando os efeitos dissipativos e conservando o momento linear na direção horizontal
+                        (direção perpendicular ao movimento inicial da bola branca), que é nulo, e levando em consideração
+                        que as duas bolas tem a mesma massa podemos afirmar que o módulo da velocidade da bola vermelha
+                        nesta direção analisada, após a colisão, é igual ao módulo da velocidade da bola branca nesta
+                        mesma direção só que com sentido contrário.<br />
+                        Se as velocidades tem mesmo módulo, e a bola vermelha está na iminência de cair, podemos inferir
+                        que ela andou 40 cm para a esquerda enquanto a bola branca anda 40 cm para a direita, a partir
+                        do ponto de colisão.<br />
+                        Isso implica que d, que é a separação entre as bolas no momento que se pede, é 40 + 40 = 80 cm.<br />
 
-                        <img src="/images/Vest/img40.png" /><br /><br />
 
                     </i>
                 </p>
@@ -419,17 +475,20 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase)<br /><br />
-            A menor esfera na qual um paralelepípedo reto-retângulo de medidas 7 cm x 4 cm x 4 cm está 
-            inscrito tem diâmetro de
+            (FUVEST- 2022 - 1ª fase) <br /><br />
+            Considere a situação indicada na figura, em que um motor, com o auxílio de uma polia,
+            ergue verticalmente uma caixa de massa 12 kg. A caixa contém materiais frágeis e deve
+            ser erguida com velocidade constante. Qual é a magnitude da força vertical que o motor
+            deve exercer para realizar a tarefa?<br />
 
+            <img src="~/images/Vest/img78.png" />
 
             <br /> <br />
-            A) 9 cm.<br />
-            B) 10 cm.<br />
-            C) 11 cm.<br />
-            D) 12 cm.<br />
-            E) 15 cm.<br />
+            A) 0 N.<br />
+            B) 30 N.<br />
+            C) 60 N.<br />
+            D) 120 N.<br />
+            E) 240 N.<br />
 
 
         </i>
@@ -442,12 +501,11 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = A.<br />
-                        Para que a esfera tangencie todos os vértices do paralelepípedo, seu diâmetro será 
-                        igual à diagonal do paralelepípedo.<br />
+                        Alternativa Correta = D.<br />
+                        Se o bloco deve subir com velocidade constante a aceleração sobre ele é nula.
+                        Diante disso, temos que:<br />
 
-                        <img src="/images/Vest/img41.png" /><br /><br />
-
+                        <img src="~/images/Vest/img79.png" /><br /><br />
 
                     </i>
                 </p>
@@ -457,19 +515,21 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase) <br /><br />
-            A função E de Euler determina, para cada número natural n, a quantidade de números naturais 
-            menores do que n cujo máximo divisor comum com n é igual a 1.<br />
-            Por exemplo, E (6) = 2 pois os números menores do que 6 com tal propriedade são 1 e 5. <br />
-            Qual o valor máximo de E (n), para n de 20 a 25?
+            (FUVEST- 2022 - 1ª fase)<br /><br />
+            Um componente eletrônico tem curva característica mostrada no gráfico a seguir:<br />
+            <img src="~/images/Vest/img80.png" /><br /><br />
+
+            A resistência elétrica do componente na região em que ele se comporta como um
+            resistor ôhmico vale aproximadamente:
 
 
             <br /> <br />
-            A) 19<br />
-            B) 20<br />
-            C) 22<br />
-            D) 24<br />
-            E) 25<br />
+            a) 0,4 Ω<br />
+            b) 0,6 Ω<br />
+            c) 0,8 Ω<br />
+            d) 1,0 Ω<br />
+            e) 1,2 Ω<br />
+
 
         </i>
     </h4>
@@ -482,25 +542,8 @@
                 <p>
                     <i>
                         Alternativa Correta = C.<br />
-                        A descrição da função de Euler indica que devemos selecionar, a cada número n, todos os 
-                        números menores que n, que sejam primos com n.<br />
-                        Para n = 20, temos:<br />
-
-                        <img src="/images/Vest/img42.png" /><br /><br />
-
-                        Para n=21, temos:<br />
-
-                        <img src="/images/Vest/img43.png" /><br /><br />
-
-                        Perceba que, por serem números compostos, acabamos por retirar todos os números menores que 
-                        n que tenham algum primo em comum com n.<br />
-                        Dessa forma, não há necessidade de fazermos o processo para todos os números do 
-                        exercício (entre 20 e 25), pois, nesse intervalo, só há um primo, o 23.<br />
-                        Assim, para o 23, não precisaremos retirar número algum da sequência dos números menores 
-                        que ele, pois é primo, resultando no maior resultado possível, nesse intervalo, para E(n).<br /><br />
-                        Portanto, n=23<br />
-
-                        <img src="/images/Vest/img44.png" /><br /><br />
+                        Pegando o ponto (0.5,0.4)  podemos usar a primeira lei de Ohm na seguinte maneira:<br /><br />
+                        V = r.i ⇒ 0,4 = R.0,5 ⇒ R = 0,8Ω
 
                     </i>
                 </p>
@@ -508,9 +551,11 @@
         </div>
     </div>
 
-</div><br /><br />
+</div>
+<br />
+<br />
 
-    <div id="container-2" class="container" style="background-color:lightskyblue">
-    <h3><a asp-action="ExerciciosFuvest2" style="text-decoration: none">Próxima Página</a><br /></h3><br />
-    </div>
+<div id="container-2" class="container" style="background-color:lightskyblue">
+    <h3><a asp-action="ExerciciosFuvestFis2" style="text-decoration: none">Próxima Página</a><br /></h3><br />
+</div>
 

@@ -3,93 +3,102 @@
 }
 <br />
 <style>
-    input[type='checkbox'] { 
-        display: none; 
-    } 
+    input[type='checkbox'] {
+        display: none;
+    }
 
-    .wrap-collabsible { 
+    .wrap-collabsible {
         margin: 1.4rem 0;
-    } 
+    }
 
-    .lbl-toggle { 
+    .lbl-toggle {
         border-radius: 15px 50px 30px;
-        display: block; 
-        font-weight: bold; 
-        font-family: monospace; 
-        font-size: 1.2rem; 
-        text-transform: uppercase; 
-        text-align: center; 
-        padding: 1rem; 
-        color: #DDD; 
-        background: darkblue; 
-        cursor: pointer;  
+        display: block;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1rem;
+        color: #DDD;
+        background: darkblue;
+        cursor: pointer;
         transition: all 0.25s ease-out;
-        
+    }
 
-    } 
-    .lbl-toggle:hover { 
-        color: #FFF; 
-    } 
+        .lbl-toggle:hover {
+            color: #FFF;
+        }
 
-    .lbl-toggle::before { 
-        content: ' '; 
-        display: inline-block; 
-        border-top: 10px solid transparent; 
-        border-bottom: 10px solid transparent; 
-        border-left: 10px solid currentColor; 
-        vertical-align: middle; 
-        margin-right: .7rem; 
-        transform: translateY(-2px); 
-        transition: transform .2s ease-out; 
-    } 
-    .toggle:checked+.lbl-toggle::before { 
-        transform: rotate(90deg) translateX(-3px); 
-    } 
-    .collapsible-content 
-    { 
-        max-height: 0px; 
-        overflow: hidden; 
-        transition: max-height .25s ease-in-out; 
-    } 
-    .toggle:checked + .lbl-toggle + .collapsible-content 
-    { 
-        max-height: 1600px; 
-    } 
+        .lbl-toggle::before {
+            content: ' ';
+            display: inline-block;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid currentColor;
+            vertical-align: middle;
+            margin-right: .7rem;
+            transform: translateY(-2px);
+            transition: transform .2s ease-out;
+        }
 
-    .toggle:checked+.lbl-toggle 
-    { 
-      border-bottom-right-radius: 0; 
-      border-bottom-left-radius: 0; 
-    } 
-    .collapsible-content .content-inner 
-    { 
-      background: rgba(0, 105, 255, .2); 
-      border-bottom: 1px solid rgba(0, 105, 255, .45); 
-      border-bottom-left-radius: 7px; 
-      border-bottom-right-radius: 7px; 
-      padding: .5rem 1rem; 
-    } 
-    .collapsible-content p 
-      { 
-          margin-bottom: 0; 
-      }
+    .toggle:checked + .lbl-toggle::before {
+        transform: rotate(90deg) translateX(-3px);
+    }
+
+    .collapsible-content {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .25s ease-in-out;
+    }
+
+    .toggle:checked + .lbl-toggle + .collapsible-content {
+        max-height: 1000px;
+    }
+
+    .toggle:checked + .lbl-toggle {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .collapsible-content .content-inner {
+        background: rgba(0, 105, 255, .2);
+        border-bottom: 1px solid rgba(0, 105, 255, .45);
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        padding: .5rem 1rem;
+    }
+
+    .collapsible-content p {
+        margin-bottom: 0;
+    }
 
 </style>
 
 <div class="container" id="container-1">
-    <h1>Exercícios FUVEST - Matemática</h1><br />
+    <h1>Exercícios FUVEST - Física</h1><br />
 
-    <h4><i>
-            (Fuvest 2020 – Primeira Fase) <br /><br />
-            Se 3x2 – 9x + 7 = (x – a)3 – (x – b)3 para todo número real x, o valor de a+b é:
+    <h4>
+        <i>
+            (FUVEST- 2022 - 1ª fase)  <br /><br />
+            O canhão de Newton, esquematizado na figura, é um experimento mental imaginado por Isaac Newton
+            para mostrar que sua lei da gravitação era universal. Disparando o canhão horizontalmente do alto
+            de uma montanha, a bala cairia na Terra em virtude da força da gravidade. Com uma maior velocidade
+            inicial, a bala iria mais longe antes de retornar à Terra. Com a velocidade certa, o projétil daria
+            uma volta completa em torno da Terra, sempre “caindo” sob ação da gravidade, mas nunca alcançando a Terra.
+            Newton concluiu que esse movimento orbital seria da mesma natureza do movimento da Lua em torno da Terra.<br /><br />
+
+            <img src="~/images/Vest/img81.png" /><br /><br />
+
+            Qual deveria ser a velocidade inicial de um projétil lançado horizontalmente do alto do
+            Everest (a uma distância aproximada de 6.400 km do centro da Terra) para colocá-lo em órbita em torno da Terra?
 
             <br /> <br />
-            A) 3.<br />
-            B) 5.<br />
-            C) 6.<br />
-            D) 9.<br />
-            E) 12.<br />
-
+            a) 8km/s<br />
+            b) 11,2 km/s<br />
+            c) 80 km/s<br />
+            d) 112 km/s<br />
+            e) 8.000 km/s<br />
 
         </i>
     </h4>
@@ -99,18 +108,15 @@
         <label for="collapsible1" class="lbl-toggle" id="gabarito1">Conferir Gabarito</label>
         <div class="collapsible-content" id="gabarito1">
             <div class="content-inner">
-                <p><i>
-                    Alternativa Correta = A. <br /><br />
+                <p>
+                    <i>
+                        Alternativa Correta = A<br />
+                        Para que a massa entre em órbita é necessário que a força resultante atue como força centrípeta,
+                        a fim de colocar o móvel em MCU.<br />
+                        Dessa maneira:<br />
 
-                        Desenvolvendo os cubos, temos:<br />
+                        <img src="~/images/Vest/img82.png" /><br /><br />
 
-                        <img src="~/images/Vest/img45.png" /><br />
-
-                        O que nos leva ao seguinte sistema de equações<br />
-
-                        <img src="~/images/Vest/img46.png" height="300px"/><br />
-
-                        Como a questão solicitou o valor de a+b, não é preciso ir adiante, já temos nossa resposta: a+b=3.<br />
                     </i>
                 </p>
             </div>
@@ -119,23 +125,24 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase)<br /><br />
-            Uma agência de turismo vendeu um total de 78 passagens para os destinos: Lisboa, 
-            Paris e Roma. Sabe-se que o número de passagens vendidas para Paris foi o dobro do número 
-            de passagens vendidas para os outros dois destinos conjuntamente. Sabe-se também que, para Roma, 
-            foram vendidas duas passagens a mais que a metade das vendidas para Lisboa. Qual foi o total de 
-            passagens vendidas, conjuntamente, para Paris e Roma?<br />
+            (FUVEST - 2022- 1ª fase)  <br /><br />
+            Em virtude do movimento das placas tectônicas, a distância entre a América do Sul e a África aumenta,
+            nos dias atuais, cerca de 2,0 cm a cada ano. Supondo que essa velocidade tivesse sido constante ao longo
+            do tempo, e tomando uma distância atual de cerca de 5.000 km entre os limites dessas duas massas continentais,
+            indique a melhor estimativa para quanto tempo teria transcorrido desde quando ambas estavam unidas em um
+            único supercontinente.
 
             <br /> <br />
-            A) 26<br />
-            B) 38<br />
-            C) 42<br />
-            D) 62<br />
-            E) 68<br />
+            a) 250.000 anos<br />
+            b) 250.0000 anos<br />
+            c) 250.00000 anos<br />
+            d) 250.000.000 anos<br />
+            e) 250.000.0000 anos<br />
+
 
 
         </i>
-    </h4> 
+    </h4>
 
     <div class="wrap-collabsible">
         <input id="collapsible2" class="toggle" type="checkbox">
@@ -146,18 +153,10 @@
                     <i>
                         Alternativa Correta = D.<br />
 
-                        Da leitura do enunciado, tiramos o seguinte sistema de equações:<br />
-
-                        <img src="~/images/Vest/img47.png" height="300px" /><br />
-
-                        Dando andamento à resolução do sistema, temos:<br />
-
-                        <img src="~/images/Vest/img48.png" height="300px" /><br />
-
-                        Novamente, a questão nos solicitou o valor da soma P+R, portanto, não há necessidade 
-                        de seguirmos com a resolução do sistema, uma vez que<br />
-
-                        <img src="~/images/Vest/img49.png" /><br />
+                        Para encontrarmos basta realizarmos a divisão com a respectiva conversão:<br /><br />
+                        t=5000Km/2cm<br />
+                        t=500000000m/2cm<br />
+                        t=250.000.000<br />
 
 
                     </i>
@@ -170,20 +169,31 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase)  <br /><br />
-           Uma cidade é dividida em dois Setores: o Setor Sul, com área de 10 km2, e o Setor Norte,
-           com área de 30 km2. Após um final de semana, foram divulgados os seguintes totais pluviométricos:<br />
+            (FUVEST - 2021 - 1ªFASE)<br /><br />
+            Um vídeo bastante popular na Internet mostra um curioso experimento em que uma garrafa de água
+            pendurada por uma corda é mantida suspensa por um palito de dente apoiado em uma mesa.<br />
 
-            <img src="~/images/Vest/img50.png" /><br /><br />
+            <img src="~/images/Vest/img83.png" /><br /><br />
 
-           É correto afirmar que o total pluviométrico desse final de semana na cidade inteira foi de
+            O "truque" só é possível pelo uso de outros palitos, formando um tipo de treliça.<br />
+            A figura à direita da foto mostra uma visão lateral do conjunto, destacando duas das forças que
+            atuam sobre o palito 1.<br />
+            Nesta figura, F é a força que o palito 2 exerce sobre o palito 1( aplicada a uma distância L do
+            ponto A na borda da mesa), P é a componente vertical da força que a corda exerce sobre o palito 1
+            (aplicada a uma distância d do ponto A) e θ é o ângulo entre a direção da força F e a vertical. <br />
+            Para que o conjunto se mantenha estático, porém na iminência de rotacionar, a relação entre os
+            módulos de F e P deve ser:<br /><br />
+            Note e adote:<br /><br />
+            Despreze o peso dos palitos em relação aos módulos das forças F e P.<br />
+
 
             <br /> <br />
-            A) 15 mm.<br />
-            B) 17 mm.<br />
-            C) 22 mm.<br />
-            D) 25 mm.<br />
-            E) 28 mm.<br />
+            a) F= |P|d/Lcos()<br />
+            b) F= |P|d/Lsen()<br />
+            c) F=|P|cos⁡()<br />
+            d) F= |P|Lcos()/d<br />
+            e) F= |P|Lsen()/d<br />
+
 
         </i>
     </h4>
@@ -195,14 +205,11 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = D.<br />
+                        Alternativa Correta = A.<br />
 
-                        O total pluviométrico P é, na verdade, uma razão entre o volume de chuva que cai em uma 
-                        determinada área, ou seja, uma razão entre um volume e uma área.<br />
-                        Seguindo essa definição, temos:<br />
-
-                        <img src="~/images/Vest/img51.png" /><br /><br />
-
+                        Para o conjunto se manter estático devemos ter um equilíbrio rotacional.<br /><br />
+                        Portanto, |F|cos(θ)*L = |P|d<br />
+                        Isolando o módulo da força F chegamos na alternativa A.<br />
                     </i>
                 </p>
             </div>
@@ -211,20 +218,26 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase) <br /><br />
+            (FUVEST - 2021 - 1ªFASE) <br /><br />
+            Os smartphones modernos vêm equipados com um acelerômetro, dispositivo que mede acelerações a que o
+            aparelho está submetido.<br />
+            O gráfico foi gerado a partir de dados extraídos por um aplicativo do acelerômetro de um smartphone
+            pendurado por um fio e colocado para oscilar sob a ação da gravidade. O gráfico mostra os dados de
+            uma das componentes da aceleração (corrigidos por um valor de referência constante) em função do tempo.<br /><br />
 
-            <img src="~/images/Vest/img52.png" /><br /><br />
+            <img src="~/images/Vest/img84.png" /><br /><br />
 
-            As possíveis soluções, em polegadas (inches, em inglês), para o problema matemático proposto
-            no quadrinho, no caso em que os pontos A, B e C estão em uma mesma reta, são:
+            Com base nos dados do gráfico e considerando que o movimento do smartphone seja o de um
+            pêndulo simples a ângulos pequenos, o comprimento do fio é de aproximadamente:
 
 
             <br /> <br />
-            a) 10/3 e 10<br />
-            b) 10/3 , 5 e 10<br />
-            c) 5/3, 10/3 e 10<br />
-            d) 5/3 e 10<br />
-            e) 10/3 e 5<br />
+            a) 5 cm<br />
+            b) 10 cm<br />
+            c) 50 cm<br />
+            d) 100 cm<br />
+            e) 150 cm<br />
+
 
         </i>
     </h4>
@@ -236,29 +249,13 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = A.<br />
+                        Alternativa Correta = C.<br />
 
-                        O texto deixa claro que a distância entre A e C(dAC) é o dobro da distância entre A e B(dAC) ou seja
-                        dAC = 2 · dAB<br />
-                        Utilizando um sistema ordenado e respeitando a ordem de que A, B e C são colineares, 
-                        podemos representar os pontos em uma reta orientada.<br />
-
-                        <img src="~/images/Vest/img53.png" /><br /><br />
-
-                        Dessa forma, seguindo as orientações do enunciado, temos:<br />
-
-                        <img src="~/images/Vest/img54.png" /><br /><br />
-
-                        Até aqui, tudo bem. No entanto, há uma segunda possibilidade para posicionarmos o ponto A, 
-                        fora do intervalo BC, veja:<br />
-
-                        <img src="~/images/Vest/img55.png" /><br /><br />
-
-                        Com essa nova representação, mas ainda com a premissa do exercício de que dAC = 2 · dAB , temos:<br />
-
-                        <img src="~/images/Vest/img56.png" /><br /><br />
-
-                        Assim, temos duas possibilidades para a posição do ponto A, nas condições dadas.
+                        Observando o gráfico temos 5 oscilações em aproximadamente 7 segundos.<br />
+                        Assim o período do movimento é aproximadamente 7/5.<br />
+                        O período de um pêndulo simples é dado por: T = 2π√(L/g).<br />
+                        Desse modo, L = T²g/(2π)².<br />
+                        L = 490/900, que é melhor aproximado das alternativas por L = 0,5 m ou L = 50 cm<br />
 
                     </i>
                 </p>
@@ -268,17 +265,23 @@
 
     <h4>
         <i>
-            (Fuvest/2019 – Primeira fase) <br /><br />
-            Se a função 𝑓: ℝ − {2} é definida por<br />
-            𝑓(𝑥) = 2𝑥 + 1/ 𝑥 − 2<br />
-            E a função 𝑔: ℝ − {2} é definida por 𝑔(𝑥) = 𝑓(𝑓(𝑥)), então 𝑔(𝑥) é igual a:<br />
+            (FUVEST - 2021 - 1ªFASE) <br /><br />
+            Considere as seguintes afirmações:<br /><br />
+            I. Uma pessoa em um trampolim é lançada para o alto. No ponto mais alto de sua trajetória, sua aceleração
+            será nula, o que dá a sensação de "gravidade zero"<br />
+            II. A resultante das forças agindo sobre um carro andando em uma estrada em linha reta a uma velocidade
+            constante tem módulo diferente de zero.<br />
+            III. As forças peso e normal atuando sobre um livro em repouso em cima de uma mesa horizontal formam um
+            par ação-reação.<br /><br />
+            De acordo com as Leis de Newton:
 
             <br /> <br />
-            a) x/2<br />
-            b) x<sup>2</sup><br />
-            c) 2x<br />
-            d) 2x + 3<br />
-            e) X<br />
+            a) Somente as afirmações I e II são corretas.<br />
+            b) Somente as afirmações I e III são corretas.<br />
+            c) Somente as afirmações II e III são corretas.<br />
+            d) Todas as afirmações são corretas.<br />
+            e) Nenhuma das afirmações é correta.<br />
+
 
         </i>
     </h4>
@@ -290,11 +293,13 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = E.<br />
+                        Alternativa Correta = E.<br /><br />
 
-                        <img src="~/images/Vest/img57.png" /><br /><br />
+                        I- Errada no ponto mais alto do salto a velocidade é zero mas a aceleração é sempre constante.<br />
+                        II - Errada Se o carro está em velocidade constante e em linha reta necessariamente o somatório
+                        das forças atuando nele tem módulo zero.<br />
+                        III - Errada Par de ação e reação não atuam no mesmo corpo.<br />
 
-                        <img src="~/images/Vest/img58.png" /><br /><br />
 
                     </i>
                 </p>
@@ -304,17 +309,26 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase)<br /><br />
-            Considere a função polinomial 𝑓: ℝ → ℝ definida por 𝑓(𝑥) = 𝑎𝑥 2 + 𝑏𝑥 + 𝑐, em que 𝑎, 𝑏 𝑒 𝑐 ∈ ℝ e 𝑎 ≠ 0. 
-            No plano cartesiano 𝑥𝑦, a única intersecção da reta 𝑦 = 2 com o gráfico de 𝑓 é o ponto (2; 2) e a 
-            intersecção da reta 𝑥 = 0 com o gráfico de 𝑓 é o ponto (0; −6). O valor de 𝑎 + 𝑏 + 𝑐 é<br />
+            (FUVEST - 2021 - 1ª FASE)<br /><br />
+            Dois balões negativamente carregados são utilizados para induzir cargas em latas metálicas, 
+            alinhadas e em contato, que, inicialmente, estavam eletricamente neutras.<br />
+
+            <img src="~/images/Vest/img85.png" /><br /><br />
+
+            Conforme mostrado na figura, os balões estão próximos, mas jamais chegam a tocar as latas. 
+            Nessa configuração, as latas 1, 2  e 3 terão, respectivamente, carga total:<br />
+            Note e adote: O contato entre dois objetos metálicos permite a passagem de cargas elétricas 
+            entre um e outro.
+            Suponha que o ar no entorno seja um isolante perfeito.
+
 
             <br /> <br />
-            a) -2<br />
-            b) 0<br />
-            c) 2<br />
-            d) 4<br />
-            e) 6<br />
+            a) 1: zero; 2: negativa; 3: zero.<br />
+            b) 1: positiva; 2: zero; 3: positiva.<br />
+            c) 1: zero; 2: positiva; 3: zero.<br />
+            d) 1: positiva; 2: negativa; 3: positiva.<br />
+            e) 1: zero; 2: zero; 3: zero.<br />
+
 
         </i>
     </h4>
@@ -326,32 +340,13 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = B.<br />
+                        Alternativa Correta = D.<br />
 
-                        Com os dados do enunciado, façamos um esboço do gráfico.<br />
+                        Ambas cargas dos balões repelem as cargas negativas das latas 1 e 3 na direção da lata 2, 
+                        onde estas permanecerão concentradas. Assim, a lata 1 ficará com carga positiva, a lata 2 
+                        ficará com carga negativa e a lata 3 ficará com carga positiva.<br />
 
-                        <img src="~/images/Vest/img59.png" /><br /><br />
 
-                        Pensemos, inicialmente, na função<br /><br />
-                        𝑓(𝑥) = 𝑎𝑥 2<br />
-                        Para deslocar essa função 2 unidades para a direita, precisamos substituir 𝑥 por 𝑥 − 2.<br />
-                        𝑓(𝑥) = 𝑎(𝑥 − 2) 2<br />
-                        Agora, para “subir” essa função duas unidades, basta somar 2 ao final.<br />
-                        𝑓(𝑥) = 𝑎(𝑥 − 2) 2 + 2<br /><br />
-
-                        Para facilitar, vamos desenvolver a expressão.<br /><br />
-                        𝑓(𝑥) = 𝑎(𝑥 − 2) 2 + 2<br />
-                        𝑓(𝑥) = 𝑎(𝑥 2 − 4𝑥 + 4) + 2<br />
-                        𝑓(𝑥) = 𝑎𝑥 2 − 4𝑎𝑥 + 4𝑎 + 2<br />
-                        Como o termo independente deve valer −6, temos.<br /><br />
-                        4𝑎 + 2 = −6 ⇒ 4𝑎 = −8 ⇒ 𝑎 = −2<br />
-                        Substituindo 𝑎 = −2 em nossa 𝑓(𝑥), temos.<br /><br />
-                        𝑓(𝑥) = 𝑎𝑥 2 − 4𝑎𝑥 + 4𝑎 + 2<br />
-                        𝑓(𝑥) = (−2)𝑥 2 − 4. (−2). 𝑥 + 4. (−2) + 2<br />
-                        𝑓(𝑥) = −2𝑥 2 + 8𝑥 – 6<br /><br />
-                        Assim,<br /><br />
-                        𝑎 + 𝑏 + 𝑐 = −2 + 8 − 6 = 0<br />
-                  
                     </i>
                 </p>
             </div>
@@ -360,34 +355,43 @@
 
     <h4>
         <i>
-            (Fuvest 2020 – Primeira Fase)<br /><br />
-            Um dono de restaurante assim descreveu a evolução do faturamento quinzenal de seu negócio, ao 
-            longo dos dez primeiros meses após a inauguração: “Até o final dos três primeiros meses, tivemos 
-            uma velocidade de crescimento mais ou menos constante, quando então sofremos uma queda abrupta, com 
-            o faturamento caindo à metade do que tinha sido atingido. Em seguida, voltamos a crescer, igualando, 
-            um mês e meio depois dessa queda, o faturamento obtido ao final do terceiro mês. Agora, ao final do 
-            décimo mês, estamos estabilizando o faturamento em um patamar 50% acima do faturamento obtido ao final 
-            do terceiro mês”.<br />
+            (FUVEST 2021 - 1ª fase)<br /><br />
+            Uma esfera metálica de massa m e carga elétrica +q descansa sobre um piso horizontal isolante, 
+            em uma região em que há um campo elétrico uniforme e também horizontal, de intensidade E, conforme 
+            mostrado na figura. Em certo instante, com auxílio de uma barra isolante, a esfera é erguida ao longo 
+            de uma linha vertical, com velocidade constante e contra a ação de gravidade, a uma altura total h, 
+            sem nunca abandonar a região de campo elétrico uniforme.<br /><br />
 
-            <img src="~/images/Vest/img60.png" /><br /><br />
+            <img src="~/images/Vest/img86.png" /><br /><br />
+
+            Ao longo do movimento descrito, os trabalhos realizados pela força gravitacional e 
+            pela força elétrica sobre a esfera, são, respectivamente:
+
+            <br /> <br />
+            a) Mgh e qEh<br />
+            b) –mgh e 0<br />
+            c) 0 e –qEh<br />
+            d) –mgh e –qEh<br />
+            e) Mgh e 0<br />
 
         </i>
     </h4>
 
     <div class="wrap-collabsible">
         <input id="collapsible7" class="toggle" type="checkbox">
-        <label for="collapsible7" class="lbl-toggle" id="gabarito7">Conferir Gabarito</label>
+        <label for="collapsible7" class="lbl-toggle" id="gabarito6">Conferir Gabarito</label>
         <div class="collapsible-content" id="gabarito7">
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = E.<br />
+                        Alternativa Correta = B.<br />
 
-                        Questão puramente interpretativa e de complexidade baixa, visto que não exige cálculos. <br />
-                        No entanto, é preciso estar atento para não incorrer em erro.<br />
-                        Quando colocamos no gráfico, item a item, os dados do enunciado, temos.<br />
-
-                        <img src="~/images/Vest/img61.png" /><br /><br />
+                        O Trabalho de uma força constante é definido como sendo W = Fdcos(Ө), em que Ө é o ângulo 
+                        entre a força e o deslocamento.<br />
+                        O Trabalho da força elétrica é nulo pois a força elétrica é perpendicular ao deslocamento, 
+                        ângulo de 90º entre os vetores.<br />
+                        O trabalho da força gravitacional é W = - mgh, negativo pois a força tem a mesma direção mas 
+                        sentido contrário do deslocamento, ângulo de 180º entre os vetores.<br />
 
                     </i>
                 </p>
@@ -397,23 +401,24 @@
 
     <h4>
         <i>
-            (Fuvest/2015 – Primeira fase) <br /><br />
-            A trajetória de um projétil, lançado da beira de um penhasco sobre um terreno plano e horizontal, 
-            é parte de uma parábola com eixo de simetria vertical, como ilustrado na figura abaixo. <br />
-            O ponto P sobre o terreno, pé da perpendicular traçada a partir do ponto ocupado pelo projétil, 
-            percorre 30m desde o instante do lançamento até o instante em que o projétil atinge o solo. <br />
-            A altura máxima do projétil, de 200m acima do terreno, é atingida no instante em que a distância percorrida 
-            por P, a partir do instante do lançamento, é de 10m. Quantos metros acima do terreno estava o projétil 
-            quando foi lançado?<br />
+            (FUVEST - 2021 - 1ª FASE)<br /><br />
+            Em uma luminária de mesa, há duas lâmpadas que podem ser acesas individualmente ou ambas ao mesmo 
+            tempo, com cada uma funcionando sob tensão nominal determinada pelo fabricante, de modo que a 
+            intensidade luminosa de cada lâmpara seja sempre a mesma. Entre os circuitos apresentados, indique 
+            aquele que corresponde a uma arranjo que permite o funcionamento conforme essa descrição.<br /><br />
 
-            <img src="~/images/Vest/img62.png" /><br /><br />
+            <img src="~/images/Vest/img87.png" /><br /><br />
+
+            Note e adote: Suponha que as lâmpadas funcionem de maneira ôhmica, ou seja, da mesma forma que um resistor.
+
 
             <br /> <br />
-            a) 60<br />
-            b) 90<br />
-            c) 120<br />
-            d) 150<br />
-            e) 180<br />
+            a) Circuito (1)<br />
+            b) Circuito (2)<br />
+            c) Circuito (3)<br />
+            d) Circuito (4)<br />
+            e) Circuito (5)<br />
+
 
         </i>
     </h4>
@@ -425,35 +430,13 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = D.<br />
+                        Alternativa Correta = B.<br />
 
-                        Com os dados do enunciado, vamos esboçar, no plano cartesiano, uma parábola que represente a situação.<br />
-
-                        <img src="~/images/Vest/img63.png" /><br /><br />
-
-                        Já vimos nessa aula que esse tipo de parábola não deve apresentar o termo 𝑏𝑥 em sua equação, 
-                        além de apresentar o intercepto-y igual a 200, ou seja, é do tipo:<br /><br />
-                        𝑦 = 𝑎𝑥2 + 200<br /><br />
-                        Além disso, a trajetória toca o solo (𝑦 = 0 ) no ponto de abscissa 𝑥 = 20. Podemos, então, 
-                        substituir esses valores na equação da parábola para descobrir o valor do coeficiente 𝑎.<br /><br />
-                        𝑦 = 𝑎𝑥2 + 200<br />
-                        0 = 𝑎. 202 + 200<br />
-                        0 = 𝑎. 400 + 200<br /><br />
-                        Subtraindo 200 de ambos os membros:<br /><br />
-                        −200 = 𝑎. 400<br />
-                        Dividindo por 400 em ambos os membros:<br /><br />
-
-                        <img src="~/images/Vest/img64.png" /><br /><br />
-
-                        Assim, completamos nossa parábola da trajetória:<br /><br />
-                        𝑦 = 𝑎𝑥2 + 200<br />
-
-                        Como queremos saber qual é a altura do terreno em relação ao solo e o lançamento 
-                        ocorreu na posição 𝑥 = −10 em nosso sistema de coordenadas, temos:<br /><br />
-
-                        <img src="~/images/Vest/img65.png" /><br /><br />
-
-                        Simbolizando que a altura do terreno, em relação ao solo, é de 150 metros.<br />
+                        O único jeito para que as lâmpadas funcionem de maneiras independentes, ou seja, ser possível 
+                        que qualquer uma delas possam ser acessas ou apagadas sem depender da outra é que os interruptores 
+                        e as próprias lâmpadas estejam em paralelo, além de garantir que a tensão que chega a elas seja a 
+                        determinada pelo fabricante, o que não ocorreria caso estivessem em série.<br />
+                        E isso acontece apenas no circuito 2.<br />
 
                     </i>
                 </p>
@@ -463,16 +446,29 @@
 
     <h4>
         <i>
-           (Fuvest/2010 – Primeira fase) <br /><br />
-            A função 𝑓: ℝ → ℝ tem como gráfico uma parábola e satisfaz 𝑓(𝑥 + 1) − 𝑓(𝑥) = 6𝑥 − 2, 
-            para todo número real 𝑥. Então, o menor valor de 𝑓(𝑥) ocorre quando 𝑥 é igual a
+            (FUVEST 2020) <br /><br />
+            A velocidade de escape de um corpo celeste é a mínima velocidade que um objeto deve ter nas proximidades da 
+            superfície desse corpo para escapar de sua atração gravitacional. Com base nessa informação e em seus 
+            conhecimentos sobre a interpretação cinética da temperatura, considere as seguintes afirmações a respeito 
+            da relação entre a velocidade de escape e a atmosfera de um corpo celeste.<br /><br />
+
+            I. Corpos celestes com mesma velocidade de escape retêm atmosferas igualmente densas, independentemente da 
+            temperatura de cada corpo.<br />
+            II. Moléculas de gás nitrogênio escapam da atmosfera de um corpo celeste mais facilmente do que moléculas 
+            de gás hidrogênio.<br />
+            III. Comparando corpos celestes com temperaturas médias iguais, aquele com a maior velocidade de escape 
+            tende a reter uma atmosfera mais densa.<br /><br />
+
+            Apenas é correto o que se afirma em:
+
+
 
             <br /> <br />
-            a) 11/6<br />
-            b) 7/6<br />
-            c) 5/6<br />
-            d) 0<br />
-            e) -5/6<br />
+            a) I<br />
+            b) II<br />
+            c) III<br />
+            d) I e II<br />
+            e) I e III<br />
 
 
         </i>
@@ -486,17 +482,18 @@
                 <p>
                     <i>
                         Alternativa Correta = C.<br />
-                        Como 𝑓(𝑥) tem como gráfico uma parábola, temos que<br /><br />
-                        𝑓(𝑥) = 𝑎𝑥2 + 𝑏𝑥 + c<br /><br />
-                        Vamos, então, seguir as orientações acerca da função 𝑓 e descobrir o que pudermos sobre os 
-                        coeficientes 𝑎, 𝑏, 𝑐.<br />
 
+                        A primeira afirmação está incorreta porque, tomando dois gases iguais, no corpo mais 
+                        quente as moléculas desse gás terão uma maior velocidade, assim elas estarão mais 
+                        propensas a escapar. Logo as atmosferas não seriam igualmente densas.<br /><br />
 
-                        <img src="~/images/Vest/img66.png" /><br /><br />
+                        A segunda afirmativa também está incorreta e o motivo é que o gás H2 é menos denso 
+                        que o gás N2 assim para uma mesma temperatura o gás Hidrogênio tem as moléculas com 
+                        uma velocidade maior, logo ele escaparia mais facilmente que o Nitrogênio.<br /><br />
 
-                        O enunciado pede o valor de 𝑥 para o menor valor de 𝑓(𝑥), ou seja, o 𝑥v.<br />
+                        A terceira alternativa está correta: Se a velocidade para escapar do corpo é maior, 
+                        então mais gases podem ser retidos por esse corpo, logo esse corpo terá uma atmosfera mais densa.<br />
 
-                        <img src="~/images/Vest/img67.png" /><br /><br />
 
                     </i>
                 </p>
@@ -506,16 +503,23 @@
 
     <h4>
         <i>
-             (Fuvest/2003 – Primeira fase)<br /><br />
-            Seja 𝑓 a função que associa, a cada número real 𝑥, o menor dos números 𝑥 + 3 e −𝑥 + 5. Assim, 
-            o valor máximo de 𝑓(𝑥) é:
+            (FUVEST 2020)<br /><br />
+            Um fabricante projetou resistores para utilizar em uma lâmpada de resistência L. 
+            Cada um deles deveria ter resistência R. Após a fabricação, ele notou que alguns 
+            deles foram projetados erroneamente, de forma que cada um deles possui uma resistência 
+            RD = R/2. Tendo em vista que a lâmpada queimará se for percorrida por uma corrente 
+            elétrica superior a V/(R+L) em qual(is) dos circuitos a lâmpada queimará?<br /><br />
+
+            <img src="~/images/Vest/img88.png" />
+
 
             <br /> <br />
-            A) 1<br />
-            B) 2<br />
-            C) 4<br />
-            D) 6<br />
-            E) 7<br />
+            a) 1, apenas<br />
+            b) 2, apenas<br />
+            c) 1 e 3, apenas<br />
+            d) 2 e 3, apenas<br />
+            e) 1, 2 e 3<br />
+
 
         </i>
     </h4>
@@ -527,12 +531,21 @@
             <div class="content-inner">
                 <p>
                     <i>
-                        Alternativa Correta = C.<br />
-                        Fazendo o gráfico das duas funções auxiliares e, com ele, associando o menor valor entre elas, temos.<br />
+                        Alternativa Correta = D.<br />
 
-                        <img src="~/images/Vest/img68.png" /><br /><br />
+                        No primeiro circuito a corrente que passa pela Lâmpada é igual à corrente total 
+                        que é dada por i = V/(R+L), logo nesse circuito a Lâmpada não queima.<br /><br />
 
-                        <img src="~/images/Vest/img69.png" /><br /><br />
+                        No segundo circuito a corrente que passa pela Lâmpada é igual à corrente 
+                        total que passa pelo circuito que é dada por i = V/(R/4 + L). Essa corrente é 
+                        maior que a corrente máxima V/(R+L), logo a Lâmpada queima. Lembre-se que uma 
+                        fração será maior quando seu denominador diminui.<br /><br />
+
+                        No terceiro circuito a corrente que passa pela Lâmpada é igual à corrente 
+                        que passa pelo ramo superior da associação em paralelo. Essa corrente será 
+                        i = V/(R/2 + L), que também é maior que a corrente máxima V/(R+L).<br /><br />
+
+                        Assim a Lâmpada queima nas situações 2 e 3.<br />
 
                     </i>
                 </p>
@@ -540,9 +553,11 @@
         </div>
     </div>
 
-</div><br /><br />
+</div>
+<br />
+<br />
 
-    <div id="container-2" class="container" style="background-color:lightskyblue">
-    <h3><a asp-action="ExerciciosFuvest" style="text-decoration: none">Página anterior</a><br /></h3><br />
-    </div>
+<div id="container-2" class="container" style="background-color:lightskyblue">
+    <h3><a asp-action="ExerciciosFuvestFis1" style="text-decoration: none">Página Anterior</a><br /></h3><br />
+</div>
 
