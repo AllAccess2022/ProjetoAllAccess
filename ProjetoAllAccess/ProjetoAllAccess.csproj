@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Energia\**" />
+    <Content Remove="Views\Energia\**" />
+    <EmbeddedResource Remove="Views\Energia\**" />
+    <None Remove="Views\Energia\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\EnergiaController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />

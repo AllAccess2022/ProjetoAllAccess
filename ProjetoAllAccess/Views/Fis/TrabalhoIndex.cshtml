@@ -1,30 +1,24 @@
-﻿@{
+﻿@model IEnumerable<PageModel>
+@{
     ViewData["Title"] = "Trabalho";
 }
 <br />
-<div class="container" id="container-1">
-    <h1>Introdução ao Trabalho Mecânico</h1><br />
-    O trabalho para a física tem um significado diferente do que o
-    tema trabalho utilizado no cotidiano. Enquanto no dia a dia é o ato de trabalhar como
-    profissão e forma de remuneração, na física o trabalho é realizado por forças que são aplicadas a corpos
-    em deslocamento. Quando uma força não é capaz de produzir deslocamento, sabemos que esta força não realiza trabalho. <br /><br />
-    Quando carregamos algo nas mãos, entretanto estamos imóveis, isso que
-    dizer que a força aplicada não realizou trabalho, por mais que a atividade tenha sido cansativa. Para a física,
-    esta situação teria realizado trabalho se além de aplicar uma força, também fossemos capaz de realizar deslocamento. <br /><br />
-
-</div>
-
+@foreach (var item in Model)
+{
+    @Html.Raw(item.Conteudo)
+}
 <br />
 <div id="container-2" class="container">
     <h1>Capítulos:</h1><br />
 
     <h3>
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="TrabalhoIndex" asp-route-id="6">1. Introdução Trabalho </a><br />
 
-        <a style="text-decoration: none" asp-controller="Fis" asp-action="Trabalho1">1. Trabalho de uma força constante </a><br />
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="TrabalhoIndex" asp-route-id="7">2. Trabalho de uma força constante </a><br />
 
-        <a style="text-decoration: none" asp-controller="Fis" asp-action="Trabalho2">2.	Trabalho de uma força peso </a><br />
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="TrabalhoIndex" asp-route-id="8">3.	Trabalho de uma força peso </a><br />
 
-        <a style="text-decoration: none" asp-controller="Fis" asp-action="Trabalho3">3.	Trabalho de uma força elástica </a><br /><br />
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="TrabalhoIndex" asp-route-id="9">4.	Trabalho de uma força elástica </a><br /><br />
 
     </h3>
    

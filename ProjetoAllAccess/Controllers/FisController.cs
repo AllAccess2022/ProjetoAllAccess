@@ -1,67 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProjetoAllAccess.Data;
 
 namespace ProjetoAllAccess.Controllers
 {
     public class FisController : Controller
     {
-        public IActionResult EnergiaIndex()
+        private readonly Contexto _contexto;
+
+        public FisController(Contexto contexto)
         {
-            return View();
-        }
-        public IActionResult Energia1()
-        {
-            return View();
-        }
-        public IActionResult Energia2()
-        {
-            return View();
-        }
-        public IActionResult Energia3()
-        {
-            return View();
-        }
-        public IActionResult Energia4()
-        {
-            return View();
-        }
-        public IActionResult LeiNewtonIndex()
-        {
-            return View();
-        }
-        public IActionResult LeiNewton1()
-        {
-            return View();
-        }
-        public IActionResult LeiNewton2()
-        {
-            return View();
-        }
-        public IActionResult LeiNewton3()
-        {
-            return View();
-        }
-        public IActionResult LeiNewton4()
-        {
-            return View();
-        }
-        public IActionResult TrabalhoIndex()
-        {
-            return View();
-        }
-        public IActionResult Trabalho1()
-        {
-            return View();
+            _contexto = contexto;
         }
 
-        public IActionResult Trabalho2()
+        public async Task<IActionResult> EnergiaIndex(int id)
         {
-            return View();
+            var context = _contexto.Conteudos.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
         }
-        public IActionResult Trabalho3()
+        
+        public async Task<IActionResult> LeiNewtonIndex(int id)
         {
-            return View();
+            var context = _contexto.Conteudos.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
         }
-
+        public async Task<IActionResult> TrabalhoIndex(int id)
+        {
+            var context = _contexto.Conteudos.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
+        }
         public IActionResult FisIndex()
         {
             return View();

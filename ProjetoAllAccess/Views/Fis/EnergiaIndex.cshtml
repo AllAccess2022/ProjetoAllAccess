@@ -1,41 +1,28 @@
-﻿@{
+﻿@model IEnumerable<PageModel>
+
+@{
     ViewData["Title"] = "Energia";
 }
 
 <br />
-<div class="container" id="container-1">
-    <h1>Introdução a Energia</h1><br />
-
-    Por vezes, encontramos a alegria sendo associada a vigor, disposição e vontade, porém é extremamente difícil realmente classificar a energia. Sabemos que ela é algo vital para a natureza como um todo, porém não devemos generalizá-la ou classifica-la de forma rasa. O ser humano utiliza diversas formas de energia e conceituamos a mesma como a capacidade de um sistema físico de realizar trabalho.
-    Nada se perde, tudo se transforma e, com isso, podemos dizer que a energia atua como agente direta em todas as transformações. <br />
-    Quando um sistema físico possui energia, este estará apto a realizar trabalho. 
-    A Energia mecânica é algo que está totalmente vinculada a movimento e consequentemente a trabalho.<br />
-    Na física a energia mecânica é chamada de energia cinética. Temos também a energia armazenada em sistemas físicos na forma latente, 
-    sendo está chamada de energia potencial, podendo ser gravitacional ou elástica.<br /><br />
-
-
-    O mundo moderno evoluiu e se desenvolveu tendo como passa as mais variadas fontes de energia.
-    Petróleo, eletricidade, energia eólica e solar são apenas alguns dos exemplos.  <br />
-
-    Ainda assim, podemos dizer que a energia ainda é algo abstrato no imaginário das pessoas.
-    Energia pode ser transferida de um corpo para o outro ou ficar acumulada apenas em um dos corpos. Concluindo,
-    energia é a capacidade de realizar trabalho. <br /><br />
-
-</div>
+@foreach (var item in Model) {
+    @Html.Raw(item.Conteudo)
+}
 <br />
 
 <div id="container-2" class="container">
     <h1>Capítulos:</h1><br />
 
     <h3>
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="EnergiaIndex" asp-route-id="1">1. Energia Introdução</a><br />
 
-        <a style="text-decoration: none" asp-controller="Fis" asp-action="Energia1">1.  Energia Cinética </a><br />
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="EnergiaIndex" asp-route-id="2">2. Energia Cinética</a><br />
 
-        <a style="text-decoration: none" asp-controller="Fis" asp-action="Energia2">2.	Energia Potencial Gravitacional</a><br />
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="EnergiaIndex" asp-route-id="3">3. Energia Potencial Gravitacional</a><br />
 
-        <a style="text-decoration: none" asp-controller="Fis" asp-action="Energia3">3.	Energia Potencial Elástica </a><br /><br />
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="EnergiaIndex" asp-route-id="4">4. Energia Potencial Elástica</a><br />
 
-        <a style="text-decoration: none" asp-controller="Fis" asp-action="Energia4">4.	Energia Mecânica </a><br /><br />
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="EnergiaIndex" asp-route-id="5">5. Energia Mecânica</a><br />
 
     </h3>
 

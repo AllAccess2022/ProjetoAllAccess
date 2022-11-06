@@ -1,0 +1,29 @@
+﻿@model IEnumerable<PageModel>
+
+@{
+    ViewData["Title"] = "Energia";
+}
+
+<br />
+@foreach (var item in Model) {
+    @Html.Raw(item.Conteudo)
+}
+<br />
+
+<div id="container-2" class="container">
+    <h1>Capítulos:</h1><br />
+
+    <h3>
+
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="Energia1">1.  Energia Cinética </a><br />
+
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="Energia2">2.	Energia Potencial Gravitacional</a><br />
+
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="Energia3">3.	Energia Potencial Elástica </a><br /><br />
+
+        <a style="text-decoration: none" asp-controller="Fis" asp-action="Energia4">4.	Energia Mecânica </a><br /><br />
+
+    </h3>
+
+</div>
+<br />

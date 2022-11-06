@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoAllAccess.Data;
 
@@ -10,34 +11,15 @@ using ProjetoAllAccess.Data;
 namespace ProjetoAllAccess.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20221105041706_PageModel")]
+    partial class PageModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("ProjetoAllAccess.Models.PageModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Assunto")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Conteudo")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Materia")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Conteudos");
-                });
 
             modelBuilder.Entity("ProjetoAllAccess.Models.Usuario", b =>
                 {
