@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PageModel>
+@{
+    ViewData["Title"] = "Conjuntos Numéricos";
+}
+<br />
+@foreach (var item in Model)
+{
+    @Html.Raw(item.Conteudo)
+}
+<br />
+
+<div id="container-2" class="container" style="background-color:lightskyblue">
+    <h1>Capítulos:</h1><br />
+
+    <h3>
+        <a asp-action="ConjuntosNumericosIndex" style="text-decoration: none" asp-route-id="15">1.	Introdução</a><br />
+
+        <a asp-action="ConjuntosNumericosIndex" style="text-decoration: none" asp-route-id="16">2.	Conjunto ℕ</a><br />
+
+        <a asp-action="ConjuntosNumericosIndex" style="text-decoration: none" asp-route-id="17">3.	Conjunto Z</a><br />
+
+        <a asp-action="ConjuntosNumericosIndex" style="text-decoration: none" asp-route-id="18">4.    Conjunto Q</a><br />
+
+        <a asp-action="ConjuntosNumericosIndex" style="text-decoration: none" asp-route-id="19">5.    Conjunto I</a><br />
+
+        <a asp-action="ConjuntosNumericosIndex" style="text-decoration: none" asp-route-id="20">6.    Conjunto R</a><br />
+
+        <a asp-action="ConjuntosNumericosIndex" style="text-decoration: none" asp-route-id="21">7.    Razão, Proporção e Porcentagem</a><br /><br />
+
+    </h3>
+
+</div>
+<br />

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<PageModel>
+@{
+    ViewData["Title"] = "Estatística";
+}
+<br />
+@foreach (var item in Model)
+{
+    @Html.Raw(item.Conteudo)
+}
+<br />
+
+<div id="container-2" class="container" style="background-color:lightskyblue">
+    <h1>Capítulos:</h1><br />
+
+    <h3>
+        <a asp-action="EstatisticaIndex" style="text-decoration: none" asp-route-id="22">1.	Introdução</a><br />
+
+        <a asp-action="EstatisticaIndex" style="text-decoration: none" asp-route-id="23">2.	Média aritmética</a><br />
+
+        <a asp-action="EstatisticaIndex" style="text-decoration: none" asp-route-id="24">3.	Moda</a><br />
+
+        <a asp-action="EstatisticaIndex" style="text-decoration: none" asp-route-id="25">4.   Mediana</a><br /><br />
+
+    </h3>
+
+</div>
+<br />

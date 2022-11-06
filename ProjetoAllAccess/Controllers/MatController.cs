@@ -1,80 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProjetoAllAccess.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProjetoAllAccess.Controllers
 {
     public class MatController : Controller
     {
-        public IActionResult NocoesConjuntos()
-        {
-            return View();
-        }
-        public IActionResult NocoesConjuntos1()
-        {
-            return View();
-        }
-        public IActionResult NocoesConjuntos2()
-        {
-            return View();
-        }
-        public IActionResult NocoesConjuntos21()
-        {
-            return View();
-        }
-        public IActionResult NocoesConjuntos3()
-        {
-            return View();
-        }
-        public IActionResult NocoesConjuntos4()
-        {
-            return View();
-        }
-        public IActionResult Estatistica()
-        {
-            return View();
-        }
-        public IActionResult Estatistica1()
-        {
-            return View();
-        }
+        private readonly Contexto _contexto;
 
-        public IActionResult Estatistica2()
+        public MatController(Contexto contexto)
         {
-            return View();
+            _contexto = contexto;
         }
-        public IActionResult Estatistica3()
+        public async Task<IActionResult> NocoesConjuntosIndex(int id)
         {
-            return View();
+            var context = _contexto.Conteudos.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
         }
-        public IActionResult ConjuntosNumericos()
+        public async Task<IActionResult> EstatisticaIndex(int id)
         {
-            return View();
+            var context = _contexto.Conteudos.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
         }
-        public IActionResult ConjuntosNumericos1()
+        public async Task<IActionResult> ConjuntosNumericosIndex(int id)
         {
-            return View();
+            var context = _contexto.Conteudos.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
         }
-        public IActionResult ConjuntosNumericos2()
-        {
-            return View();
-        }
-        public IActionResult ConjuntosNumericos3()
-        {
-            return View();
-        }
-        public IActionResult ConjuntosNumericos4()
-        {
-            return View();
-        }
-        public IActionResult ConjuntosNumericos5()
-        {
-            return View();
-        }
-        public IActionResult ConjuntosNumericos6()
-        {
-            return View();
-        }
-
-
         public IActionResult MatIndex()
         {
             return View();
