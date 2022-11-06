@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoAllAccess.Data;
 
@@ -10,9 +11,10 @@ using ProjetoAllAccess.Data;
 namespace ProjetoAllAccess.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20221106194505_ExerciciosMatFis")]
+    partial class ExerciciosMatFis
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,26 +99,6 @@ namespace ProjetoAllAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuario");
-                });
-
-            modelBuilder.Entity("ProjetoAllAccess.Models.VestibularModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Conteudo")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Materia")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("NomeVest")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ExVest");
                 });
 #pragma warning restore 612, 618
         }

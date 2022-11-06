@@ -14,5 +14,7 @@ namespace ProjetoAllAccess.Data
 
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<PageModel> Conteudos { get; set; }
+        public DbSet<PageExercicioModel> Exercicio { get; set; }
+        public DbSet<VestibularModel> ExVest { get; set; }
     }
 }

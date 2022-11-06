@@ -1,0 +1,10 @@
+﻿@model IEnumerable<PageExercicioModel>
+@{
+    ViewData["Title"] = "Exercícios de Matemática";
+}
+<br />
+@foreach (var item in Model)
+{
+    @Html.Raw(item.Conteudo)
+}
+<br />

@@ -2,79 +2,6 @@
     ViewData["Title"] = "Exercícios - Enem";
 }
 <br />
-<style>
-    input[type='checkbox'] { 
-        display: none; 
-    } 
-
-    .wrap-collabsible { 
-        margin: 1.4rem 0;
-    } 
-
-    .lbl-toggle { 
-        border-radius: 15px 50px 30px;
-        display: block; 
-        font-weight: bold; 
-        font-family: monospace; 
-        font-size: 1.2rem; 
-        text-transform: uppercase; 
-        text-align: center; 
-        padding: 1rem; 
-        color: #DDD; 
-        background: darkblue; 
-        cursor: pointer;  
-        transition: all 0.25s ease-out;
-        
-
-    } 
-    .lbl-toggle:hover { 
-        color: #FFF; 
-    } 
-
-    .lbl-toggle::before { 
-        content: ' '; 
-        display: inline-block; 
-        border-top: 10px solid transparent; 
-        border-bottom: 10px solid transparent; 
-        border-left: 10px solid currentColor; 
-        vertical-align: middle; 
-        margin-right: .7rem; 
-        transform: translateY(-2px); 
-        transition: transform .2s ease-out; 
-    } 
-    .toggle:checked+.lbl-toggle::before { 
-        transform: rotate(90deg) translateX(-3px); 
-    } 
-    .collapsible-content 
-    { 
-        max-height: 0px; 
-        overflow: hidden; 
-        transition: max-height .25s ease-in-out; 
-    } 
-    .toggle:checked + .lbl-toggle + .collapsible-content 
-    { 
-        max-height: 1000px; 
-    } 
-
-    .toggle:checked+.lbl-toggle 
-    { 
-      border-bottom-right-radius: 0; 
-      border-bottom-left-radius: 0; 
-    } 
-    .collapsible-content .content-inner 
-    { 
-      background: rgba(0, 105, 255, .2); 
-      border-bottom: 1px solid rgba(0, 105, 255, .45); 
-      border-bottom-left-radius: 7px; 
-      border-bottom-right-radius: 7px; 
-      padding: .5rem 1rem; 
-    } 
-    .collapsible-content p 
-      { 
-          margin-bottom: 0; 
-      }
-
-</style>
 
 <div class="container" id="container-1">
     <h1>Exercícios Enem - Eletricidade e Óptica</h1><br />
@@ -85,7 +12,7 @@
             percepção das cores: um tipo para tons vermelhos, um para tons azuis e outro para 
             tons verdes. As diversas cores que enxergamos são o resultado da percepção das cores básicas, 
             como indica a figura.
-            <img src="~/images/Vest/img28.png" /><br />
+            <img src="/images/Vest/img28.png" /><br />
             Para qual cartão os dois voluntários identificarão a mesma cor?
 
 
@@ -218,7 +145,7 @@
             durante um ano. Os resultados encontrados estão mostrados esquematicamente no gráfico 
             (SV: Solstício de Verão; SI: Solstício de Inverno; E: Equinócio):<br />
 
-            <img src="~/images/Vest/img29.png" /><br />
+            <img src="/images/Vest/img29.png" /><br />
 
             Qual(is) cidade(s) indicada(s) no texto e no gráfico contradiz(em) a afirmação II?<br />
 
@@ -264,9 +191,9 @@
             pode ser vista na figura. No quadro é apresentada a razão (n) entre a velocidade da luz no vácuo e 
             no respectivo material (celulose, glicerina ou ar).<br />
 
-            <img src="~/images/Vest/img30.png" /><br /><br />
+            <img src="/images/Vest/img30.png" /><br /><br />
 
-            <img src="~/images/Vest/img31.png" /><br />
+            <img src="/images/Vest/img31.png" /><br />
 
             Nessa situação, o papel se tornou translúcido porque a luz é
 
@@ -311,7 +238,7 @@
             essa percepção, algumas informações adicionais são necessárias para se concluir que nem o eclipse 
             solar, nem o lunar ocorrem com tal periodicidade.<br />
 
-            <img src="~/images/Vest/img32.png" /><br />
+            <img src="/images/Vest/img32.png" /><br />
 
             A periodicidade dos eclipses ser diferente da possível percepção do estudante ocorre em razão de:<br />
 
@@ -350,7 +277,7 @@
             como um fogão solar. Esse dispositivo é montado de tal forma que a superfície fique posicionada sempre 
             voltada para o Sol. Neste, a panela deve ser colocada em um ponto determinado para maior eficiência do fogão.<br />
 
-            <img src="~/images/Vest/img33.png" /><br />
+            <img src="/images/Vest/img33.png" /><br />
 
             Considerando que a panela esteja posicionada no ponto citado, a maior eficiência ocorre porque os raios solares:
 
@@ -368,6 +295,6 @@
 </div><br /><br />
 
     <div id="container-2" class="container" style="background-color:lightskyblue">
-    <h3><a asp-action="ExerciciosEnemFis1" style="text-decoration: none">Página Anterior</a><br /></h3><br />
+    <h3><a asp-action="ExerciciosVestibularIndex" asp-route-id="3" style="text-decoration: none">Página Anterior</a><br /></h3><br />
     </div>
 

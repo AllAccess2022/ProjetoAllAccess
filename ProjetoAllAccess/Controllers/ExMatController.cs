@@ -1,48 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProjetoAllAccess.Data;
 
 namespace ProjetoAllAccess.Controllers
 {
     public class ExMatController : Controller
     {
-        public IActionResult ERelacaoInclusao()
+        private readonly Contexto _contexto;
+
+        public ExMatController(Contexto contexto)
         {
-            return View();
+            _contexto = contexto;
         }
-        public IActionResult EIgualdadeConjunto()
+        public async Task <IActionResult> ExercicioMatIndex(int id)
         {
-            return View();
+            var context = _contexto.Exercicio.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
         }
-        public IActionResult EIntersecaoReuniao()
-        {
-            return View();
-        }
-        public IActionResult EDiferenca()
-        {
-            return View();
-        }
-        public IActionResult EConjuntoNumerico()
-        {
-            return View();
-        }
-        public IActionResult ERelacaoInclusaoGab()
-        {
-            return View();
-        }
-        public IActionResult EIgualdadeConjuntoGab()
-        {
-            return View();
-        }
-        public IActionResult EIntersecaoReuniaoGab()
-        {
-            return View();
-        }
-        public IActionResult EDiferencaGab()
-        {
-            return View();
-        }
-        public IActionResult EConjuntoNumericoGab()
-        {
-            return View();
-        }
+       
     }
 }

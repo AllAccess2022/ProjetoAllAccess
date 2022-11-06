@@ -2,79 +2,6 @@
     ViewData["Title"] = "Exercícios - Comvest";
 }
 <br />
-<style>
-    input[type='checkbox'] { 
-        display: none; 
-    } 
-
-    .wrap-collabsible { 
-        margin: 1.4rem 0;
-    } 
-
-    .lbl-toggle { 
-        border-radius: 15px 50px 30px;
-        display: block; 
-        font-weight: bold; 
-        font-family: monospace; 
-        font-size: 1.2rem; 
-        text-transform: uppercase; 
-        text-align: center; 
-        padding: 1rem; 
-        color: #DDD; 
-        background: darkblue; 
-        cursor: pointer;  
-        transition: all 0.25s ease-out;
-        
-
-    } 
-    .lbl-toggle:hover { 
-        color: #FFF; 
-    } 
-
-    .lbl-toggle::before { 
-        content: ' '; 
-        display: inline-block; 
-        border-top: 10px solid transparent; 
-        border-bottom: 10px solid transparent; 
-        border-left: 10px solid currentColor; 
-        vertical-align: middle; 
-        margin-right: .7rem; 
-        transform: translateY(-2px); 
-        transition: transform .2s ease-out; 
-    } 
-    .toggle:checked+.lbl-toggle::before { 
-        transform: rotate(90deg) translateX(-3px); 
-    } 
-    .collapsible-content 
-    { 
-        max-height: 0px; 
-        overflow: hidden; 
-        transition: max-height .25s ease-in-out; 
-    } 
-    .toggle:checked + .lbl-toggle + .collapsible-content 
-    { 
-        max-height: 800px; 
-    } 
-
-    .toggle:checked+.lbl-toggle 
-    { 
-      border-bottom-right-radius: 0; 
-      border-bottom-left-radius: 0; 
-    } 
-    .collapsible-content .content-inner 
-    { 
-      background: rgba(0, 105, 255, .2); 
-      border-bottom: 1px solid rgba(0, 105, 255, .45); 
-      border-bottom-left-radius: 7px; 
-      border-bottom-right-radius: 7px; 
-      padding: .5rem 1rem; 
-    } 
-    .collapsible-content p 
-      { 
-          margin-bottom: 0; 
-      }
-
-</style>
 
 <div class="container" id="container-1">
     <h1>Exercícios COMVEST - Matemática</h1><br />
@@ -151,7 +78,7 @@
             A versão a gasolina custa R$ 150.000,00 e a versão híbrida custa R$ 180.000,00. 
             A tabela a seguir indica o consumo de combustível de cada uma das versões:<br /><br />
 
-            <img src="~/images/Vest/img89.png" /><br /><br />
+            <img src="/images/Vest/img89.png" /><br /><br />
 
             Note que a versão híbrida é mais econômica, porém custa mais caro.<br />
             Um motorista faz diariamente um percurso de 36 km na cidade e de 56 km na estrada. 
@@ -216,9 +143,9 @@
             (UNICAMP - 2022 - 1ª fase - Caderno R)  <br /><br />
             As figuras abaixo ilustram, respectivamente, os gráficos das funções y = f(x) e y = g(x).<br /><br />
 
-            <img src="~/images/Vest/img90.png" /><br /><br />
+            <img src="/images/Vest/img90.png" /><br /><br />
 
-            <img src="~/images/Vest/img91.png" /><br /><br />
+            <img src="/images/Vest/img91.png" /><br /><br />
             Então f(g(−1)) − g(f(1)) vale: 
 
 
@@ -384,7 +311,7 @@
                     <i>
                         Alternativa Correta = B.<br />
 
-                        <img src="~/images/Vest/img92.png" /><br /><br />
+                        <img src="/images/Vest/img92.png" /><br /><br />
 
                         Veja essa figura. Note que a-r, a, a+r é uma progressão aritmética, como está no 
                         enunciado. Além disso, x é um valor inteiro. <br />
@@ -418,7 +345,7 @@
             Nesse jogo, os participantes usam as mãos para representar os símbolos de pedra, papel e tesoura, 
             conforme mostrado nos emojis a seguir:<br /><br />
 
-            <img src="~/images/Vest/img93.png" /><br /><br />
+            <img src="/images/Vest/img93.png" /><br /><br />
 
             Pelas regras do jogo, o participante que escolher “pedra” ganha do que escolher tesoura;
             o participante que escolher tesoura ganha do que escolher papel; por fim, o que escolher papel 
@@ -491,7 +418,7 @@
                         Se o polinômio p(x)=2x3 + ax2 + bx + c é divisível pelo polinômio p(x)=2x2−x+4, 
                         então ele deixa resto zero quando efetuamos a divisão. Então:<br /><br />
 
-                        <img src="~/images/Vest/img94.png" /><br /><br />
+                        <img src="/images/Vest/img94.png" /><br /><br />
 
                         (a+1)x2+(b−4)x+c=2x2−x+4<br />
 
@@ -605,6 +532,6 @@
 </div><br /><br />
 
     <div id="container-2" class="container" style="background-color:lightskyblue">
-    <h3><a asp-action="ExerciciosFuvest2" style="text-decoration: none">Próxima Página</a><br /></h3><br />
+    <h3><a asp-action="ExerciciosVestibularIndex" asp-route-id="10" style="text-decoration: none">Próxima Página</a><br /></h3><br />
     </div>
 

@@ -2,119 +2,6 @@
     ViewData["Title"] = "Exercícios - Enem";
 }
 <br />
-<style>
-    input[type='checkbox'] { 
-        display: none; 
-    } 
-
-    .wrap-collabsible { 
-        margin: 1.4rem 0;
-    } 
-
-    .lbl-toggle { 
-        border-radius: 15px 50px 30px;
-        display: block; 
-        font-weight: bold; 
-        font-family: monospace; 
-        font-size: 1.2rem; 
-        text-transform: uppercase; 
-        text-align: center; 
-        padding: 1rem; 
-        color: #DDD; 
-        background: darkblue; 
-        cursor: pointer;  
-        transition: all 0.25s ease-out;
-        
-
-    } 
-    .lbl-toggle:hover { 
-        color: #FFF; 
-    } 
-
-    .lbl-toggle::before { 
-        content: ' '; 
-        display: inline-block; 
-        border-top: 10px solid transparent; 
-        border-bottom: 10px solid transparent; 
-        border-left: 10px solid currentColor; 
-        vertical-align: middle; 
-        margin-right: .7rem; 
-        transform: translateY(-2px); 
-        transition: transform .2s ease-out; 
-    } 
-    .toggle:checked+.lbl-toggle::before { 
-        transform: rotate(90deg) translateX(-3px); 
-    } 
-    .collapsible-content 
-    { 
-        max-height: 0px; 
-        overflow: hidden; 
-        transition: max-height .25s ease-in-out; 
-    } 
-    .toggle:checked + .lbl-toggle + .collapsible-content 
-    { 
-        max-height: 350px; 
-    } 
-
-    .toggle:checked+.lbl-toggle 
-    { 
-      border-bottom-right-radius: 0; 
-      border-bottom-left-radius: 0; 
-    } 
-    .collapsible-content .content-inner 
-    { 
-      background: rgba(0, 105, 255, .2); 
-      border-bottom: 1px solid rgba(0, 105, 255, .45); 
-      border-bottom-left-radius: 7px; 
-      border-bottom-right-radius: 7px; 
-      padding: .5rem 1rem; 
-    } 
-    .collapsible-content p 
-      { 
-          margin-bottom: 0; 
-      }
-
-</style>
-<div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar" class="">
-        <div class="custom-menu">
-            <button type="button" id="sidebarCollapse" class="btn btn-primary">
-            </button>
-        </div>
-        <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
-            <div class="user-logo">
-                <div class="img" style="background-image: url(images/logo.jpg);"></div>
-                <h3>Catriona Henderson</h3>
-            </div>
-        </div>
-        <ul class="list-unstyled components mb-5">
-            <li class="active">
-                <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-trophy mr-3"></span> Top Review</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
-            </li>
-            <li>
-                <a href="#"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
-            </li>
-        </ul>
-    </nav>
-
-</div>
-
-
 
 <div class="container" id="container-1">
     <h1>Exercícios Enem - Matemática</h1><br />
@@ -209,7 +96,7 @@
             ainda disponíveis. A empresa monitora, permanentemente, o número de assentos já vendidos e compara-o com 
             o número total de assentos do ônibus para avaliar a necessidade de alocação de veículos extras.
             Na imagem tem-se a informação dos assentos já vendidos e dos ainda disponíveis em um determinado instante.
-            <img src="~/images/Vest/img1.png" /><br />
+            <img src="/images/Vest/img1.png" /><br />
             A razão entre o número de assentos já vendidos e o total de assentos desse ônibus, 
             no instante considerado na imagem, é:
 
@@ -308,7 +195,7 @@
             pois aceleram o metabolismo e, em consequência, elevam o consumo de calorias. No gráfico, estão 
             registrados os valores calóricos, em kcal, gastos em cinco diferentes atividades físicas, em função do 
             tempo dedicado às atividades, contado em minuto.<br />
-            <img src="~/images/Vest/img2.png" /><br />
+            <img src="/images/Vest/img2.png" /><br />
             Qual dessas atividades físicas proporciona o maior consumo de quilocalorias por minuto?<br />
 
             <br /> <br />
@@ -357,7 +244,7 @@
             No plano cartesiano, três satélites, A, B e C estão representados, cada um, por um ponto (m,r) 
             cujas coordenadas são, respectivamente, a massa do satélite e o raio da sua órbita em torno da Terra.<br />
 
-            <img src="~/images/Vest/img3.png" /><br />
+            <img src="/images/Vest/img3.png" /><br />
             Com base nas posições relativas dos pontos no gráfico, deseja-se comparar as intensidades FA, FB e FC 
             da força gravitacional que a Terra exerce sobre os satélites A, B e C respectivamente.<br />
             As intensidades FA, FB e FC expressas no gráfico satisfazem a relação:<br />
@@ -403,12 +290,12 @@
             (Enem 2017) O resultado de uma pesquisa eleitoral, sobre a preferência dos eleitores em relação a 
             dois candidatos, foi representado por meio do Gráfico 1.<br />
 
-            <img src="~/images/Vest/img4.png" /><br />
+            <img src="/images/Vest/img4.png" /><br />
 
             Ao ser divulgado esse resultado em jornal, o Gráfico 1 foi cortado durante a diagramação, 
             como mostra o Gráfico 2.<br />
 
-            <img src="~/images/Vest/img5.png" /><br />
+            <img src="/images/Vest/img5.png" /><br />
 
             Apesar de os valores apresentados estarem corretos e a largura das colunas ser a mesma, muitos 
             leitores criticaram o formato do Gráfico 2 impresso no jornal, alegando que houve prejuízo visual 
@@ -457,7 +344,7 @@
             divisória do medidor, conforme figura a seguir.<br />
 
 
-            <img src="~/images/Vest/img6.png" /><br />
+            <img src="/images/Vest/img6.png" /><br />
 
             Como o motorista conhece o percurso, sabe que existem, até a chegada a seu destino, cinco postos 
             de abastecimento de combustível, localizados a 150 km, 187 km, 450 km, 500 km e 570 km do ponto de partida.<br />
@@ -537,6 +424,6 @@
 </div><br /><br />
 
     <div id="container-2" class="container" style="background-color:lightskyblue">
-    <h3><a asp-action="ExerciciosEnem2" style="text-decoration: none">Próxima Página</a><br /></h3><br />
+    <h3><a asp-action="ExerciciosVestibularIndex" asp-route-id="2" style="text-decoration: none">Próxima Página</a><br /></h3><br />
     </div>
 

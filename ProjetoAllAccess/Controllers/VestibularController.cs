@@ -1,9 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProjetoAllAccess.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace ProjetoAllAccess.Controllers
 {
     public class VestibularController : Controller
     {
+        private readonly Contexto _contexto;
+
+        public VestibularController(Contexto contexto)
+        {
+            _contexto = contexto;
+        }
         public IActionResult IndexVestibular()
         {
             return View();
@@ -12,53 +20,10 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
-        public IActionResult ExerciciosEnem1()
+        public async Task<IActionResult> ExerciciosVestibularIndex(int id)
         {
-            return View();
-        }
-        public IActionResult ExerciciosEnem2()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosEnemFis1()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosEnemFis2()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosFuvest()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosFuvest2()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosFuvestFis1()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosFuvestFis2()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosComvest()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosComvest2()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosComvestFis1()
-        {
-            return View();
-        }
-        public IActionResult ExerciciosComvestFis2()
-        {
-            return View();
+            var context = _contexto.ExVest.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
         }
     }
 }
