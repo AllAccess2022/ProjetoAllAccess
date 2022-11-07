@@ -20,7 +20,32 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> ExerciciosVestibularIndex(int id)
+        public async Task<IActionResult> ExerciciosEnemIndex(int id)
+        {
+            var context = _contexto.ExVest.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
+        }
+        public async Task<IActionResult> ExerciciosFuvestIndex(int id)
+        {
+            var context = _contexto.ExVest.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
+        }
+        public async Task<IActionResult> ExerciciosComvestIndex(int id)
+        {
+            var context = _contexto.ExVest.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
+        }
+        public async Task<IActionResult> ExerciciosEnemFisIndex(int id)
+        {
+            var context = _contexto.ExVest.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
+        }
+        public async Task<IActionResult> ExerciciosFuvestFisIndex(int id)
+        {
+            var context = _contexto.ExVest.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
+        }
+        public async Task<IActionResult> ExerciciosComvestFisIndex(int id)
         {
             var context = _contexto.ExVest.Where(p => p.Id.Equals(id));
             return View(await context.ToListAsync());

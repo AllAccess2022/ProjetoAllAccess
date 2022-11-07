@@ -271,7 +271,7 @@ input[type='checkbox'] {
 }
 
 .toggle:checked + .lbl-toggle + .collapsible-content {
-    max-height: 800px;
+    max-height: 1600px;
 }
 
 .toggle:checked + .lbl-toggle {

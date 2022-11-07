@@ -1,0 +1,15 @@
+﻿@model IEnumerable<VestibularModel>
+@{
+    ViewData["Title"] = "Exercícios Enem";
+}
+<br />
+@foreach (var item in Model)
+{
+    @Html.Raw(item.Conteudo)
+}
+<br />
+
+<div id="container-2" class="container" style="background-color:lightskyblue">
+    <h3><a asp-action="ExerciciosEnemIndex" asp-route-id="11" style="text-decoration: none">Página 1</a><br /></h3>
+    <h3><a asp-action="ExerciciosEnemIndex" asp-route-id="12" style="text-decoration: none">Página 2</a><br /></h3>
+</div>
