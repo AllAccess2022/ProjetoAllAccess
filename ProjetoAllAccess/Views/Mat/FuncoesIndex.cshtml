@@ -1,0 +1,42 @@
+﻿@model IEnumerable<PageModel>
+@{
+    ViewData["Title"] = "Funções";
+}
+<br />
+@foreach (var item in Model)
+{
+    @Html.Raw(item.Conteudo)
+}
+<br />
+
+
+
+
+<div id="container-2" class="container" style="background-color:lightskyblue">
+    <h1>Capítulos:</h1><br />
+
+    <h3>
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="32">1.	Introdução</a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="33">2.	A noção intuitiva de função</a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="34">3.	A noção de função como relação entre conjuntos</a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="35">4.	Funções definidas por fórmulas </a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="36">5.	Domínio e contradomínio </a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="37">6.	Leitura informal de gráficos</a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="38">7.	O plano cartesiano</a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="39">8.	Construção de gráficos</a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="40">9. Análise de gráficos</a><br />
+
+        <a asp-action="FuncoesIndex" style="text-decoration: none" asp-route-id="41">10. Conceitos</a><br />
+
+    </h3>
+
+</div>
+<br />
