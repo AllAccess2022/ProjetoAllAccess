@@ -1,19 +1,20 @@
-html {
+html, body {
     font-size: 14px;
+    height: 100%;
+    min-height: 100vh;
+    --background: white;
+    --text: black;
 }
-    a, a:focus, a:active {
-        text-decoration: none;
-        color: inherit;
-    }
 
+footer {
+    margin-top: auto;
+}
 
 #container-1 {
     align-content: center;
     text-align: center;
-    background-color: white;
     font-family: Helvetica;
     border-radius: 15px 50px 30px;
-    background: white;
     border: 3px solid white;
 }
 
@@ -23,7 +24,6 @@ html {
     text-align: center;
     font-family: Helvetica;
     border-radius: 15px 50px 30px;
-    background: lightblue;
     border: 2px solid darkblue;
     align-content: center;
 }
@@ -437,6 +437,7 @@ input[type='checkbox'] {
     #irTop:hover {
         background-color: #555;
     }
+
 
 /* MOBILE*/
 @media only screen and (max-width: 420px) {
