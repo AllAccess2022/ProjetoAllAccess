@@ -63,13 +63,45 @@
 
 
             <ul class="nav col-md-3 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"> Termos de Uso</li>
-                <li class="ms-3"> Sobre</li>
+                <li class="ms-3" role="button" data-bs-toggle="modal" data-bs-target="#Modal1"> Termos de Uso</li>
+                <!-- Modal -->
+                <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header " style="background-color:lightskyblue">
+                                <h1  id="ModalLabel1" style="color:white">Termos de Uso</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Termos de Uso
+                            </div>
+                            <div class="modal-footer" style="background-color:lightskyblue">
+                                <h3 style="color:white">ALL ACCESS</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
             </ul>
 
             <ul class="nav col-md-3 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"> plataforma.all.access@gmail.com</li>
+                <li class="ms-3" role="button" data-bs-toggle="modal" data-bs-target="#Modal2"> Sobre</li>
+                <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color:lightskyblue">
+                                <h1  id="ModalLabel2" style="color:white">Sobre</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Sobre
+                            </div>
+                            <div class="modal-footer" style="background-color:lightskyblue">
+                                <h3 style="color:white">ALL ACCESS</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </ul>
             <ul class="nav col-md-3 justify-content-end list-unstyled d-flex">
                 <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/plataforma_all_access/" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>

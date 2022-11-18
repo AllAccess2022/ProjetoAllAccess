@@ -3442,7 +3442,7 @@ textarea.form-control-lg {
         display: inline-block;
         margin-left: .255em;
         vertical-align: .255em;
-        content: "";
+        content: none;
         border-top: .3em solid;
         border-right: .3em solid transparent;
         border-bottom: 0;
@@ -3631,12 +3631,12 @@ textarea.form-control-lg {
     display: inline-block;
     margin-left: .255em;
     vertical-align: .255em;
-    content: "";
+    content: none;
     border-top: 0;
     border-right: .3em solid transparent;
     border-bottom: .3em solid;
     border-left: .3em solid transparent
-}
+    }
 
 .dropup .dropdown-toggle:empty::after {
     margin-left: 0
@@ -3654,7 +3654,7 @@ textarea.form-control-lg {
     display: inline-block;
     margin-left: .255em;
     vertical-align: .255em;
-    content: "";
+    content: none;
     border-top: .3em solid transparent;
     border-right: 0;
     border-bottom: .3em solid transparent;
@@ -3681,7 +3681,7 @@ textarea.form-control-lg {
     display: inline-block;
     margin-left: .255em;
     vertical-align: .255em;
-    content: ""
+    content: none
 }
 
 .dropstart .dropdown-toggle::after {
@@ -3692,7 +3692,7 @@ textarea.form-control-lg {
     display: inline-block;
     margin-right: .255em;
     vertical-align: .255em;
-    content: "";
+    content: none;
     border-top: .3em solid transparent;
     border-right: .3em solid;
     border-bottom: .3em solid transparent
