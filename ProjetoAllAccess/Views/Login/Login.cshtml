@@ -11,6 +11,8 @@
     <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjetoAllAccess</title>
+    <link rel="icon" href="/images/AC-icon-logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/w3.css">
     <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
@@ -29,7 +31,8 @@
 
     </head>
    <body class="text-center">
-    @if (TempData["MensagemErro"] != null)
+<main class="form-signin w-100 m-auto">
+        @if (TempData["MensagemErro"] != null)
 
 {
     <div class="alert alert-danger" role="alert">
@@ -38,9 +41,8 @@
     </div>
 
 }
-<main class="form-signin w-100 m-auto">
   <form asp-action="Entrar" method="post">
-    <img class="mb-4" src="/images/AC-icon-logo.svg" alt="" width="72" height="57">
+            <img class="mb-4" src="/images/logo_all_access.png" alt="" width="200" height="200">
     <h1 class="h3 mb-3 fw-normal">Efetuar Login</h1>
 
     <div class="form-floating">
@@ -57,7 +59,7 @@
         <button type="submit" class="w-50 btn btn-lg btn-primary">Entrar</button>
         <a asp-action="Index" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
     </div>
-    <a asp-action="CriarConta" type="button" class="w-100 btn btn-lg btn-danger">Criar Conta</a>
+    <a asp-controller="Conta"asp-action="CriarConta" type="button" class="w-100 btn btn-lg btn-danger">Criar Conta</a>
     <p class="mt-5 mb-3 text-muted">© 2022 - Plataforma All Access</p>
   </form>
 </main>

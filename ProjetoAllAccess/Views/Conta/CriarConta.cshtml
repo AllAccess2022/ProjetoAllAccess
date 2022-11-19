@@ -1,15 +1,15 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ProjetoAllAccess.Models.Usuario
 @{
     Layout = "";
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Criar Conta";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjetoAllAccess</title>
+    <link rel="icon" href="/images/AC-icon-logo.svg" type ="image/svg+xml" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/w3.css">
     <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
@@ -30,33 +30,43 @@
 <body class="text-center">
 
     <main class="form-signin w-100 m-auto">
-        <form>
-            <img class="mb-4" src="/images/AC-icon-logo.svg" alt="" width="72" height="57">
+        @if (TempData["Mensagem"] != null)
+
+        {
+            <div class="alert alert-success" role="alert">
+                <button type="button" class="btn btn-success btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+                @TempData["Mensagem"]
+            </div>
+
+        }
+        <form asp-action ="CriarConta">
+            <img class="mb-4" src="/images/logo_all_access.png" alt="" width="200" height="200">
             <h1 class="h3 mb-3 fw-normal">Criar Conta</h1>
 
             <div class="form-floating">
-              <input class="form-control" id="Nome" placeholder="Nome">
+              <input class="form-control" id="Nome" placeholder="Nome" asp-for="Nome">
               <label for="floatingNome">Nome</label>
+              <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-floating">
-              <input  class="form-control" id="Sobrenome" placeholder="Sobrenome">
+                <input class="form-control" id="Sobrenome" placeholder="Sobrenome" asp-for="Sobrenome">
               <label for="floatingSobrenome">Sobrenome</label>
             </div>
             <div class="form-floating">
-                <input type="date" class="form-control" id="datanasc" placeholder="xx/xx/xxxx">
+                <input type="date" class="form-control" id="datanasc" placeholder="xx/xx/xxxx" asp-for="Nascimento">
                 <label for="datanasc">Data de Nascimento</label>
             </div>
             <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="nome@examplo.com">
+                <input type="email" class="form-control" id="floatingInput" placeholder="nome@examplo.com" asp-for="Email">
                 <label for="floatingInput">Email</label>
             </div>
             <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" asp-for="Senha">
                 <label for="floatingPassword">Senha</label>
             </div>
-            <div class="row w3-row-padding">
-                <button class="w-50 btn btn-lg btn-primary" type="submit">Criar</button>
-                <a asp-action="Login" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
+            <div class="row w3-row-padding form-group" >
+                <button class="w-50 btn btn-lg btn-primary" type="submit" value="CriarConta">Criar</button>
+                <a asp-controller="Login" asp-action="Login" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
             </div>
             
             <p class="mt-5 mb-3 text-muted">© 2022 - Plataforma All Access</p>
