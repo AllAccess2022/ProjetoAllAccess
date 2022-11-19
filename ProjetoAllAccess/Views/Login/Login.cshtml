@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @model LoginModel
+    Layout = "";
+    ViewData["Title"] = "Login";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/w3.css">
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjetoAllAccess.styles.css" asp-append-version="true" />
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    
+
+    </head>
+   <body class="text-center">
+    @if (TempData["MensagemErro"] != null)
+
+{
+    <div class="alert alert-danger" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+
+}
+<main class="form-signin w-100 m-auto">
+  <form asp-action="Entrar" method="post">
+    <img class="mb-4" src="/images/AC-icon-logo.svg" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Efetuar Login</h1>
+
+    <div class="form-floating">
+        <input type="email" asp-for="Login" class="form-control" id="login" aria-describedby="emailAjuda" placeholder="name@example.com">
+        @Html.ValidationMessageFor(x => x.Login)
+        <label for="login">Email</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" asp-for="Senha" class="form-control" id="senha" placeholder="Password">
+        @Html.ValidationMessageFor(x => x.Senha)
+        <label for="senha">Senha</label>
+    </div>
+    <div class="row w3-row-padding">
+        <button type="submit" class="w-50 btn btn-lg btn-primary">Entrar</button>
+        <a asp-action="Index" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
+    </div>
+    <a asp-action="CriarConta" type="button" class="w-100 btn btn-lg btn-danger">Criar Conta</a>
+    <p class="mt-5 mb-3 text-muted">© 2022 - Plataforma All Access</p>
+  </form>
+</main>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+   
+    
+  
+
+</body>
+
+</html>

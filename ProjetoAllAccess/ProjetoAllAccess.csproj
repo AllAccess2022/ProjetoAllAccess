@@ -62,6 +62,7 @@
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+    <Content Remove="wwwroot\css\StyleSheet.css" />
   </ItemGroup>
 
   <ItemGroup>

@@ -7,7 +7,7 @@ html, body {
 }
 
 footer {
-    margin-top: auto;
+    margin-top: auto; 
 }
 
 #container-1 {
@@ -437,6 +437,8 @@ input[type='checkbox'] {
     #irTop:hover {
         background-color: #555;
     }
+
+
 
 
 /* MOBILE*/

@@ -16,7 +16,11 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
-        public IActionResult Create()
+        public IActionResult CriarConta()
+        {
+            return View();
+        }
+        public IActionResult Login()
         {
             return View();
         }
