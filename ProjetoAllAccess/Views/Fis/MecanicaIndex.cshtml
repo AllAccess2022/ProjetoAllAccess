@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PageModel>
+
+@{
+    ViewData["Title"] = "Mecânica";
+}
+
+<br />
+@foreach (var item in Model)
+{
+    @Html.Raw(item.Conteudo)
+}
+<br />

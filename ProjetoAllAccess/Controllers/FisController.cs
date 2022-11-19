@@ -29,6 +29,11 @@ namespace ProjetoAllAccess.Controllers
             var context = _contexto.Conteudos.Where(p => p.Id.Equals(id));
             return View(await context.ToListAsync());
         }
+        public async Task<IActionResult> MecanicaIndex(int id)
+        {
+            var context = _contexto.Conteudos.Where(p => p.Id.Equals(id));
+            return View(await context.ToListAsync());
+        }
         public IActionResult FisIndex()
         {
             return View();
