@@ -521,6 +521,19 @@ input[type='checkbox'] {
     #container-alternativas {
         width: 100%;
     }
+
+    #btnPerfil {
+        position: relative;
+    }
+    #navbarPrincipal {
+        position: relative;
+    }
+    #dropPerfil {
+        position: relative;
+        right: auto !important;
+        left: 0 !important;
+        top: 0;
+    }
 }
 
 /* DESKTOP */
