@@ -1,4 +1,4 @@
-﻿@model ProjetoAllAccess.Models.Usuario
+﻿@model Usuario
 @{
     Layout = "";
     ViewData["Title"] = "Perfil";
@@ -60,7 +60,7 @@
             </dd>
         </dl>
         <div class="row w3-row-padding form-group">
-            <a asp-action="EditarConta" type="button" class="w-50 btn btn-lg btn-primary">Editar</a>
+            <a asp-route-id="@Model.Id" asp-action="EditarConta" type="button" class="w-50 btn btn-lg btn-primary">Editar</a>
             <a asp-controller="Home" asp-action="Index" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
         </div>
 

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<PostUserModel>
+
+@{
+    Layout = "_Layout";
+}
+
+
+@foreach (var item in Model)
+{
+    <div class="col-md-2">
+
+    </div>
+    <div class="container col-md-8 text-center" >
+        <h1>@Html.DisplayFor(modelItem => item.Titulo)</h1>
+    <br />
+
+        <h3>@Html.DisplayFor(modelItem => item.Materia)</h3>
+    <br />
+    <div class="justify-content-center">
+            @Html.DisplayFor(modelItem => item.Conteudo)
+    </div>
+   
+    </div>
+    <div class="col-md-2">
+    </div>
+}
+

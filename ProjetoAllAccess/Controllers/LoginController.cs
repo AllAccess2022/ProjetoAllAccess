@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata;
 using ProjetoAllAccess.Data;
 using ProjetoAllAccess.Helper;
 using ProjetoAllAccess.Models;
@@ -10,11 +11,14 @@ namespace ProjetoAllAccess.Controllers
     {
         private readonly IUsuarioRepositorio? _usuarioRepositorio;
         private readonly ISessao _sessao;
+        private readonly IEmail _email;
         public LoginController(IUsuarioRepositorio usuarioRepositorio,
-                                ISessao sessao)
+                                ISessao sessao,
+                                IEmail email)
         {
             _usuarioRepositorio = usuarioRepositorio;
             _sessao = sessao;
+            _email = email;
         }
   
 
@@ -37,6 +41,10 @@ namespace ProjetoAllAccess.Controllers
             _sessao.RemoverSessaoUsuario();
 
             return RedirectToAction("Index", "Login");
+        }
+        public IActionResult RedefinirSenha()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -74,7 +82,53 @@ namespace ProjetoAllAccess.Controllers
             }       
 
         }
-        
+
+        [HttpPost]
+        public IActionResult EnviarLinkParaRedefinirSenha(RedefinirSenhaModel redefinirSenhaModel)
+        {
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+
+                    Usuario usuario = _usuarioRepositorio.BuscarEmailParaRedefinir(redefinirSenhaModel.Email);
+
+                    if (usuario != null)
+                    {
+                        string novaSenha = usuario.GerarNovaSenha();
+                        string mensagem = $"Sua nova senha é: {novaSenha}";
+                        _usuarioRepositorio.AtualizarSenha(usuario);
+                        bool emailEnviado = _email.Enviar(usuario.Email, "AllAccess - Nova Senha", mensagem);
+
+                        if (emailEnviado)
+                        {
+                           
+                            
+                            TempData["MensagemSucesso"] = $"Nova senha enviada por email.";
+                        }
+                        else
+                        {
+                            TempData["MensagemErrou"] = $"Ocorreu um Erro.";
+                        }
+                        
+                        return RedirectToAction("Login", "Login");
+
+                    }
+                    TempData["MensagemErro"] = $"Não conseguimos redefinir sua senha. Verifique os dados informados.";
+
+                }
+                return View("Login");
+
+            }
+            catch (Exception erro)
+            {
+                TempData["MensagemErro"] = $"Não foi possivel redefinir sua senha, tente novamente: {erro.Message})";
+                return RedirectToAction("Login");
+
+            }
+        }
+
 
     }
 }

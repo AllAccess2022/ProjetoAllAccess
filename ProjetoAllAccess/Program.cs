@@ -17,6 +17,7 @@ internal class Program
         builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
         builder.Services.AddScoped<ISessao, Sessao>();
+        builder.Services.AddScoped<IEmail, Email>();
 
         builder.Services.AddSession(o => 
         {

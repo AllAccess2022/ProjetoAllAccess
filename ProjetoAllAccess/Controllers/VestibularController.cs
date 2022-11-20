@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjetoAllAccess.Data;
 using Microsoft.EntityFrameworkCore;
+using ProjetoAllAccess.Filters;
 
 namespace ProjetoAllAccess.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class VestibularController : Controller
     {
         private readonly Contexto _contexto;

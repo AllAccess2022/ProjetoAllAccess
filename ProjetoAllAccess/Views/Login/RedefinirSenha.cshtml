@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @model RedefinirSenhaModel
+    Layout = "";
+    ViewData["Title"] = "Redefinir Senha";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjetoAllAccess</title>
+    <link rel="icon" href="/images/AC-icon-logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/w3.css">
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjetoAllAccess.styles.css" asp-append-version="true" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+
+
+
+</head>
+<body class="text-center">
+    <main class="form-signin w-100 m-auto">
+        @if (TempData["MensagemErro"] != null)
+
+        {
+            <div class="alert alert-danger" role="alert">
+                <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+                @TempData["MensagemErro"]
+            </div>
+
+        }
+        @if (TempData["MensagemSucesso"] != null)
+
+        {
+            <div class="alert alert-success" role="alert">
+                <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+                @TempData["MensagemSucesso"]
+            </div>
+
+        }
+        <form asp-action="EnviarLinkParaRedefinirSenha" method="post">
+            <img class="mb-4" src="/images/logo_all_access.png" alt="" width="200" height="200">
+            <h1 class="h3 mb-3 fw-normal">Redefinir Senha</h1>
+
+            <div class="form-floating">
+                <input type="email" asp-for="Email" class="form-control" id="email" aria-describedby="emailAjuda" placeholder="name@example.com">
+                @Html.ValidationMessageFor(x => x.Email)
+                <label for="email">Email</label>
+            </div>
+            <div class="row w3-row-padding">
+                <button type="submit" class="w-50 btn btn-lg btn-primary">Redefinir</button>
+                <a asp-action="Login" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
+            </div>
+            
+            <p class="mt-5 mb-3 text-muted">© 2022 - Plataforma All Access</p>
+        </form>
+    </main>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+
+</body>
+
+</html>

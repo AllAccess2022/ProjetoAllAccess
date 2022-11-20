@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoAllAccess.Data;
 
@@ -10,9 +11,10 @@ using ProjetoAllAccess.Data;
 namespace ProjetoAllAccess.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20221120021201_PostUser")]
+    partial class PostUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,33 +59,6 @@ namespace ProjetoAllAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Conteudos");
-                });
-
-            modelBuilder.Entity("ProjetoAllAccess.Models.PostUserModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Conteudo")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Materia")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Titulo")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PostUser");
                 });
 
             modelBuilder.Entity("ProjetoAllAccess.Models.Usuario", b =>

@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoAllAccess.Data;
+using ProjetoAllAccess.Filters;
 
 namespace ProjetoAllAccess.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class ExMatController : Controller
     {
         private readonly Contexto _contexto;

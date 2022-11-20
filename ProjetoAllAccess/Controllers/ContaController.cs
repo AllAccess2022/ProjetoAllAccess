@@ -1,28 +1,48 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProjetoAllAccess.Data;
+using ProjetoAllAccess.Filters;
 using ProjetoAllAccess.Models;
+using ProjetoAllAccess.Repositorio;
 
 namespace ProjetoAllAccess.Controllers
 {
+    
     public class ContaController : Controller
     {
         private readonly Contexto _context;
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
 
-        public ContaController(Contexto context)
+        public ContaController(Contexto context,
+                                IUsuarioRepositorio usuarioRepositorio)
         {
             _context = context;
+            _usuarioRepositorio = usuarioRepositorio;
         }
         public IActionResult CriarConta()
         {
             return View();
         }
-        public IActionResult DetalheConta() 
+        public async Task<IActionResult> DetalheConta(Guid? id) 
         {
-            return View();
+            if (id == null || _context.Usuario == null)
+            {
+                return NotFound();
+            }
+
+            var usuario = await _context.Usuario
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return View(usuario);
         }
-        public IActionResult EditarConta()
+        public IActionResult EditarConta(Guid id)
         {
-            return View();
+            Usuario usuario =_usuarioRepositorio.BuscarPorId(id);
+            return View(usuario);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -32,11 +52,20 @@ namespace ProjetoAllAccess.Controllers
             {
                 usuario.Id = Guid.NewGuid();
                 _context.Add(usuario);
+                usuario.SetSenhaHash();
                 await _context.SaveChangesAsync();
                 TempData["Mensagem"] = $"Conta criada com sucesso!";
                 return RedirectToAction(nameof(CriarConta));
             }
             return View("Home","Login");
         }
+        [HttpPost]
+
+        public IActionResult Alterar(Usuario usuario)
+        {
+            _usuarioRepositorio.Atualizar(usuario);
+            return RedirectToAction("Index","Home");
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Usuario
+@{
     Layout = "_LayoutLogOut";
     ViewData["Title"] = "Inicio";
 
@@ -16,7 +17,9 @@
                 Estude conosco e compartilhe experiencias com a comunidade.<br />
                 Acesse e Confira!!
             </p>
+            
             <a type="button" asp-action="Login" class="btn btn-primary btn-lg">Entrar</a>
+            
         </div>
         <div class="coluna-login-33">
             <img src="/images/logo_all_access.png" class="responsive" />

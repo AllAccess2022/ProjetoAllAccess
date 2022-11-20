@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoAllAccess.Data;
+using ProjetoAllAccess.Filters;
 using ProjetoAllAccess.Models;
 
 namespace ProjetoAllAccess.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class UsuariosController : Controller
     {
         private readonly Contexto _context;
