@@ -5,10 +5,10 @@
 @{
 }
 <a class="navbar-brand active" asp-controller="Home" asp-action="Index" style="font-family:Helvetica">ALL ACCESS</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#NavPrincipal" aria-controls="NavPrincipal" aria-expanded="false" aria-label="Toggle navigation" id="navbarPrincipal">
     <span class="navbar-toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse" role="group" aria-label="Basic outlined example">
+<div class="collapse navbar-collapse" role="group" aria-label="Basic outlined example" id="NavPrincipal">
     <ul class="navbar-nav mx-auto mb-2 mb-md-0">
 
         <a class="nav-link active" asp-action="Index" asp-controller="PostUser">
@@ -117,6 +117,7 @@
                 Discord
             </button>
         </a>
+        
 
     </ul>
 
@@ -127,12 +128,12 @@
       @Model.Nome
     <li class="nav-link active dropstart">
 
-        <button type="button" class="btn" data-bs-toggle="dropdown">
+        <button type="button" class="btn" data-bs-toggle="dropdown" id="btnPerfil">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
             </svg>
         </button>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu" id="dropPerfil">
             <li><a class="dropdown-item btn btn-outline-primary" asp-controller="Conta" asp-action="DetalheConta" asp-route-id="@Model.Id">Perfil</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item btn btn-outline-danger" asp-controller="Login" asp-action="Logout">Sair</a></li>
