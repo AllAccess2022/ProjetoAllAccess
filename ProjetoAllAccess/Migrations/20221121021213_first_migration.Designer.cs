@@ -11,8 +11,8 @@ using ProjetoAllAccess.Data;
 namespace ProjetoAllAccess.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20221120021201_PostUser")]
-    partial class PostUser
+    [Migration("20221121021213_first_migration")]
+    partial class first_migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -59,6 +59,29 @@ namespace ProjetoAllAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Conteudos");
+                });
+
+            modelBuilder.Entity("ProjetoAllAccess.Models.PostUserModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Conteudo")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Materia")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Titulo")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PostUser");
                 });
 
             modelBuilder.Entity("ProjetoAllAccess.Models.Usuario", b =>

@@ -66,19 +66,15 @@ namespace ProjetoAllAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Conteudo")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Materia")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Titulo")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
