@@ -1,4 +1,6 @@
-﻿@{
+﻿@model PostUserModel
+
+@{
     
 }
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -18,30 +20,32 @@
         </div>
 
 
-        <div class="container col-md-8 " >
-        <form method="post" >
-            <div class="form-floating">
-                  <input class="form-control" id="Nome" placeholder="Nome" >
-                  <label for="floatingNome">Titulo do Post</label>
-                </div>
+        <div class="container col-md-8" >
+        <form asp-controller="PostUser" asp-action="Criar" method="post" >
                 <div class="form-floating">
-                    <input class="form-control" id="Sobrenome" placeholder="Sobrenome" >
-                  <label for="floatingSobrenome">Descrição</label>
+                    <input type="text" asp-for="Titulo" class="form-control" id="Titulo" placeholder="Titulo">
+                  <label for="floatingTitulo">Titulo do Post</label>
                 </div>
-            <div class="form-floating" >
-                    <select list="browsers" name="browser" class="form-control" id="materia" >
-                    <datalist>
-                        <option value="Matemática">Matemática</option>
-                        <option value="Fisica">Fisica</option>
-                        <option value="Outro">Outro</option>
-                    </datalist>
-                    </select>
-                
+
+
+                <div class="form-floating">
+                    <input type="text" asp-for="Descricao" class="form-control" id="Descricao" placeholder="Descrição">
+                    <label for="floatingDescricao">Descrição</label>
                 </div>
-            <textarea id="summernote" name="editordata"></textarea>
+
+                <div class="form-floating">
+                    <input type="text" asp-for="Materia" class="form-control" id="Materia" placeholder="Materia">
+                    <label for="floatingMateria">Matéria</label>
+                </div>
+
+                <div class="form-floating">
+                    <textarea asp-for="Conteudo" class="form-control" id="summernote" ></textarea> 
+                </div>
+
+                <!--<textarea asp-for="Conteudo" id="Conteudo" name="editordata"></textarea>-->
             <div class="row w3-row-padding form-group" >
-                    <button class="w-50 btn btn-lg btn-primary" type="submit" value="CriarConta">Criar</button>
-                    <a asp-controller="Login" asp-action="Login" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
+                    <button class="w-50 btn btn-lg btn-primary" type="submit" value="Criar">Criar</button>
+                    <a asp-controller="Home" asp-action="Index" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
                 </div>
             
                 
@@ -60,20 +64,24 @@
     @section Scripts {
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
         <script>
-          $('#summernote').summernote({
-            placeholder: 'Escreva seu Conteudo',
-            tabsize: 3,
-            height: 300,
-            toolbar: [
-              ['style', ['style']],
-              ['font', ['bold', 'underline', 'clear']],
-              ['color', ['color']],
-              ['para', ['ul', 'ol', 'paragraph']],
-              ['table', ['table']],
-              ['insert', ['link', 'picture', 'video']],
-              ['view', ['codeview', 'help']]
-            ]
-          });
+            $(document).ready(function(){
+                    
+                        $('#summernote').summernote({
+                        placeholder: 'Escreva seu Conteudo',
+                        tabsize: 3,
+                        height: 300,
+                        toolbar: [
+                            ['style', ['style']],
+                            ['font', ['bold', 'underline', 'clear']],
+                            ['color', ['color']],
+                            ['para', ['ul', 'ol', 'paragraph']],
+                            ['table', ['table']],
+                            ['insert', ['link', 'picture', 'video']],
+                            ['view', ['codeview', 'help']]
+                        ]
+                    });
+            })
+          
         </script>
 
 }

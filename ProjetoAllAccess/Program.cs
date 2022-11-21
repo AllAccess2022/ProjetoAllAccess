@@ -18,6 +18,7 @@ internal class Program
         builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
         builder.Services.AddScoped<ISessao, Sessao>();
         builder.Services.AddScoped<IEmail, Email>();
+        builder.Services.AddScoped <IPostUserRepositorio, PostUserRepositorio>();
 
         builder.Services.AddSession(o => 
         {
