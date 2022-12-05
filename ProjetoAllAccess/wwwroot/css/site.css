@@ -567,4 +567,42 @@ input[type='checkbox'] {
     iframe {
         width: 100%;
     }
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
 }
+
+/*Estilos da página de Post*/
+
+
+#containerTitulo {
+    border: 3px solid black;
+    border-radius: 15px 50px;
+    border-color: grey;
+    padding: 20px;
+    box-shadow: 10px 5px 5px lightskyblue;
+}
+#containerMateria {
+    border: 3px solid black;
+    border-radius: 15px 50px;
+    border-color: grey;
+    padding: 20px;
+    box-shadow: 10px 5px 5px lightskyblue;
+}
+#tituloPost{
+    font-family: Helvetica;
+    font-size:xx-large;
+
+}
+#tituloMateria {
+    font-family: Helvetica;
+    font-size:x-large;
+}
+#postConteudo {
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+

@@ -7,15 +7,28 @@
 
 @foreach (var item in Model)
 {
-    <div class="row">
+    <div class="row" id="post">
         <div class="col-md-3" style="">
         </div>
-        <div class=" col-md-6 text-center" >
-            <h1>@Html.DisplayFor(modelItem => item.Titulo)</h1>
-            <h3>@Html.DisplayFor(modelItem => item.Materia)</h3>
-        <div class="justify-content-center">
+        <div class="col-md-6 text-center">
+
+            <div class="container" id="containerTitulo">
+            <h1 id="tituloPost">@Html.DisplayFor(modelItem => item.Titulo)</h1>
+            </div> <br />
+
+            <div class="container" id="containerMateria">
+            <h3 id="tituloMateria">@Html.DisplayFor(modelItem => item.Materia)</h3>
+            </div><br />
+
+            <div class="container" id="containerConteudo">
+                <div contenteditable="true" id="postConteudo">
+                
                 @Html.Raw(item.Conteudo)
-        </div>
+               
+                </div>
+
+            </div>
+
         </div>
         <div class="col-md-3" style="">
         </div>
