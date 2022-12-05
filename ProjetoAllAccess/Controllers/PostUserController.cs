@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoAllAccess.Data;
+using ProjetoAllAccess.Filters;
 using ProjetoAllAccess.Models;
 using ProjetoAllAccess.Repositorio;
 
 namespace ProjetoAllAccess.Controllers
 {
+    [PaginaParaUsuarioLogado]
     public class PostUserController : Controller
     {
         private readonly IPostUserRepositorio _PostUserRepositorio;
 
         public PostUserController(IPostUserRepositorio postUserRepositorio
+                                    
                                    ,Contexto context)
         {
             _PostUserRepositorio = postUserRepositorio;
@@ -35,8 +38,9 @@ namespace ProjetoAllAccess.Controllers
         }
 
         [HttpPost]
-        public IActionResult Criar(PostUserModel postUser)
+        public IActionResult Criar(PostUserModel postUser, string nomeUsuario)
         {
+            postUser.NomeUsuario = nomeUsuario;
             _PostUserRepositorio.Adicionar(postUser);
 
             return RedirectToAction("Index");

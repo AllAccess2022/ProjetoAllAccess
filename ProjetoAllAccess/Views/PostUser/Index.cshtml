@@ -1,39 +1,45 @@
 ﻿@model IEnumerable<PostUserModel>
 @{
     Layout = "_Layout";
+    ViewData["Title"] = "Lista de Conteudo";
 }
 
-<div class="row">
-    <div class="col-md-2">
+    <div class="row">
+        <div class="col-md-3">
 
-    </div>
-        <div class="col-md-8">
+        </div>
+        <div class="col-md-6">
             <div class="coluna2">
                 <div class="cartao2">
                     <img src="/images/feed_logo.jpg" />
                 </div>
             </div>
-
-    <div class="container col-md-8">
-       <a type="button" class="btn btn-primary" asp-action="CriarPost">Criar</a>
-     <div class="row" >
-            @foreach (var item in Model)
-            {
-        <div class="card1">
-          <div class="card-header">
-                    @Html.DisplayFor(modelItem => item.Titulo)
-          </div>
-          <div class="card-body">
-                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Materia)</h5>
-                    <p class="card-text">@Html.DisplayFor(modelItem => item.Descricao)</p>
-                    <a asp-action="PostConteudo" asp-route-id="@item.Id" class="btn btn-primary">Acessar</a>
-          </div>
+            <center><a type="button" class="btn btn-primary btn-lg w-50 w3-padding-large" asp-action="CriarPost">Criar</a></center>
+            <div class="col-auto">                    
+                <div class="row" >
+                    
+                        @foreach (var item in Model)
+                        {
+                            <div class="w3-padding-16">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <h1 class="display-6">@Html.DisplayFor(modelItem => item.Titulo)</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="card-title">@Html.DisplayFor(modelItem => item.Materia)</h1>
+                                        <p class="card-text">@Html.DisplayFor(modelItem => item.Descricao)</p>
+                                        <a type="button" asp-action="PostConteudo" asp-route-id="@item.Id" class="btn btn-outline-primary w-25">Acessar</a>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        <figcaption class="blackquote-footer">publicado em: @Html.DisplayFor(modelItem => item.CreatedAt)</figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    
+                </div>
+            </div>        
         </div>
-            }
+        <div class="col-md-3">
+        </div>
     </div>
-
-    </div>
-    <div class="col-md-2">
-
-    </div>
-</div>

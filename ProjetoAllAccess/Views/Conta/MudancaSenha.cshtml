@@ -1,7 +1,7 @@
 ﻿@model Usuario
 @{
     Layout = "";
-    ViewData["Title"] = "Perfil";
+    ViewData["Title"] = "Trocar Senha";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -31,40 +31,33 @@
 
     <main class="form-signin w-100 m-auto">
         <img class="mb-4" src="/images/logo_all_access.png" alt="" width="200" height="200">
-        <h2>Perfil</h2>
+        <h2>Efetuar Troca de senha</h2>
 
-        <dl class="row">
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Nome)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Nome)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Sobrenome)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Sobrenome)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Email)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Email)
-            </dd>
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Nascimento)
-            </dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Nascimento)
-            </dd>
-        </dl>
-        <div class="row w3-row-padding form-group">
-            <a asp-route-id="@Model.Id" asp-action="EditarConta" type="button" class="w-50 btn btn-lg btn-primary">Editar</a>
-            <a asp-controller="Home" asp-action="Index" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
+        <div class="row">
+            <div class="col-md">
+                <form asp-action="">
+                    <input type="hidden" asp-for="Id" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                         <div class="form-floating">
+                            <input type="password" asp-for="Senha" class="form-control" id="senhaatual" placeholder="Senha Atual">
+                            @Html.ValidationMessageFor(x => x.Senha)
+                            <label for="senhaatual">Senha Atual</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" asp-for="Senha" class="form-control" id="novasenha" placeholder="Nova Senha">
+                            <label for="novasenha">Nova Senha</label>
+                        </div>
+                        
+                    <div class="form-group w-100 w3-padding-top-24">
+                        <button type="submit" class="btn btn-primary btn-lg ">Salvar</button>
+                        <a asp-controller="Home" asp-action="Index" type="button" class=" btn btn-lg btn-success">Voltar</a>
+                    </div>
+                </form>
+            </div>
         </div>
-        <p class="mx-auto mb-4 text-sm"><a asp-action="MudancaSenha" class="text-primary text-gradient font-weight-bold">Trocar a senha</a></p>
-        <p class="mt-5 mb-3 text-muted">© 2022 - Plataforma All Access</p>
+
+            <p class="mt-5 mb-3 text-muted">© 2022 - Plataforma All Access</p>
 
     </main>
 
@@ -72,7 +65,11 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
 
 
 </body>

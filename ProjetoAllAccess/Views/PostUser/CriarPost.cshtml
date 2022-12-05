@@ -1,8 +1,9 @@
 ﻿@model PostUserModel
 
 @{
-    
+    ViewData["Title"] = "Criar Post";
 }
+<script type="text/javascript" src="~/js/nomeUsuario.js" asp-append-version="true"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
@@ -22,29 +23,30 @@
 
         <div class="container col-md-8" >
         <form asp-controller="PostUser" asp-action="Criar" method="post" >
+            
                 <div class="form-floating">
-                    <input type="text" asp-for="Titulo" class="form-control" id="Titulo" placeholder="Titulo">
+                    <input type="text" asp-for="@Model.Titulo" class="form-control" id="Titulo" placeholder="Titulo">
                   <label for="floatingTitulo">Titulo do Post</label>
                 </div>
 
 
                 <div class="form-floating">
-                    <input type="text" asp-for="Descricao" class="form-control" id="Descricao" placeholder="Descrição">
+                    <input type="text" asp-for="@Model.Descricao" class="form-control" id="Descricao" placeholder="Descrição">
                     <label for="floatingDescricao">Descrição</label>
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" asp-for="Materia" class="form-control" id="Materia" placeholder="Materia">
+                    <input type="text" asp-for="@Model.Materia" class="form-control" id="Materia" placeholder="Materia">
                     <label for="floatingMateria">Matéria</label>
                 </div>
 
                 <div class="form-floating">
-                    <textarea asp-for="Conteudo" class="form-control" id="summernote" ></textarea> 
+                    <textarea asp-for="@Model.Conteudo" class="form-control" id="summernote"></textarea>
                 </div>
 
                 <!--<textarea asp-for="Conteudo" id="Conteudo" name="editordata"></textarea>-->
             <div class="row w3-row-padding form-group" >
-                    <button class="w-50 btn btn-lg btn-primary" type="submit" value="Criar">Criar</button>
+                    <button class="w-50 btn btn-lg btn-primary" type="submit" value="Criar" onclick="setNomeUsuario()">Criar</button>
                     <a asp-controller="Home" asp-action="Index" type="button" class="w-50 btn btn-lg btn-success">Voltar</a>
                 </div>
             
@@ -83,6 +85,7 @@
             })
           
         </script>
+        
 
 }
 </div>

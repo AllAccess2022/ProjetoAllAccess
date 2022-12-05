@@ -23,6 +23,10 @@ namespace ProjetoAllAccess.Controllers
         {
             return View();
         }
+        public IActionResult MudancaSenha()
+        {
+            return View();
+        }
         public async Task<IActionResult> DetalheConta(Guid? id) 
         {
             if (id == null || _context.Usuario == null)
