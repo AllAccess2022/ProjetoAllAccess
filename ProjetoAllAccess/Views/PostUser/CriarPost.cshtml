@@ -8,6 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
+    <script>
+    $('.summernote').summernote({
+        // your options... and
+        maximumImageFileSize: 500 * 1024, // 500 KB
+        callbacks: {
+            onImageUploadError: function (msg) {
+                console.log(msg + ' (1 MB)');
+            }
+        }
+    });
+    </script>
+
 <div class="row">
         <div class="col-md-2">
 
@@ -81,9 +93,35 @@
                             ['insert', ['link', 'picture', 'video']],
                             ['view', ['codeview', 'help']]
                         ]
+                           
                     });
             })
-          
+                
+        </script>
+        <!-- script para deixar as imagens do usuário responsivas e limitar o tamanho da imagem-->
+        <script>
+                callbacks: {
+                    onImageUpload: function (files) {
+
+                        if (!files.length) return;
+                        var file = files[0];
+                        // create FileReader
+                        var reader = new FileReader();
+                        reader.onloadend = function () {
+                            // when loaded file, img's src set datauri
+                            console.log("img", $("<img>"));
+                            var img = $("<img>").attr({ src: reader.result, width: "100%" }); // << Add here img attributes !
+                            console.log("var img", img);
+                            $('#postBody').summernote("insertNode", img[0]);
+                        }
+
+                        if (file) {
+                            // convert fileObject to datauri
+                            reader.readAsDataURL(file);
+                        }
+
+                    }
+                }
         </script>
         
 
