@@ -49,13 +49,33 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
+    <!-- CHATBOT -->
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+            if (!myLandbot) {
+                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+                s.addEventListener('load', function () {
+                    var myLandbot = new Landbot.Livechat({
+                        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1664745-YRW2LRH9T1IBOOGE/index.json',
+                    });
+                });
+                s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            }
+        }
+    </script>
+
     <!--MAIN BODY-->
     <!--FOOTER-->
     <div class="container-fluid ">
         <footer class="d-flex flex-wrap align-items-center py-3 my-4 border-top">
             <div class="col-md-3 d-flex align-items-center">
                 <object type="image/svg+xml" data="/images/AC-icon-logo.svg" width="30" height="24" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" viewBox="0 0 16 16"></object>
-                <span class="mb-3 mb-md-0 text-muted">© 2022 Plataforma - All Access</span>
+                <span class="mb-3 mb-md-0 text-muted">© 2023 Plataforma - All Access</span>
             </div>
 
 

@@ -81,6 +81,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Chatbot\" />
     <Folder Include="wwwroot\images\Mat\" />
     <Folder Include="wwwroot\images\Fis\" />
     <Folder Include="wwwroot\images\ExMat\" />

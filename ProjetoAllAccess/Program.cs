@@ -12,8 +12,8 @@ internal class Program
         // Add services to the container.
         builder.Services.AddControllersWithViews();
         builder.Services.AddDbContext<Contexto>(options =>
-            options.UseMySql("Server=dballaccess.mysql.database.azure.com;Port=3306;Database=allaccessdb;Uid=allaccessadm;Pwd=Ifucked2k19;",
-            ServerVersion.Parse("8.0.30-mysql")));
+            options.UseMySql("Server=127.0.0.1;Port=3306;Database=dballaccess;Uid=root;Pwd=12345;",
+            ServerVersion.Parse("8.0.33-mysql")));
         builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
         builder.Services.AddScoped<ISessao, Sessao>();

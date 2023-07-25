@@ -66,9 +66,9 @@ namespace ProjetoAllAccess.Controllers
                             _sessao.CriarSessaoDoUsuario(usuario);
                             return RedirectToAction("Index", "Home");
                         }
-                        TempData["MensagemErro"] = $"Login Não foi realizado, senha invalida";
+                        TempData["MensagemErro"] = $"Login Não foi realizado, senha inválida!";
                     }
-                    TempData["MensagemErro"] = $"Login Não foi realizado, Usuario ou senha invalidos";
+                    TempData["MensagemErro"] = $"Login Não foi realizado, Usuário ou senha inválidos!";
 
                 }
                 return View("Login");
@@ -76,7 +76,7 @@ namespace ProjetoAllAccess.Controllers
             }
             catch (Exception erro)
             {
-                TempData["MensagemErro"] = $"Login Não foi realizado: {erro.Message})";
+                TempData["MensagemErro"] = $"Login não foi realizado: {erro.Message})";
                 return RedirectToAction("Login");
 
             }       
