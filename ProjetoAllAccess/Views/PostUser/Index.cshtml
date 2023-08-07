@@ -30,9 +30,7 @@
                                         <p class="card-text">@Html.DisplayFor(modelItem => item.Descricao)</p>
                                         <a type="button" asp-action="PostConteudo" asp-route-id="@item.Id" class="btn btn-outline-primary w-25">Acessar</a>
                                     </div>
-                                    <div class="card-footer text-muted">
-                                        <figcaption class="blackquote-footer">publicado em: @Html.DisplayFor(modelItem => item.CreatedAt)</figcaption>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         }
