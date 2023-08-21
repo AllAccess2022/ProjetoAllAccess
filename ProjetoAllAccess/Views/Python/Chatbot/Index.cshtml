@@ -1,0 +1,111 @@
+﻿@{
+    ViewData["Title"] = "Python";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-config>
+        [[fetch]]
+        files = ["/chatbot.py"]
+    </py-config>
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-12">
+
+        <h1> Teste Py</h1>
+
+        <py-script>
+
+                import re
+                import chatterbot_corpus
+                import time
+                time.clock = time.time
+                import logging
+                from chatterbot import ChatBot
+                chatbot = ChatBot("BOT Gui")
+                import logging
+                logging.basicConfig(filename='logDEBUG.log',level=logging.DEBUG)
+                from chatterbot.trainers import ListTrainer
+
+
+                conversation = [
+                "ola",
+                "OlÃ¡, meu nome Ã© BOT Gui e estou aqui para te ajudar com suas dÃºvidas a respeito do projeto.",
+                "oi",
+                "OlÃ¡, meu nome Ã© BOT Gui e estou aqui para te ajudar com suas dÃºvidas a respeito do projeto.",
+                "eai",
+                "Oi, tudo bem?",
+                "Bom dia",
+                "Bom dia, como posso te ajudar?",
+                "Boa tarde",
+                "Bom tarde, como posso te ajudar?",
+                "Boa noite"
+                "Bom noite, como posso te ajudar?",
+                "boa noite",
+                "Bom noite, como posso te ajudar?",
+                "O que vocÃª faz?",
+                "Eu sou o chatbot do projeto de TCC do Guilherme Ometto sobre TDAH.",
+                "Oq vc faz",
+                "Eu sou o chatbot do projeto de TCC do Guilherme Ometto sobre TDAH.",
+                "Que legal",
+                "Muito obrigado!",
+                "qual seu nome?",
+                "BOT Gui",
+                "Pode me ajudar?",
+                "Claro, o que vocÃª precisa?",
+                "O que Ã© TDAH?",
+                "TDAH significa Transtorno do DÃ©ficit de AtenÃ§Ã£o com Hiperatividade. Ã‰ um transtorno neurobiolÃ³gico que afeta a atenÃ§Ã£o, impulsividade e hiperatividade.",
+                "Qual o intuito do projeto?",
+                "O projeto tem como obejtivo criar uma plataforma acolhedora e informativa sobre TDAH, criando a oportunidade dos usuÃ¡rios se comunicarem pela comunidade do Discord.",
+                "Os sintomas comuns do TDAH incluem dificuldade de concentraÃ§Ã£o, impulsividade, hiperatividade, desorganizaÃ§Ã£o e dificuldades em seguir instruÃ§Ãµes.",
+                "Como Ã© feito o diagnÃ³stico do TDAH?",
+                "O diagnÃ³stico do TDAH Ã© feito por um profissional de saÃºde mental, que irÃ¡ avaliar os sintomas do paciente, histÃ³rico mÃ©dico e comportamental. Testes psicolÃ³gicos e avaliaÃ§Ãµes neurolÃ³gicas tambÃ©m podem ser realizados.",
+                "Quais sÃ£o os tratamentos disponÃ­veis para o TDAH?",
+                "Os tratamentos para TDAH incluem medicamentos estimulantes e nÃ£o estimulantes, terapia comportamental e aconselhamento.",
+                "Como o TDAH afeta o desempenho acadÃªmico e profissional?",
+                "O TDAH pode afetar negativamente o desempenho acadÃªmico e profissional, uma vez que pode ser difÃ­cil para a pessoa se concentrar, seguir instruÃ§Ãµes e organizar tarefas.",
+                "Existem estratÃ©gias eficazes para lidar com o TDAH?",
+                "Sim, existem diversas estratÃ©gias que podem ajudar a pessoa com TDAH, como a utilizaÃ§Ã£o de agendas e listas de tarefas, ter rotinas diÃ¡rias, criar um ambiente organizado e evitar distraÃ§Ãµes.",
+                "Como os pais podem ajudar crianÃ§as com TDAH em casa e na escola?",
+                "Os pais podem ajudar as crianÃ§as com TDAH em casa e na escola criando um ambiente estruturado, oferecendo apoio emocional e ajudando a crianÃ§a a desenvolver habilidades sociais e de organizaÃ§Ã£o.",
+                "Quais sÃ£o as comorbidades frequentemente associadas ao TDAH?",
+                "As comorbidades frequentemente associadas ao TDAH incluem transtornos de ansiedade, depressÃ£o, transtorno opositor desafiador e transtornos do sono.",
+                "Como o TDAH Ã© visto em diferentes culturas?",
+                "O TDAH Ã© visto de forma semelhante em diferentes culturas, embora as estratÃ©gias de tratamento e a aceitaÃ§Ã£o cultural possam variar.",
+                "Quais sÃ£o os mitos comuns sobre o TDAH e como desmistificÃ¡-los?",
+                "Alguns mitos comuns sobre o TDAH incluem a ideia de que o transtorno nÃ£o Ã© real ou que Ã© causado por pais negligentes. Esses mitos podem ser desmistificados com informaÃ§Ãµes precisas e cientificamente comprovadas sobre o transtorno.",
+                "Quais sÃ£o as Ãºltimas pesquisas em relaÃ§Ã£o ao TDAH?",
+                "As Ãºltimas pesquisas em relaÃ§Ã£o ao TDAH incluem estudos sobre a eficÃ¡cia de diferentes tratamentos, como medicamentos e terapia comportamental, e estudos sobre a relaÃ§Ã£o entre o TDAH e outras condiÃ§Ãµes de saÃºde mental.",
+                ]
+
+                my_bot = ChatBot(name='BOT Gui', read_only=True,
+                logic_adapters=
+                ['chatterbot.logic.MathematicalEvaluation',
+                'chatterbot.logic.BestMatch'])
+
+                from chatterbot.trainers import ChatterBotCorpusTrainer
+                corpus_trainer = ChatterBotCorpusTrainer(chatbot)
+                corpus_trainer.train('chatterbot.corpus.portuguese')
+
+                trainer = ListTrainer(chatbot)
+                trainer.train(conversation)
+
+                while True:
+                pergunta = input("UsuÃ¡rio: ")
+                resposta = chatbot.get_response(pergunta)
+                if float(resposta.confidence) > 0.3:
+                print('BOT Gui: ', resposta)
+                else:
+                print('BOT Gui: Ainda nÃ£o sei responder esta pergunta.')
+
+        </py-script>
+
+    </div>
+</div>
+</body>
+</html>
+

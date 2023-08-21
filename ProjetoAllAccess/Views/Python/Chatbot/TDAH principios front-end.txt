@@ -1,0 +1,13 @@
+O front-end de um site pode afetar pessoas com Transtorno de Déficit de Atenção e Hiperatividade (TDAH) de várias maneiras. Aqui estão alguns pontos a considerar:
+
+Aparência visual: Um design de front-end confuso, com cores muito vibrantes, muitos elementos em movimento ou layouts complexos, pode distrair e sobrecarregar pessoas com TDAH. Isso pode dificultar a concentração e a compreensão do conteúdo do site.
+
+Organização e estrutura: Uma organização inadequada do conteúdo, com informações dispersas e desorganizadas, pode dificultar a localização e a compreensão das informações para pessoas com TDAH. A falta de uma estrutura clara pode levar à confusão e à perda de interesse.
+
+Elementos interativos: Sites com muitos elementos interativos, como anúncios pop-up, vídeos automáticos e menus complicados, podem causar distração e interromper o fluxo de pensamento de pessoas com TDAH. Essas distrações podem dificultar a realização de tarefas ou a absorção do conteúdo do site.
+
+Tempo de carregamento: Sites com tempos de carregamento longos podem ser frustrantes para pessoas com TDAH, que geralmente têm dificuldade em esperar ou manter o foco por períodos prolongados. Um tempo de carregamento rápido é importante para manter o engajamento e evitar distrações desnecessárias.
+
+Acessibilidade: A falta de recursos de acessibilidade pode impactar negativamente pessoas com TDAH. Por exemplo, a ausência de opções de aumento de fonte, legendas em vídeos ou funcionalidades de navegação simplificadas pode dificultar a leitura e a compreensão do conteúdo.
+
+É importante considerar esses fatores ao projetar o front-end de um site, visando criar uma experiência mais amigável para pessoas com TDAH. Isso pode incluir o uso de cores suaves e esquemas de design equilibrados, a organização clara do conteúdo, a redução de distrações desnecessárias e a implementação de recursos de acessibilidade.
