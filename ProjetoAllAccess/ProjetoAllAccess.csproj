@@ -7,9 +7,17 @@
 
   <ItemGroup>
     <Compile Remove="Views\Energia\**" />
+    <Compile Remove="Views\Python\**" />
+    <Compile Remove="wwwroot\chatbot-deployment\**" />
     <Content Remove="Views\Energia\**" />
+    <Content Remove="Views\Python\**" />
+    <Content Remove="wwwroot\chatbot-deployment\**" />
     <EmbeddedResource Remove="Views\Energia\**" />
+    <EmbeddedResource Remove="Views\Python\**" />
+    <EmbeddedResource Remove="wwwroot\chatbot-deployment\**" />
     <None Remove="Views\Energia\**" />
+    <None Remove="Views\Python\**" />
+    <None Remove="wwwroot\chatbot-deployment\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -61,7 +69,13 @@
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
     <Content Remove="C:\Users\caiqu\.nuget\packages\bootstrap\5.2.1\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+    <Content Remove="wwwroot\css\style.css" />
     <Content Remove="wwwroot\css\StyleSheet.css" />
+    <Content Remove="wwwroot\js\app.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Shared\JavaScript.js" />
   </ItemGroup>
 
   <ItemGroup>
@@ -87,6 +101,11 @@
     <Folder Include="wwwroot\images\ExFis\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\css\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\js\app.js" />
   </ItemGroup>
 
 </Project>
