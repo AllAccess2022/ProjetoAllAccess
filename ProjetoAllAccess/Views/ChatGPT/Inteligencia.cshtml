@@ -5,8 +5,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="~/css/site.css">
+    <title>Oráculo</title>
 
-    <title>Chat GPT</title>
+    
+
     <script>
         function Send() {
 
@@ -14,7 +17,7 @@
 
             var sQuestion = txtMsg.value;
             if (sQuestion == "") {
-                alert("Digite sua pergunta!");
+                alert("Me pergunte alguma coisa!");
                 txtMsg.focus();
                 return;
             }
@@ -23,7 +26,7 @@
             oHttp.open("POST", "https://api.openai.com/v1/completions");
             oHttp.setRequestHeader("Accept", "application/json");
             oHttp.setRequestHeader("Content-Type", "application/json");
-            oHttp.setRequestHeader("Authorization", "Bearer " + "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")
+            oHttp.setRequestHeader("Authorization", "Bearer " + "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")
 
             oHttp.onreadystatechange = function () {
                 if (oHttp.readyState === 4) {
@@ -50,7 +53,7 @@
                         }
 
                         if (s == "") s = "Sem resposta";
-                        txtOutput.value += "Gui BOT: " + s;
+                        txtOutput.value += "Oráculo: " + s;
                         TextToSpeech(s);
                     }
                 }
@@ -85,48 +88,69 @@
             txtMsg.value = "";
         }
     </script>
-    <link rel="stylesheet" type="text/css" href="chat.css">
+
+
+    <script>
+           const textarea = document.getElementById('textarea');
+
+        textarea.addEventListener('input', function ()
+        {
+            // Define a altura mínima do textarea para evitar que ele fique muito pequeno
+            this.style.height = 'auto';
+            // Define a altura do textarea com base no conteúdo
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+
+    </script>
+
+
 </head>
 <body>
-    <style>
-        textarea{
-            resize: none;
-        }
-        #txtOutput{
-            overflow: auto;
-            pointer-events: none;
-        }
 
-        #idContainer{
-            align-self: center;
-            resize: none;
-            overflow: auto;
-            border-radius: 15px 50px 30px;
-            background: lightblue;
-            border: 2px solid darkblue;
-            padding: 20px;
-            justify-content: center;
-            height: 100%;
-            width: 50%;
-        }
-        #btnSend{
-            background: rgba(0, 105, 255, .2);
-            
-            border-bottom-left-radius: 7px;
-            border-bottom-right-radius: 7px;
-            border-top-left-radius: 7px;
-            border-top-right-radius: 7px;
-        }
-    </style>
-    <center>
-    <div id="idContainer">
-        <textarea id="txtMsg" rows="5" wrap="soft" style="width: 98%; margin-left: 3px" placeholder="Digite aqui!"></textarea>
-
-        <div>
-            <button type="button" onclick="Send()" id="btnSend">Enviar</button>
+    <div class="coluna">
+        <div class="cartao">
+            <img src="/images/oraculo.png" />
         </div>
+    </div>
 
-        <textarea id="txtOutput" rows="5" wrap="soft" style="width: 98%; margin-left: 3px; margin-top: 5px" placeholder="Saída"></textarea>
+
+    <div id="idContainer">
+        <textarea id="txtMsg" rows="5" wrap="soft" style="width: 98%; margin-left: 3px" placeholder="Me pergunte qualquer coisa!"></textarea>
+
+
+            <button class="btnSend" type="button" onclick="Send()" id="btnSend">Enviar</button>
+     
+
+            <button class="btnSend" type="button" id="limparButton">Recomeçar</button> <br />
+
+        <style>
+            .btnSend{
+                background-color: #3498db;
+                color: black;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+                outline: black;
+            }
+
+            .btnSend{
+                    background-color: #2980b9;
+                }
+        </style>
+        <script>
+            document.getElementById('limparButton').addEventListener('click', function ()
+            {
+                var textareas = document.querySelectorAll('textarea');
+                for (var i = 0; i < textareas.length; i++)
+                {
+                    textareas[i].value = ''; // Limpar o conteúdo da textarea
+                }
+            });
+        </script>
+        Resposta:
+        <textarea id="txtOutput" rows="5" wrap="soft" style="width: 98%; margin-left: 3px; margin-top: 5px" placeholder=""></textarea>
         
         <script>
             function updateOutput(content) {
@@ -136,7 +160,9 @@
 
         <div id="idText"></div>
     </div>
-    </center>
+    <br />
+    <br />
+
 
     
 

@@ -75,6 +75,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="chatbot-deployment\README.md" />
     <None Remove="Views\Shared\JavaScript.js" />
   </ItemGroup>
 
@@ -95,6 +96,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="chatbot-deployment\standalone-frontend\images\" />
     <Folder Include="wwwroot\images\Mat\" />
     <Folder Include="wwwroot\images\Fis\" />
     <Folder Include="wwwroot\images\ExMat\" />
@@ -104,7 +106,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\Class.css" />
     <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\images\chatbox-icon.svg" />
     <None Include="wwwroot\js\app.js" />
   </ItemGroup>
 
