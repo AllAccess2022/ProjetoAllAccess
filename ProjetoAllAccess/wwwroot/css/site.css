@@ -626,19 +626,23 @@ input[type='checkbox'] {
 
 /* CHATBOX
 =============== */
+
 .chatbox {
     position: fixed;
     bottom: 30px;
     right: 30px;
 }
 
+
 /* CONTENT IS CLOSE */
+
+
 .chatbox__support {
-    display: flex;
+    display: none;
     flex-direction: column;
     background: #eeee;
-    width: 300px;
-    height: 350px;
+    height: 525px;
+    width: 550px;
     z-index: -123456;
     opacity: 0;
     transition: all .0s ease-in-out;
@@ -648,6 +652,7 @@ input[type='checkbox'] {
 
 /* CONTENT ISOPEN */
 .chatbox--active {
+    display: flex;
     position: fixed;
     bottom: 10px; /* Ajuste a posição vertical conforme necessário */
     right: 90px; /* Posição horizontal relativa ao ícone */
@@ -700,20 +705,16 @@ input[type='checkbox'] {
     margin-right: auto;
 }
 
-/* FOOTER */
-.chatbox__footer {
-    position: sticky;
-    bottom: 0;
-}
 
 .chatbox__support {
     background: #f9f9f9;
-    height: 525px;
-    width: 350px;
+    height: 550px;
+    width: 550px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
 
 /* HEADER */
 .chatbox__header {
@@ -791,9 +792,10 @@ input[type='checkbox'] {
         text-align: left;
     }
 
-.chatbox__send--footer {
+    .chatbox__send--footer {
     color: white;
-}
+    }
+
 
 .chatbox__button button,
 .chatbox__button button:focus,

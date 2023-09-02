@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjetoAllAccess</title>
     <link rel="icon" href="/images/logo_navegador.svg" type ="image/svg+xml" />
+    <link rel="stylesheet" href="~/css/site.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/w3.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjetoAllAccess.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/css/site.css">
+
     
     
   
@@ -69,8 +70,7 @@
 
      
     <!-- CHATBOT IA -->
-
-        <div class="chatbox">
+        <div class="chatbox">          
             <div class="chatbox__support">
                 <div class="chatbox__header">
                     <div class="chatbox__image--header">
@@ -85,7 +85,25 @@
                     <div></div>
                 </div>
                 <div class="chatbox__footer">
-                    <input type="text" placeholder="Digite aqui :)">
+
+                <button style="    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+color: white;
+    cursor: pointer;" id="startButton">
+                    Use sua Voz
+                </button>
+                <button style="    padding: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+color: white;
+    cursor: pointer;" id="stopButton">
+                    Parar
+                </button>
+
+                <input id="txtChatbot" type="text" placeholder="Digite aqui :)">
                     <button class="chatbox__send--footer send__button">Enviar</button>
                 </div>
             </div>
@@ -300,7 +318,7 @@
             
         new Accessibility(options);
     </script>
-      
+    <script src="~/js/ReconhecimentoVoz_Chatbot.js"></script>
     <script src="~/js/app.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

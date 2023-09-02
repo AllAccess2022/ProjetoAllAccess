@@ -23,6 +23,7 @@ class Chatbox {
                 this.onSendButton(chatBox)
             }
         })
+        
     }
 
     toggleState(chatbox) {
