@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjetoAllAccess.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    
-    
-  
 </head>
 <body>
 
@@ -42,7 +38,7 @@
                 @RenderBody()
             </main>
 
-    <!-- VLIBRAS -->
+    <!-- PLUGIN VLIBRAS-->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -53,22 +49,10 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-    
-    
-    
-    
-
-    
     
     
 
 
-       
-    
-    
-
-     
     <!-- CHATBOT IA -->
         <div class="chatbox">          
             <div class="chatbox__support">
@@ -268,11 +252,10 @@ color: white;
     </div>
     <!--FOOTER-->
 
-    <!--SCRIPT-->
+    <!--SCRIPTS-->
     
     
     <script type="text/javascript" src="~/js/main.bundle.js"></script>
-
     <script>
         var labels = {
             resetTitle: 'Voltar aos padrões',
@@ -326,7 +309,7 @@ color: white;
     
     
     @await RenderSectionAsync("Scripts", required: false)
-    <!--SCRIPT-->
+    <!--SCRIPTS-->
 </body>
 </html>
 

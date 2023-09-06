@@ -35,15 +35,6 @@
 
 
     <header>
-        <nav class="navbar navbar-expand-lg  " style="background-color: #e3f2fd">
-            <div class="container-fluid">
-                <a class="navbar-brand active" asp-controller="" asp-action="" style="font-family:gagalin">ALL ACCESS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-            </div>
-        </nav>
     </header>
     <!--HEADER-->
     <!--MAIN BODY-->
@@ -51,27 +42,17 @@
         @RenderBody()
     </main>
 
-    <!-- PLUGIN VLIBRAS-->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+    
 
     <!--MAIN BODY-->
     <!--FOOTER-->
 
-    <div class="container-fluid">
-        <footer class="d-flex flex-wrap align-items-center py-3 my-4 border-top" style="background-color: #e3f2fd">
+    <div class="container-fluid" style="background-color:white">
+        <footer class="d-flex flex-wrap align-items-center py-3 my-4 border-top" style="background-color:white">
            
             <div class="col-md-3 d-flex align-items-center">
                 <object type="image/svg+xml" data="/images/AC-icon-logo.svg" width="30" height="24" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" viewBox="0 0 16 16"></object>
-                <span class="mb-3 mb-md-0 text-muted">© 2022 Plataforma - All Access</span>
+                <span class="mb-3 mb-md-0 text-muted">© 2023 Plataforma - All Access</span>
             </div>
 
 
@@ -222,6 +203,17 @@
 
     <!--FOOTER-->
     <!--SCRIPT-->
+    <!-- PLUGIN VLIBRAS-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

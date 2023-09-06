@@ -27,6 +27,7 @@
                                     </div>
                                     <div class="card-body">
                                         <h1 class="card-title">@Html.DisplayFor(modelItem => item.Materia)</h1>
+                                        Criador:<a class="card-title">@Html.DisplayFor(modelItem => item.NomeUsuario)</a>
                                         <p class="card-text">@Html.DisplayFor(modelItem => item.Descricao)</p>
                                         <a type="button" asp-action="PostConteudo" asp-route-id="@item.Id" class="btn btn-outline-primary w-25">Acessar</a>
                                     </div>

@@ -61,7 +61,14 @@ namespace ProjetoAllAccess.Controllers
                 TempData["Mensagem"] = $"Conta criada com sucesso!";
                 return RedirectToAction(nameof(CriarConta));
             }
-            return View("Home","Login");
+            else
+            {
+                // Adicione um erro ao ModelState para indicar que houve um problema na validação.
+                ModelState.AddModelError(string.Empty, "Erro ao criar a conta. Por favor, verifique os dados inseridos.");
+
+                // Redirecione de volta para a página de criação de conta com os erros.
+                return View("CriarConta");
+            }
         }
         [HttpPost]
 
