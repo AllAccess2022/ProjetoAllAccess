@@ -148,8 +148,13 @@ a, a:focus, a:active {
     /*background-color: #f1f1f1;*/
 }
 
-/*Login index*/
+.logo {
+    width: 100px;
+    max-height: 70px;
+}
 
+
+/*Login index*/
 .container-login {
     padding: 64px;
     width: 100%;
@@ -528,7 +533,9 @@ input[type='checkbox'] {
         position: relative;
     }
     #navbarPrincipal {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     #dropPerfil {
         position: relative;
@@ -573,6 +580,10 @@ input[type='checkbox'] {
         height: 100%;
         width: 100%;
     }
+    #navbarPrincipal {
+        width: auto;
+    }
+   
 
 }
 
@@ -833,7 +844,7 @@ textarea {
     padding: 30px;
     justify-content: center;
     background-size: 300% 300%;
-    background-image: linear-gradient(-45deg, lightblue 0%, lightgreen 25%, lightblue 51%, lightgreen 100%);
+    background-image: linear-gradient(-45deg, lightblue 0%, lightblue 25%, lightblue 51%, lightblue 100%);
     -webkit-animation: AnimateBG .5s ease infinite;
     animation: AnimateBG 10s ease infinite;
 }
@@ -857,42 +868,40 @@ textarea {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.bg {
-    width: 100%;
-    height: 100vh;
+.card-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: 300% 300%;
-    background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
-    -webkit-animation: AnimateBG 20s ease infinite;
-    animation: AnimateBG 20s ease infinite;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
-@-webkit-keyframes AnimateBG {
-    0% {
-        background-position: 0% 50%;
+#cartao-menu {
+    width: 250px;
+    height: 425px;
+    margin: 0;
+    padding: 5px;
+    background-color: ghostwhite;
+    border: 5px solid lightsteelblue;
+    border-radius: 10px;
+    text-align: center;
+}
+
+    .card img {
+        max-width: 100%;
+        height: 50%;
     }
 
-    50% {
-        background-position: 100% 50%;
-    }
+.description {
+    padding: 10px;
+}
 
-    100% {
-        background-position: 0% 50%;
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
     }
 }
 
-@keyframes AnimateBG {
-    0% {
-        background-position: 0% 50%;
-    }
 
-    50% {
-        background-position: 100% 50%;
-    }
 
-    100% {
-        background-position: 0% 50%;
-    }
-}
+
+
