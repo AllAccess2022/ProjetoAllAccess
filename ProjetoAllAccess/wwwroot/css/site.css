@@ -745,12 +745,12 @@ input[type='checkbox'] {
 }
 
 .chatbox__heading--header {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     color: white;
 }
 
 .chatbox__description--header {
-    font-size: .9rem;
+    font-size: 1.5rem;
     color: white;
 }
 

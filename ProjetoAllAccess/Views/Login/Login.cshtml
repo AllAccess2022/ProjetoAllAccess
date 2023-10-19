@@ -60,8 +60,8 @@
 
         }
   <form asp-action="Entrar" method="post">
-    <img class="mb-4" src="/images/logo_all_access.png" alt="" width="200" height="200">
-    <h1 class="h3 mb-3 fw-normal">Efetuar Login</h1>
+    <img class="mb-4" src="/images/logo_final.png" alt="" width="200" height="180">
+            <h1 class="h3 mb-3 fw-normal"><b>Faça login ou crie sua conta.</b></h1>
 
     <div class="form-floating">
         <input type="email" asp-for="Login" class="form-control" id="login" aria-describedby="emailAjuda" placeholder="name@example.com">
@@ -74,15 +74,75 @@
         <label for="senha">Senha</label>
     </div>
     <div>
-        <button type="submit" class="w-60 btn btn-lg btn-primary">Entrar</button>
+        <button type="submit" class="w-60 btn btn-lg btn-primary">Acessar</button>
         <a asp-action="Index" type="button" class="w-60 btn btn-lg btn-success">Voltar</a>
     </div>
-    <br />
-            Ainda não tem uma conta? Cadastre-se! É grátis e sempre será. :)<br /><br />
-    <a asp-controller="Conta"asp-action="CriarConta" type="button" class="w-100 btn btn-lg btn-danger">Criar Conta</a>
+    
+            <b>Ainda não tem uma conta? Cadastre-se! É grátis e sempre será.</b><br />
+    <a asp-controller="Conta"asp-action="CriarConta" type="button" class="w-100 btn btn-lg btn-danger">Cadastre-se</a>
             <!--<p class="mx-auto mb-4 text-sm"><a asp-action="RedefinirSenha" class="text-primary text-gradient font-weight-bold">Esqueci a senha</a></p>-->
     <p class="mt-5 mb-3 text-muted">© 2023 - Plataforma All Access</p>
   </form>
+
+  <!-- VLIBRAS LOGIN -->
+        <!-- PLUGIN VLIBRAS-->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <script type="text/javascript" src="~/js/main.bundle.js"></script>
+        <script>
+            var labels = {
+                resetTitle: 'Voltar aos padrões',
+                closeTitle: 'Fechar',
+                menuTitle: 'Menu de Accessibilidade do All Access',
+                increaseText: 'Aumentar o tamanho do texto',
+                decreaseText: 'Diminuir o tamanho do texto',
+                increaseTextSpacing: 'Aumentar o espaçamento do texto',
+                decreaseTextSpacing: 'Diminuir o espaçamento do texto',
+                increaseLineHeight: 'Aumentar a altura entre linhas',
+                decreaseLineHeight: 'Diminuir a altura entre linhas',
+                invertColors: 'Inverter cores',
+                grayHues: 'Escalas de cinza',
+                underlineLinks: 'Sublinhar links',
+                bigCursor: 'Cursor grande',
+                readingGuide: 'Guia de leitura (TDAH)',
+                textToSpeech: 'Texto para fala',
+                speechToText: 'Fala para texto',
+                disableAnimations: 'Desativar animações'
+            };
+
+            var options = {
+                labels: labels,
+                icon: {
+                    circular: true,
+                    img: 'accessible',
+                    position: {
+                        top: { size: 50, units: 'vh' },
+                        left: { size: 2, units: '%' },
+                        type: 'fixed'
+                    }
+
+                },
+                hotkeys: {
+                    enabled: true
+                }
+            };
+
+            options.textToSpeechLang = 'pt-BR';
+            options.speechToTextLang = 'pt-BR';
+
+
+
+            new Accessibility(options);
+        </script>
+
 </main>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

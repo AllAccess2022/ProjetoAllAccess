@@ -10,21 +10,21 @@ namespace ProjetoAllAccess.Models
         [Display(Name = "Id")]
         [Column("Id")]
         public Guid Id { get; set; }
-        [Required(ErrorMessage = "Insira Nome")]
+        [Required(ErrorMessage = "Insira seu nome")]
         [Display(Name = "Nome")]
         [Column("Nome")]
         public string Nome { get; set; }
-        [Required(ErrorMessage = "Insira Sobrenome")]
+        [Required(ErrorMessage = "Insira seu sobrenome")]
         [Display(Name = "Sobrenome")]
         [Column("Sobrenome")]
         public string Sobrenome { get; set; }
-        [Required(ErrorMessage = "Insira Email")]
-        [EmailAddress(ErrorMessage = "Email Inválido")]
-        [Display(Name = "Email")]
+        [Required(ErrorMessage = "Insira seu E-mail")]
+        [EmailAddress(ErrorMessage = "E-mail Inválido!")]
+        [Display(Name = "E-mail")]
         [Column("Email")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Insira Data Nascimento")]
-        [Display(Name = "Data Nascimento")]
+        [Required(ErrorMessage = "Insira sua data de Nascimento")]
+        [Display(Name = "Data de nascimento")]
         [Column("Nascimento")]
         [DataType(DataType.Date)]
         public DateTime Nascimento { get; set; }
@@ -32,7 +32,7 @@ namespace ProjetoAllAccess.Models
         [Display(Name = "Nivel")]
         [Column("Nivel")]
         public int Nivel { get; set; }
-        [Required(ErrorMessage = "Insira Senha")]
+        [Required(ErrorMessage = "Insira sua senha")]
         [Display(Name = "Senha")]
         [Column("Senha")]
         public string Senha { get; set; }
