@@ -4,8 +4,7 @@
     ViewData["Title"] = "Inicio";
 
 }
-
-
+<body>
 <div class="container-login" style="background-color: white">
     <div class="row-login">
         <div class="coluna-login-66">
@@ -13,7 +12,12 @@
             <h1 class="large-font" style="color:cornflowerblue"><b>O que é?</b></h1>
             <p>
                 <span style="font-size:36px">Estude e compartilhe.</span><br />
-                Uma plataforma criada com o objetivo de aprimorar a forma como as pessoas estudam e se conectam entre si, buscando proporcionar mais satisfação no processo de aprendizagem e promover relacionamentos mais gratificantes com aqueles que estão enfrentando situações semelhantes. Junte-se a nós para estudar e compartilhar suas experiências com a comunidade. Não deixe de acessar e conferir!
+
+                Uma plataforma criada com o objetivo de aprimorar a maneira que as pessoas estudam
+                e interagem, buscando trazer novas tecnlogias e inclusão digital através de
+                ferramentas de acessibilidade. Junte-se a nós para estudar e compartilhar suas experiências
+                com a comunidade. Não deixe de acessar e conferir!
+
             </p>
             
             <a type="button" asp-action="Login" class="btn btn-primary btn-lg"><b>Acessar</b></a>
@@ -52,7 +56,13 @@
                     <div class="modal1-body">
 
                         <h3 style="font-weight:bold">Para acessar os conteúdos preciso criar uma conta? </h3>
-                        Sim, para acessar os conteúdos da plataforma é necessário criar uma conta. Assim você pode desfrutar da plataforma de forma completa. Bons estudos!<br />
+                        Sim, para acessar e publicar conteúdos da plataforma é necessário criar uma conta. Assim você pode desfrutar da plataforma de forma completa. Bons estudos!<br />
+
+                        <h3 style="font-weight:bold">Quais são as ferramentas de acessibilidade que a plataforma promove?</h3>
+                        O diferencial da plataforma All Access é a inclusão e democratização dos ambientes virtuais. Para isso, contamos com diversos elementos de acessibilidade no geral, tais como o widget do canto esquerdo que serve como um ajudante para funcionalidades de acessibilidade visuais, o VLibras que atende à necessidades de portadores de deficiência auditiva. A plataforma foi pensada em conter elementos visuais que não atrapalhem na navegação dos usuários. .<br />
+
+                        <h3 style="font-weight:bold">A inclusão digital atende os usuários diagnosticados com TDAH?</h3>
+                        Sim! A estrutura e ferramentas criadas na plataforma foram pensadas para atender principalmente os usuários com TDAH, visto que essa condição é desafiadora na usabilidade de plataformas digitais.<br />
 
                         <h3 style="font-weight:bold">Posso publicar minhas listas de exercícios e conteúdos de estudo pessoal?</h3>
                         Claro. Publicar seus conteúdos gera uma maior gama de informações sendo compartilhadas na plataforma, isso quer dizer que você, e os demais usuários, encontrarão mais conteúdos para tornar seu aprendizado mais completo.<br />
@@ -90,10 +100,12 @@
     <div class="row-login">
         <div class="coluna-login-66">
             <h1 class="xlarge-font" style="color:darkslateblue"><b>Discord</b></h1>
-            <h1 class="large-font" style="color:cornflowerblue"><b>Servidor da galera</b></h1>
+            <h1 class="large-font" style="color:cornflowerblue"><b>A comunidade da galera</b></h1>
             <p>
                 <span style="font-size:36px">All Access no Discord.</span><br />
-                Acesse nosso Servidor no Discord e fique por dentro!
+                O Discord unifica a plataforma All Access em um ambiente digital interativo onde
+                os estudantes podem compartilhar conhecimentos, tirar dúvidas e estudar juntos num só lugar.<br />                
+                Acesse nossa comunidade no Discord e fique por dentro!
             </p>
             <a href="https://discord.gg/HzfanyhCTH" target="_blank">
                 <button class="btn btn-primary btn-lg">
@@ -110,18 +122,9 @@
     </div>
 </div>
 
-<!-- VLIBRAS LOGIN -->
-<!-- PLUGIN VLIBRAS-->
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-    </div>
-</div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
+
+
+<!-- PLUGIN ACESSIBILIDADE MUDAR IDIOMA -->
 <script type="text/javascript" src="~/js/main.bundle.js"></script>
 <script>
     var labels = {
@@ -169,3 +172,6 @@
     new Accessibility(options);
 </script>
 
+
+
+</body>
