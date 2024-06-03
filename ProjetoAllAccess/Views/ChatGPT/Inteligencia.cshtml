@@ -1,1 +1,176 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Inteligencia Artificial";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="site.css">
+    <title>Oráculo</title>
+
+    <script>
+        function Send()
+        {
+            var selLang = "pt-BR";
+            var sQuestion = document.getElementById('txtMsg').value;
+
+            if (sQuestion == "")
+            {
+                alert("Me pergunte alguma coisa!");
+                document.getElementById('txtMsg').focus();
+                return;
+            }
+
+            var oHttp = new XMLHttpRequest();
+            oHttp.open("POST", "https://api.openai.com/v1/chat/completions");
+            oHttp.setRequestHeader("Accept", "application/json");
+            oHttp.setRequestHeader("Content-Type", "application/json");
+            oHttp.setRequestHeader("Authorization", "Bearer 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");
+
+            oHttp.onreadystatechange = function ()
+            {
+                if (oHttp.readyState === 4)
+                {
+                    var oJson = {};
+                    if (document.getElementById('txtOutput').value != "")
+                    {
+                        document.getElementById('txtOutput').value += "\n";
+                    }
+
+                    try
+                    {
+                        oJson = JSON.parse(oHttp.responseText);
+                    } catch (ex)
+                    {
+                        document.getElementById('txtOutput').value += "Erro: " + ex.message;
+                    }
+
+                    if (oJson.error && oJson.error.message)
+                    {
+                        document.getElementById('txtOutput').value += "Erro: " + oJson.error.message;
+                    } else if (oJson.choices && oJson.choices[0].message)
+                    {
+                        var s = oJson.choices[0].message.content;
+
+                        if (selLang != "en-US")
+                        {
+                            var a = s.split("?\n");
+                            if (a.length == 2)
+                            {
+                                s = a[1];
+                            }
+                        }
+
+                        if (s == "") s = "Sem resposta";
+                        document.getElementById('txtOutput').value += "Oráculo: " + s;
+                        
+                    }
+                }
+            };
+
+            var sModel = "gpt-3.5-turbo";
+            var iMaxTokens = 2048;
+            var sUserId = "1";
+            var dTemperature = 0.7;
+
+            var data = {
+                model: sModel,
+                messages: [
+                    { role: 'system', content: 'IA ChatGPT' },
+                    { role: 'user', content: sQuestion }
+                ],
+                max_tokens: iMaxTokens,
+                user: sUserId,
+                temperature: dTemperature,
+                stop: ["#", ";"]
+            };
+
+            oHttp.send(JSON.stringify(data));
+
+            if (document.getElementById('txtOutput').value != "")
+            {
+                document.getElementById('txtOutput').value += "\n";
+            }
+
+            document.getElementById('txtMsg').value = "";
+        }
+    </script>
+
+    <script>
+        const textarea = document.getElementById('txtMsg');
+
+        textarea.addEventListener('input', function ()
+        {
+            // Define a altura mínima do textarea para evitar que ele fique muito pequeno
+            this.style.height = 'auto';
+            // Define a altura do textarea com base no conteúdo
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="coluna">
+            <div class="cartao">
+                <img src="/images/oraculo.png" />
+            </div>
+        </div>
+
+        <div id="idContainer">
+            <textarea id="txtMsg" rows="5" wrap="soft" style="width: 98%; margin-left: 3px" placeholder="Estou aqui para te ajudar! Me pergunte alguma coisa..."></textarea>
+
+            <button class="btnVoz" id="startButton">Iniciar Reconhecimento de Voz</button>
+            <button class="btnVoz" id="stopButton">Parar Reconhecimento de Voz</button><br /><br />
+
+            <button class="btnSend" type="button" onclick="Send()" id="btnSend">Enviar</button>
+            <button class="btnSend" type="button" id="limparButton">Recomeçar</button> <br />
+
+            <style>
+                .btnSend {
+                    background-color: #2980b9;
+                    color: black;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    outline: black;
+                }
+
+                .btnVoz {
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    outline: black;
+                }
+            </style>
+
+            <script>
+                document.getElementById('limparButton').addEventListener('click', function ()
+                {
+                    var textareas = document.querySelectorAll('textarea');
+                    for (var i = 0; i < textareas.length; i++)
+                    {
+                        textareas[i].value = ''; // Limpar o conteúdo da textarea
+                    }
+                });
+            </script>
+
+            Resposta:
+            <textarea id="txtOutput" rows="5" wrap="soft" style="width: 98%; margin-left: 3px; margin-top: 5px" placeholder=""></textarea>
+
+            <script>
+                function updateOutput(content)
+                {
+                    const txtOutput = document.getElementById("txtOutput");
+                    txtOutput.innerHTML = content;
+                }
+            </script>
+        </div>
+        <br />
+        <br />
+        <script src="~/js/ReconhecimentoVoz_Oraculo.js"> </script>
+    </div>
+</body>
+</html>
